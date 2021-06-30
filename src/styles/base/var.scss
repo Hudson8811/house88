@@ -1,0 +1,40 @@
+/* media */
+$media-list: (
+				'xxs': 375,
+				'xs': 560,
+				'sm': 767,
+				'md': 1079,
+				'lg': 1279,
+				'xl': 1599,
+				'xxl': 1900
+);
+
+
+/* шрифты */
+$mainFont: 'Roboto', sans-serif;
+
+$fs-main: 15px;
+$fs-h1: 39px;
+$fs-h2: 31px;
+$fs-h3: 25px;
+$fs-h4: 24px;
+$fs-h5: 19px;
+$fs-h6: 16px;
+
+
+/* цвета */
+$textMainColor: #52525A;
+$textTitleColor: #262C36;
+$disableColor: #6b7285;
+$bgDisableColor: #E5E7E6;
+$bgGrayColor: #F4F4F4;
+
+$breadCrumbsColor: #BEBFCF;
+$breadCrumbsColorHover: #3E5DC8;
+$breadCrumbsColorLast: #262C36;
+
+$selectColor1: #426cff;
+$selectColor2: #3E5DC8;
+
+$linkMainColor: $selectColor1;
+$linkHoverColor: $selectColor2;
