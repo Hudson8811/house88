@@ -9,14 +9,338 @@
     <title>Главная</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__container container"> 
+        <div class="header__logo"><img src="images/logo.png" width="210" height="74" alt=""></div>
+        <div class="header__contact"><a class="header__contact-email" href="mailto:">info@house88.ru</a>
+          <div class="header__contact-text">По всем вопросам</div>
+        </div>
+        <button class="header__button" type="button">Выбрать блогера</button>
+      </div>
+    </header>
     <main class="main">
       <section class="hero"> 
-        <div class="hero__container container">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ex! Aut error placeat dolor eligendi debitis ab et ipsum. Quibusdam obcaecati quaerat adipisci sed. Distinctio, incidunt fugit. Consequatur, distinctio ducimus.</div>
+        <div class="hero__container container"> 
+          <div class="hero__photo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ex! Aut error placeat dolor eligendi debitis ab et ipsum. Quibusdam obcaecati quaerat adipisci sed. Distinctio, incidunt fugit. Consequatur, distinctio ducimus.</div>
+          <div class="hero__main"> 
+            <h1 class="hero__title">Тикток дом <span>house88</span></h1>
+            <div class="hero__text">Внимание <span>30</span> миллионнов человек для вашего продукта или услуги</div>
+          </div>
+        </div>
+      </section>
+      <section class="about"> 
+        <div class="about__container container">
+          <h2 class="about__title title" data-before="about us">О нас</h2>
+          <div class="about__grid"> 
+            <div class="about__photo"><img src="images/about-photo.png" width="908" height="510" alt="Общее фото "></div>
+            <div class="about__main"> 
+              <div class="about__main-title">House88 это возможности:</div>
+              <ul class="about__list"> 
+                <li class="about__item">Зайти на востребованные площадки с продакшеном <span>любого уровня сложности.</span></li>
+                <li class="about__item">Получить <span>комплексный подход:</span> от анализа рынка до подробных отчётов.</li>
+                <li class="about__item">Интегрировать нас в вашу маркетинговую систему и провести <span>совместные брейнштормы</span> с отделом маркетинга.</li>
+                <li class="about__item">Получать <span>анализ процесса рекламных интеграций</span> и корректировку тактики ведения по потребности.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partnership"> 
+        <div class="partnership__container container"> 
+          <h2 class="partnership__title title" data-before="Brands">С нами уже сотрудничают</h2>
+          <ul class="partnership__list"> 
+            <li class="partnership__item"> <img src="images/logo-starbucks-coffee.png" width="113" height="113" alt="Starbucks Coffee"></li>
+            <li class="partnership__item"> <img src="images/logo-letual.png" width="229" height="39" alt="Л'этуаль"></li>
+            <li class="partnership__item"> <img src="images/logo-street-beat.png" width="226" height="87" alt="Street Beats"></li>
+            <li class="partnership__item"> <img src="images/logo-formula-cinema.png" width="310" height="33" alt="Формула кино"></li>
+            <li class="partnership__item"> <img src="images/logo-pubg-mobile.png" width="115" height="85" alt="PUBG mobile"></li>
+            <li class="partnership__item"> <img src="images/logo-sportmaster.png" width="120" height="79" alt="Спортмастер"></li>
+            <li class="partnership__item"> <img src="images/logo-metro.png" width="165" height="30" alt="METRO"></li>
+            <li class="partnership__item"> <img src="images/logo-tele2.png" width="143" height="54" alt="Tele2"></li>
+          </ul>
+          <div class="partnership__grid">
+            <div class="partnership__video"> <img src="images/partners-1.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-2.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-3.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-4.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-5.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-6.jpg"></div>
+            <div class="partnership__video"> <img src="images/partners-7.jpg"></div>
+          </div>
+        </div>
+      </section>
+      <section class="line-section"> 
+        <div class="line-section__container container"> 
+          <h2 class="line-section__title title" data-before="Contact us">Хотите посотрудничать?</h2>
+          <div class="line-section__main">
+            <form action="" method="post">
+              <div class="line-section__fieldset">
+                <label class="field">
+                  <input type="text" name="name"><span class="field__hint">Имя</span>
+                </label>
+                <label class="field">
+                  <input type="tel" name="phone"><span class="field__hint">Телефон</span>
+                </label>
+                <label class="field">
+                  <input type="email" name="email"><span class="field__hint">Почта</span>
+                </label>
+                <label class="field">
+                  <input type="text" name="text"><span class="field__hint">Что надо?</span>
+                </label>
+              </div>
+              <button class="line-section__button" type="submit"> <span>Отправить</span></button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="quality">
+        <div class="quality__container container">
+          <h2 class="quality__title title title--theme-light" data-before="tiktok">Мы привносим качественный контент в ТикТок</h2>
+          <ul class="quality__list"> 
+            <li class="quality__item">
+              <div class="quality__item-video"> <img src="images/quality-1.jpg" alt=""></div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Браслеты / 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
+            </li>
+            <li class="quality__item">
+              <div class="quality__item-video"> <img src="images/quality-2.jpg" alt=""></div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Человек-паук / 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
+            </li>
+            <li class="quality__item">
+              <div class="quality__item-video"> <img src="images/quality-3.jpg" alt=""></div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Краш с района / 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="what-doing">
+        <div class="what-doing__container container"> 
+          <div class="what-doing__section">
+            <div class="what-doing__section-media">
+              <div class="what-doing__section-video"><img src="images/global-trends-image.png" alt=""></div>
+            </div>
+            <div class="what-doing__section-main">
+              <div class="what-doing__section-title title title--theme-light">Делаем мировые тренды</div>
+              <div class="what-doing__section-sound">
+                <Lorem>ipsum dolor, sit amet consectetur adipisicing elit. Ea ad sequi obcaecati commodi, accusamus molestias iure! Quod maxime, nesciunt repellendus possimus, sint molestias porro autem tenetur deserunt odit perferendis tempore!</Lorem>
+              </div>
+            </div>
+          </div>
+          <div class="what-doing__section">
+            <div class="what-doing__section-media"> <img src="images/new-formats-image.jpg" alt=""></div>
+            <div class="what-doing__section-main"> 
+              <div class="what-doing__section-title title title--theme-light">Создаём новые форматы продвижения треков через <span data-before="tik tok">тикток</span></div>
+            </div>
+          </div>
+          <div class="what-doing__section">
+            <div class="what-doing__section-main"> 
+              <div class="what-doing__section-title title title--theme-light" data-before="Скоро">Создаём образовательный контент</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="booking">
+        <div class="booking__container container"> 
+          <h2 class="booking__title title" data-before="booking">Букинг блогеров</h2>
+          <div class="booking__filters"> 
+            <h3 class="booking__filters-title">Виды интеграций:</h3>
+            <ul class="booking__filters-list">
+              <li class="booking__filters-item"> 
+                <button type="button" data-target="#">Челленджи и скетчи</button>
+              </li>
+              <li class="booking__filters-item"> 
+                <button type="button" data-target="#">Рубрики</button>
+              </li>
+              <li class="booking__filters-item"> 
+                <button type="button" data-target="#">Имиджевые</button>
+              </li>
+              <li class="booking__filters-item"> 
+                <button type="button" data-target="#">Вирусные</button>
+              </li>
+              <li class="booking__filters-item"> 
+                <button type="button" data-target="#">Пранки</button>
+              </li>
+            </ul>
+          </div>
+          <div class="booking__main"> 
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Oreo</h3><img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Daniil</h3><img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Alexkady</h3><img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Seneamin</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Prokop</h3><img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Zavaly</h3><img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="booking__card">
+              <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
+              <div class="booking__card-main">
+                <div class="booking__card-title">
+                  <h3>Haribo</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">ТикТок</div>
+                  <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <div class="booking__card-social"> 
+                  <div class="booking__card-social-title">Инстаграм </div>
+                  <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#"></a>
+                </div>
+                <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store">
+        <div class="store__container container">
+          <h2 class="store__title title" data-before="Store" data-after="Скоро открытие"></h2>
+          <ul class="store__list"> 
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-1.jpg" width="363" height="363" alt="Наклейки House88"></div>
+              <h3 class="store__card-title">Наклейки House88</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+            </li>
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Картины от Zavaly"></div>
+              <h3 class="store__card-title">Картины от Zavaly</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+            </li>
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Браслеты от Seneamin"></div>
+              <h3 class="store__card-title">Браслеты от Seneamin</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="line-section">
+        <div class="line-section__container container">
+          <h2 class="line-section__title title">Кстати, мы ещё и диджитал студия</h2>
+          <div class="line-section__main">
+            <div class="line-section__list"> 
+              <h3>Мы делаем:</h3>
+              <ul>
+                <li>Бриф с вашим маркетинговым отделом </li>
+                <li>Рекламные концепции</li>
+                <li>Съёмки под ключ: от идеи до финального видео </li>
+                <li>Анализируем трафик из ТикТок</li>
+                <li>Развиваем коммерческие профили в ТикТок</li>
+              </ul>
+            </div><a class="line-section__button" href="#"> <span>Отправить</span></a>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container container"> 
+        <div class="footer__row">
+          <address class="footer__address">Москва, Россия</address><a class="footer__email" href="mailto:reklama@house88.ru">reklama@house88.ru</a>
+        </div>
+        <div class="footer__row">
+          <div class="footer__links"> <a href="#">Политика обработки персональных данных</a></div>
+          <div class="footer__links"> <a href="#">TikTok</a><a href="#">Instagram</a></div>
+        </div>
+      </div>
+    </footer>
     <script src="js/main.min.js"></script>
   </body>
 </html>
