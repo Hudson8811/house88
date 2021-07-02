@@ -10,9 +10,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container container"> 
+      <div class="header__container"> 
         <div class="header__logo"><img src="images/logo.png" width="210" height="74" alt=""></div>
-        <div class="header__contact"><a class="header__contact-email" href="mailto:">info@house88.ru</a>
+        <div class="header__contact"><a class="header__contact-email" href="mailto:info@house88.ru">info@house88.ru</a>
           <div class="header__contact-text">По всем вопросам</div>
         </div>
         <button class="header__button" type="button">Выбрать блогера</button>
@@ -20,17 +20,55 @@
     </header>
     <main class="main">
       <section class="hero"> 
-        <div class="hero__container container"> 
-          <div class="hero__photo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ex! Aut error placeat dolor eligendi debitis ab et ipsum. Quibusdam obcaecati quaerat adipisci sed. Distinctio, incidunt fugit. Consequatur, distinctio ducimus.</div>
-          <div class="hero__main"> 
-            <h1 class="hero__title">Тикток дом <span>house88</span></h1>
-            <div class="hero__text">Внимание <span>30</span> миллионнов человек для вашего продукта или услуги</div>
+        <div class="hero__container"> 
+          <div class="hero__photo"><img src="images/hero/main-photo.jpg" width="1920" height="2200" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+            <div class="hero__grid"> 
+              <div class="hero__member hero__member--seneamin">
+                <div class="hero__member-image"><img src="images/hero/1.png" width="748" height="2681" alt="seneamin"></div>
+                <div class="hero__member-text">seneamin</div>
+              </div>
+              <div class="hero__member hero__member--oreo">
+                <div class="hero__member-image"><img src="images/hero/2.png" width="743" height="2525" alt="oreowhiteboy"></div>
+                <div class="hero__member-text">oreowhiteboy</div>
+              </div>
+              <div class="hero__member hero__member--haribo">
+                <div class="hero__member-image"><img src="images/hero/3.png" width="822" height="2591" alt="haribo"></div>
+                <div class="hero__member-text">haribo</div>
+              </div>
+              <div class="hero__member hero__member--zavaly">
+                <div class="hero__member-image"><img src="images/hero/4.png" width="726" height="2542" alt="zava_ly"></div>
+                <div class="hero__member-text">zava_ly</div>
+              </div>
+              <div class="hero__member hero__member--smmagnat">
+                <div class="hero__member-image"><img src="images/hero/.png" width="" height="" alt="smmagnat"></div>
+                <div class="hero__member-text">smmagnat</div>
+              </div>
+              <div class="hero__member hero__member--daniil">
+                <div class="hero__member-image"><img src="images/hero/5.png" width="651" height="2280" alt="danil_co"></div>
+                <div class="hero__member-text">danil_co</div>
+              </div>
+              <div class="hero__member hero__member--alexkady">
+                <div class="hero__member-image"><img src="images/hero/6.png" width="564" height="2427" alt="alex_kady"></div>
+                <div class="hero__member-text">alex_kady</div>
+              </div>
+              <div class="hero__member hero__member--prokop">
+                <div class="hero__member-image"><img src="images/hero/.png" width="" height="" alt="prokop"></div>
+                <div class="hero__member-text">prokop</div>
+              </div>
+            </div><map name="image-map">
+              <area target="" alt="" title="" href="" coords="176,202,172,183,172,148,204,122,259,136,267,153,265,185,278,207,269,233,250,253,256,270,276,296,300,309,303,323,300,358,303,387,308,413,310,464,310,499,306,537,303,589,303,626,291,667,281,715,273,796,271,830,250,884,242,933,252,954,256,1006,281,1037,337,1047,339,1064,301,1078,237,1076,200,1078,206,1105,228,1130,235,1149,222,1161,189,1171,161,1166,142,1152,120,1127,128,1091,123,1057,100,1020,96,955,106,827,110,691,100,598,108,533,71,518,55,501,54,420,66,355,79,306,135,282,161,272,178,255,191,241,186,228,169,219" shape="poly"></map>
+          </div>
+          <div class="hero__main">
+            <div class="container">
+              <h1 class="hero__title title">Тикток дом <span class="hero__title-double">house88<span class="part part--text-ho">ho </span><span class="part part--text-use">use </span><span class="part part--text-88">88</span></span></h1>
+              <div class="hero__text title"><span class="title__bg">Внимание <span class="hero__title-double" data-before="30">30</span> миллионнов</span><span class="title__bg">человек для вашего продукта</span><span class="title__bg">или услуги</span></div>
+            </div>
           </div>
         </div>
       </section>
       <section class="about"> 
         <div class="about__container container">
-          <h2 class="about__title title" data-before="about us">О нас</h2>
+          <h2 class="about__title title" data-before="about us"> <span class="title__bg">О нас</span></h2>
           <div class="about__grid"> 
             <div class="about__photo"><img src="images/about-photo.png" width="908" height="510" alt="Общее фото "></div>
             <div class="about__main"> 
@@ -47,74 +85,143 @@
       </section>
       <section class="partnership"> 
         <div class="partnership__container container"> 
-          <h2 class="partnership__title title" data-before="Brands">С нами уже сотрудничают</h2>
+          <h2 class="partnership__title title" data-before="Brands"> <span class="title__bg">С нами уже </span><span class="title__bg">сотрудничают</span></h2>
           <ul class="partnership__list"> 
-            <li class="partnership__item"> <img src="images/logo-starbucks-coffee.png" width="113" height="113" alt="Starbucks Coffee"></li>
-            <li class="partnership__item"> <img src="images/logo-letual.png" width="229" height="39" alt="Л'этуаль"></li>
-            <li class="partnership__item"> <img src="images/logo-street-beat.png" width="226" height="87" alt="Street Beats"></li>
-            <li class="partnership__item"> <img src="images/logo-formula-cinema.png" width="310" height="33" alt="Формула кино"></li>
-            <li class="partnership__item"> <img src="images/logo-pubg-mobile.png" width="115" height="85" alt="PUBG mobile"></li>
-            <li class="partnership__item"> <img src="images/logo-sportmaster.png" width="120" height="79" alt="Спортмастер"></li>
-            <li class="partnership__item"> <img src="images/logo-metro.png" width="165" height="30" alt="METRO"></li>
-            <li class="partnership__item"> <img src="images/logo-tele2.png" width="143" height="54" alt="Tele2"></li>
+            <li class="partnership__item partnership__item--starbucks-coffee"> <img src="images/logo-starbucks-coffee.png" width="113" height="113" alt="Starbucks Coffee"></li>
+            <li class="partnership__item partnership__item--letual"> <img src="images/logo-letual.png" width="229" height="39" alt="Л'этуаль"></li>
+            <li class="partnership__item partnership__item--street-beat"> <img src="images/logo-street-beat.png" width="226" height="87" alt="Street Beats"></li>
+            <li class="partnership__item partnership__item--formula-cinema"> <img src="images/logo-formula-cinema.png" width="310" height="33" alt="Формула кино"></li>
+            <li class="partnership__item partnership__item--pubg-mobile"> <img src="images/logo-pubg-mobile.png" width="115" height="85" alt="PUBG mobile"></li>
+            <li class="partnership__item partnership__item--sportmaster"> <img src="images/logo-sportmaster.png" width="120" height="79" alt="Спортмастер"></li>
+            <li class="partnership__item partnership__item--metro"> <img src="images/logo-metro.png" width="165" height="30" alt="METRO"></li>
+            <li class="partnership__item partnership__item--tele2"> <img src="images/logo-tele2.png" width="143" height="54" alt="Tele2"></li>
           </ul>
           <div class="partnership__grid">
-            <div class="partnership__video"> <img src="images/partners-1.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-2.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-3.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-4.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-5.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-6.jpg"></div>
-            <div class="partnership__video"> <img src="images/partners-7.jpg"></div>
+            <div class="partnership__video partnership__video--one">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/metro.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--two">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/letual.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--three">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/street-beat.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--four">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/formula-cinema.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--five">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/lenses.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--six">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/street-beat.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--seven">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/pubg.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="partnership__video partnership__video--eight">
+              <video autoplay="true" muted="true" loop="true">
+                <source src="images/video/metro.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
       </section>
-      <section class="line-section"> 
+      <section class="line-section">
         <div class="line-section__container container"> 
-          <h2 class="line-section__title title" data-before="Contact us">Хотите посотрудничать?</h2>
+          <h2 class="line-section__title title" data-before="Contact us"><span class="title__bg">Хотите </span><span class="title__bg">посотрудничать?</span></h2>
           <div class="line-section__main">
-            <form action="" method="post">
+            <form action="#" method="post">
               <div class="line-section__fieldset">
-                <label class="field">
-                  <input type="text" name="name"><span class="field__hint">Имя</span>
+                <label class="line-section__field field" aria-label="Имя">
+                  <input type="text" name="name" placeholder="Имя">
                 </label>
-                <label class="field">
-                  <input type="tel" name="phone"><span class="field__hint">Телефон</span>
+                <label class="line-section__field field" aria-label="Телефон">
+                  <input type="tel" name="phone" placeholder="Телефон">
                 </label>
-                <label class="field">
-                  <input type="email" name="email"><span class="field__hint">Почта</span>
+                <label class="line-section__field field" aria-label="Почта">
+                  <input type="email" name="email" placeholder="Почта">
                 </label>
-                <label class="field">
-                  <input type="text" name="text"><span class="field__hint">Что надо?</span>
+                <label class="line-section__field field" aria-label="Что надо?">
+                  <input type="text" name="text" placeholder="Что надо?">
                 </label>
               </div>
-              <button class="line-section__button" type="submit"> <span>Отправить</span></button>
+              <button class="line-section__button" type="submit"><span class="line-section__button-icon"> 
+                  <svg width="130" height="130">
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg></span><span class="line-section__button-text">Отправить</span></button>
             </form>
           </div>
         </div>
       </section>
       <section class="quality">
         <div class="quality__container container">
-          <h2 class="quality__title title title--theme-light" data-before="tiktok">Мы привносим качественный контент в ТикТок</h2>
-          <ul class="quality__list"> 
+          <h2 class="quality__title title" data-before="tiktok"><span class="title__bg">Мы привносим качественный</span>контент в ТикТок</h2>
+          <ul class="quality__list">
             <li class="quality__item">
-              <div class="quality__item-video"> <img src="images/quality-1.jpg" alt=""></div>
+              <div class="quality__item-video"> 
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/bracelets.mp4" type="video/mp4">
+                </video>
+                <button class="quality__item-toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
               <div class="quality__item-info"> 
-                <h3 class="quality__item-title">Браслеты / 1 серия</h3>
+                <h3 class="quality__item-title">Браслеты <span>/</span> 1 серия</h3>
                 <div class="quality__item-text">Тикток Сериал</div>
               </div>
             </li>
             <li class="quality__item">
-              <div class="quality__item-video"> <img src="images/quality-2.jpg" alt=""></div>
+              <div class="quality__item-video"> 
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/spiderman.mp4" type="video/mp4">
+                </video>
+                <button class="quality__item-toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
               <div class="quality__item-info"> 
-                <h3 class="quality__item-title">Человек-паук / 1 серия</h3>
+                <h3 class="quality__item-title">Человек-паук <span>/</span> 1 серия</h3>
                 <div class="quality__item-text">Тикток Сериал</div>
               </div>
             </li>
             <li class="quality__item">
-              <div class="quality__item-video"> <img src="images/quality-3.jpg" alt=""></div>
+              <div class="quality__item-video"> 
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/crush.mp4" type="video/mp4">
+                </video>
+                <button class="quality__item-toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
               <div class="quality__item-info"> 
-                <h3 class="quality__item-title">Краш с района / 1 серия</h3>
+                <h3 class="quality__item-title">Краш с района <span>/</span> 1 серия</h3>
                 <div class="quality__item-text">Тикток Сериал</div>
               </div>
             </li>
@@ -123,33 +230,46 @@
       </section>
       <section class="what-doing">
         <div class="what-doing__container container"> 
-          <div class="what-doing__section">
+          <div class="what-doing__section what-doing__section--trends">
             <div class="what-doing__section-media">
-              <div class="what-doing__section-video"><img src="images/global-trends-image.png" alt=""></div>
+              <div class="what-doing__section-video">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/global-trends.mp4" type="video/mp4">
+                </video>
+                <button class="what-doing__section-media-toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
             </div>
             <div class="what-doing__section-main">
-              <div class="what-doing__section-title title title--theme-light">Делаем мировые тренды</div>
-              <div class="what-doing__section-sound">
-                <Lorem>ipsum dolor, sit amet consectetur adipisicing elit. Ea ad sequi obcaecati commodi, accusamus molestias iure! Quod maxime, nesciunt repellendus possimus, sint molestias porro autem tenetur deserunt odit perferendis tempore!</Lorem>
+              <div class="what-doing__section-title title title">Делаем мировые <span class="title__bg">тренды</span></div>
+              <div class="what-doing__section-sound"><img src="images/original-sound.jpg" width="551" height="173" alt=""></div>
+            </div>
+          </div>
+          <div class="what-doing__section what-doing__section--formats">
+            <div class="what-doing__section-media"> <img src="images/new-formats-image.jpg" alt=""></div>
+            <div class="what-doing__section-main"> 
+              <div class="what-doing__section-title title">
+                 Создаём новые форматы 
+                <span class="title__bg">продвижения</span> 
+                треков через <span class="what-doing__section-title-double" data-before="tik tok">тикток</span>
               </div>
             </div>
           </div>
-          <div class="what-doing__section">
-            <div class="what-doing__section-media"> <img src="images/new-formats-image.jpg" alt=""></div>
+          <div class="what-doing__section what-doing__section--learning">
             <div class="what-doing__section-main"> 
-              <div class="what-doing__section-title title title--theme-light">Создаём новые форматы продвижения треков через <span data-before="tik tok">тикток</span></div>
-            </div>
-          </div>
-          <div class="what-doing__section">
-            <div class="what-doing__section-main"> 
-              <div class="what-doing__section-title title title--theme-light" data-before="Скоро">Создаём образовательный контент</div>
+              <div class="what-doing__section-title title" data-after="Скоро"><span class="title__bg">Создаём</span><span class="title__bg">образовательный</span><span class="title__bg">контент</span></div>
             </div>
           </div>
         </div>
       </section>
       <section class="booking">
         <div class="booking__container container"> 
-          <h2 class="booking__title title" data-before="booking">Букинг блогеров</h2>
+          <h2 class="booking__title title" data-before="booking"><span class="title__bg">Букинг блогеров</span></h2>
           <div class="booking__filters"> 
             <h3 class="booking__filters-title">Виды интеграций:</h3>
             <ul class="booking__filters-list">
@@ -179,11 +299,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -196,11 +322,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -213,11 +345,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -230,11 +368,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -247,11 +391,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -264,11 +414,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -281,11 +437,17 @@
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <div class="booking__card-social"> 
                   <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#"></a>
+                  <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#chain"></use>
+                    </svg></a>
                 </div>
                 <button class="booking__card-button" type="button" data-member="#">Оставить заявку</button>
               </div>
@@ -295,7 +457,7 @@
       </section>
       <section class="store">
         <div class="store__container container">
-          <h2 class="store__title title" data-before="Store" data-after="Скоро открытие"></h2>
+          <h2 class="store__title title" data-before="Store" data-after="Скоро открытие"><span class="title__bg">Мерч шоп</span></h2>
           <ul class="store__list"> 
             <li class="store__card">
               <div class="store__card-image">	<img src="images/store-1.jpg" width="363" height="363" alt="Наклейки House88"></div>
@@ -312,35 +474,152 @@
           </ul>
         </div>
       </section>
-      <section class="line-section">
+      <section class="line-section line-section--digital">
         <div class="line-section__container container">
-          <h2 class="line-section__title title">Кстати, мы ещё и диджитал студия</h2>
+          <h2 class="line-section__title title"><span class="title__bg">Кстати, мы ещё и </span><span class="title__bg">диджитал студия</span></h2>
           <div class="line-section__main">
             <div class="line-section__list"> 
               <h3>Мы делаем:</h3>
               <ul>
-                <li>Бриф с вашим маркетинговым отделом </li>
-                <li>Рекламные концепции</li>
-                <li>Съёмки под ключ: от идеи до финального видео </li>
-                <li>Анализируем трафик из ТикТок</li>
-                <li>Развиваем коммерческие профили в ТикТок</li>
+                <li> <span>Бриф с вашим маркетинговым отделом </span></li>
+                <li> <span>Рекламные концепции</span></li>
+                <li> <span>Съёмки под ключ: от идеи до финального видео </span></li>
+                <li> <span>Анализируем трафик из ТикТок</span></li>
+                <li> <span>Развиваем коммерческие профили в ТикТок</span></li>
               </ul>
-            </div><a class="line-section__button" href="#"> <span>Отправить</span></a>
+            </div><a class="line-section__button" href="#" target="_blank"> <span class="line-section__button-icon"> 
+                <svg width="130" height="130">
+                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                </svg></span><span class="line-section__button-text">На сайт</span></a>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__container container"> 
-        <div class="footer__row">
-          <address class="footer__address">Москва, Россия</address><a class="footer__email" href="mailto:reklama@house88.ru">reklama@house88.ru</a>
-        </div>
-        <div class="footer__row">
-          <div class="footer__links"> <a href="#">Политика обработки персональных данных</a></div>
-          <div class="footer__links"> <a href="#">TikTok</a><a href="#">Instagram</a></div>
+      <div class="footer__container container">
+        <div class="footer__flex">
+          <div class="footer__left">
+            <div class="footer__title">Москва, Россия</div>
+            <div class="footer__row"><a class="footer__link" href="#">Политика обработки персональных данных</a></div>
+          </div>
+          <div class="footer__right"><a class="footer__title footer__title--link" href="mailto:reklama@house88.ru">reklama@house88.ru</a>
+            <div class="footer__row"><a class="footer__link" href="#">TikTok</a><a class="footer__link" href="#">Instagram</a></div>
+          </div>
         </div>
       </div>
     </footer>
+    <div class="brief">
+      <div class="brief__title">HOUSE 88</div>
+      <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и мы свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
+      <form action="#" method="post">
+        <fieldset> 
+          <legend>Тип интеграции</legend>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioChallengesAndSketches" type="radio" name="type-integration" value="Челленджи и скетчи">
+            <label for="radioChallengesAndSketches">Челленджи и скетчи</label>
+          </div>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioCategories" type="radio" name="type-integration" value="Рубрики" checked>
+            <label for="radioCategories">Рубрики</label>
+          </div>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioImageBased" type="radio" name="type-integration" value="Имиджевые">
+            <label for="radioImageBased">Имиджевые</label>
+          </div>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioViral" type="radio" name="type-integration" value="Вирусные">
+            <label for="radioViral">Вирусные</label>
+          </div>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioPranks" type="radio" name="type-integration" value="Пранки">
+            <label for="radioPranks">Пранки</label>
+          </div>
+          <div class="choice-button">
+            <input class="visually-hidden" id="radioHelpChoice" type="radio" name="type-integration" value="Помочь с выбором">
+            <label for="radioHelpChoice">Помочь с выбором</label>
+          </div>
+        </fieldset>
+        <fieldset> 
+          <legend>Выберите блогера (ов)</legend>
+          <div class="choice-button"> 
+            <input id="checkboxHelpChoice" type="checkbox" name="help-choice" value="Помочь с выбором">
+          </div>
+          <div class="brief__member-grid">
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxOreo" type="checkbox" name="Oreo" value="Oreo">
+              <label for="checkboxOreo"><span> <img src="images/brief/oreo.jpg" width="53" height="53" alt="Oreo"></span>Oreo</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxDaniil" type="checkbox" name="Daniilzhishko" value="Daniilzhishko">
+              <label for="checkboxDaniil"><span> <img src="images/brief/daniil.jpg" width="53" height="53" alt="Daniilzhishko"></span>Daniilzhishko</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxAlexkady" type="checkbox" name="Alex Kady" value="Alex Kady">
+              <label for="checkboxAlexkady"><span> <img src="images/brief/alexkady.jpg" width="53" height="53" alt="Alex Kady"></span>Alex Kady</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxSeneamin" type="checkbox" name="Seneamin" value="Seneamin">
+              <label for="checkboxSeneamin"><span> <img src="images/brief/seneamin.jpg" width="53" height="53" alt="Seneamin"></span>Seneamin</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxZava_ly" type="checkbox" name="Zava_ly" value="Zava_ly">
+              <label for="checkboxZava_ly"><span> <img src="images/brief/zavaly.jpg" width="53" height="53" alt="Zava_ly"></span>Zava_ly</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxProkop" type="checkbox" name="Prokop" value="Prokop">
+              <label for="checkboxProkop"><span> <img src="images/brief/prokop.jpg" width="53" height="53" alt="Prokop"></span>Prokop</label>
+            </div>
+            <div class="choice-button"> 
+              <input class="visually-hidden" id="checkboxHaribo" type="checkbox" name="Haribo" value="Haribo">
+              <label for="checkboxHaribo"><span> <img src="images/brief/haribo.jpg" width="53" height="53" alt="Haribo"></span>Haribo</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset> 
+          <label class="field" aria-label="Как вас зовут?">
+            <input type="text" placeholder="Как вас зовут?">
+          </label>
+          <label class="field" aria-label="Название компании">
+            <input type="text" placeholder="Название компании">
+          </label>
+          <div class="brief__fields-grid"> 
+            <div class="brief__fields-column">
+              <label class="field" aria-label="Ссылка на соцсети">
+                <input type="url" placeholder="Ссылка на соцсети">
+              </label>
+              <label class="field" aria-label="Доп. ссылка на соцсети">
+                <input type="url" placeholder="Доп. ссылка">
+              </label>
+            </div>
+            <div class="brief__fields-column">
+              <label class="field" aria-label="Ссылка на сайт">
+                <input type="url" placeholder="Ссылка на сайт">
+              </label>
+              <label class="field" aria-label="Доп. ссылка на сайт">
+                <input type="url" placeholder="Доп. ссылка">
+              </label>
+            </div>
+          </div>
+          <label aria-label="Опишите вашу задачу">
+            <input type="text" placeholder="Опишите вашу задачу">
+          </label>
+          <label aria-label="Почта / Ник в Telegram">
+            <input type="text" placeholder="Почта / Ник в Telegram">
+          </label>
+        </fieldset>
+        <div class="brief__form-bottom">
+          <div class="custom-button">
+            <input class="visually-hidden" type="file" id="customFileBrief">
+            <label for="customFileBrief"><span class="custom-button__icon">
+                <svg width="27" height="27">
+                  <use xlink:href="images/sprite.svg#attach"></use>
+                </svg></span>Прикрепить файлы</label>
+          </div>
+          <button class="brief__form-send" type="submit">Отправить</button>
+          <div class="brief__form-consent">Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a></div>
+        </div>
+      </form>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

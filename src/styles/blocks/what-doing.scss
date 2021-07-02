@@ -1,0 +1,168 @@
+.what-doing {
+  padding: vw(64) 0 vw(147);
+
+  &__container {
+    max-width: vw(1450);
+  }
+
+  &__section {
+    $section: &;
+    background-color: #ffffff;
+
+    &--trends {
+      display: flex;
+      padding: vw(84) vw(64) vw(40);
+
+      #{$section}-media {
+        position: relative;
+        width: vw(515);
+        height: vw(754);
+        padding-left: vw(76);
+        padding-top: vw(118);
+        background-image: url("../images/global-trends-image.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+        flex-shrink: 0;
+
+        &-toggle {
+          position: absolute;
+          right: vw(27);
+          bottom: vw(32);
+          z-index: 1;
+        }
+      }
+
+      #{$section}-video {
+        position: relative;
+        width: vw(339);
+        overflow: hidden;
+        border-radius: vw(16);
+
+        video {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      #{$section}-main {
+        padding-left: vw(163);
+        padding-top: vw(66);
+      }
+
+      #{$section}-title {
+        max-width: vw(380);
+        margin-left: vw(35);
+        margin-bottom: vw(190);
+        text-align: left;
+
+        .title__bg {
+          margin-top: vw(2);
+          margin-left: vw(-20);
+          color: #ffffff;
+          background-color: #000000;
+        }
+      }
+    }
+
+    &--formats {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: vw(52);
+
+      #{$section}-media {
+        flex-shrink: 0;
+      }
+
+      #{$section}-main {
+        position: relative;
+        padding: 80px 107px;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+        }
+
+        &::before {
+          left: 0;
+          top: vw(78);
+          left: vw(330);
+          width: vw(168);
+          height: vw(167);
+          background-image: url("../images/smile.png");
+        }
+
+        &::after {
+          left: vw(86);
+          bottom: vw(28);
+          width: vw(138);
+          height: vw(277);
+          background-image: url("../images/hand.png");
+        }
+      }
+
+      #{$section}-title {
+        margin-top: vw(262);
+        text-align: right;
+
+        &-double {
+          display: inline-block;
+          position: relative;
+
+          &::before {
+            content: attr(data-before);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-34%) translateX(-50%);
+            font-family: $thirdFont;
+            font-weight: 400;
+            font-size: vw(57);
+            line-height: 1;
+            letter-spacing: vw(5.13);
+            white-space: nowrap;
+            color: $purpleColor;
+          }
+        }
+
+        .title__bg {
+          margin-top: vw(2);
+          margin-right: vw(-20);
+          color: #ffffff;
+          background-color: #000000;
+        }
+      }
+    }
+
+    &--learning {
+      margin-top: vw(175);
+      background-color: transparent;
+
+      #{$section}-title {
+        max-width: vw(800);
+        margin: 0 auto;
+
+        &::after {
+          content: attr(data-after);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translateX(-50%) translateY(-50%) rotate(-30deg);
+
+          z-index: 1;
+          padding: vw(5) vw(40);
+          font-size: vw(24);
+          letter-spacing: vw(-0.51);
+          line-height: 1;
+          color: #ffffff;
+          background-color: $purpleColor;
+        }
+      }
+    }
+  }
+}

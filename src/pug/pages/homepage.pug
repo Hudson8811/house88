@@ -5,7 +5,7 @@ block vars
 		const page = {
 			title: 'Главная'
 		};
-		const partners = [
+		const PARTNERS = [
 			{n: 'logo-starbucks-coffee', w: '113', h: '113', alt: 'Starbucks Coffee'}, 
 			{n: 'logo-letual', w: '229', h: '39', alt: 'Л\'этуаль'}, 
 			{n: 'logo-street-beat', w: '226', h: '87', alt: 'Street Beats'}, 
@@ -28,21 +28,71 @@ block vars
 			{name: 'Haribo', img: 'booking-haribo', smiles: ['6', '12'], social: [{name: 'ТикТок', link: '#', count: '720 000'}, {name: 'Инстаграм ', link: '#', count: '106 000'}]}
 		];
 
-		const STORE_CARDS = [{img: 'store-1', name: 'Наклейки House88', link: '#'}, {img: 'store-2', name: 'Картины от Zavaly', link: '#'}, {img: 'store-2', name: 'Браслеты от Seneamin', link: '#'}]
+		const STORE_CARDS = [{img: 'store-1', name: 'Наклейки House88', link: '#'}, {img: 'store-2', name: 'Картины от Zavaly', link: '#'}, {img: 'store-2', name: 'Браслеты от Seneamin', link: '#'}];
+		
+		const HERO_MEMBERS = [
+			{mod: 'seneamin', img: { n:'1', w: '748', h: '2681'}, text: 'seneamin'},
+			{mod: 'oreo', img: { n:'2', w: '743', h: '2525'}, text: 'oreowhiteboy'},
+			{mod: 'haribo', img: { n:'3', w: '822', h: '2591'}, text: 'haribo'},
+			{mod: 'zavaly', img: { n:'4', w: '726', h: '2542'}, text: 'zava_ly'},
+			{mod: 'smmagnat', img: { n:'', w: '', h: ''}, text: 'smmagnat'},
+			{mod: 'daniil', img: { n:'5', w: '651', h: '2280'}, text: 'danil_co'},
+			{mod: 'alexkady', img: { n:'6', w: '564', h: '2427'}, text: 'alex_kady'},
+			{mod: 'prokop', img: { n:'', w: '', h: ''}, text: 'prokop'}
+		];
+
+		const PARTNERSHIP_VIDEOS = [
+			{video: 'metro', mod: 'one'},
+			{video: 'letual', mod: 'two'},
+			{video: 'street-beat', mod: 'three'},
+			{video: 'formula-cinema', mod: 'four'},
+			{video: 'lenses', mod: 'five'},
+			{video: 'street-beat', mod: 'six'},
+			{video: 'pubg', mod: 'seven'},
+			{video: 'metro', mod: 'eight'}
+		];
+
+		const SERIALS = [
+			{video: 'bracelets', name: 'Браслеты <span>/</span> 1 серия'},
+			{video: 'spiderman', name: 'Человек-паук <span>/</span> 1 серия'},
+			{video: 'crush', name: 'Краш с района <span>/</span> 1 серия'}
+		];
 
 block main
 	section.hero 
-		.hero__container.container 
-			.hero__photo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ex! Aut error placeat dolor eligendi debitis ab et ipsum. Quibusdam obcaecati quaerat adipisci sed. Distinctio, incidunt fugit. Consequatur, distinctio ducimus.
-			.hero__main 
-				h1.hero__title Тикток дом 
-					span house88
-				
-				.hero__text Внимание <span>30</span> миллионнов человек для вашего продукта или услуги
+		.hero__container 
+			.hero__photo
+				img(src="images/hero/main-photo.jpg", width="1920", height="2200", usemap="#image-map", alt="Совместное фото тиктокеров house88")
+				.hero__grid 
+					each item, index in HERO_MEMBERS
+						div(class="hero__member hero__member--" + item.mod + (index === 17 ? ' hero__member--hover' : ''))
+							.hero__member-image
+								img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)
+							.hero__member-text= item.text
+
+
+				map(name="image-map")
+						area(target="", alt="", title="", href="", coords="176,202,172,183,172,148,204,122,259,136,267,153,265,185,278,207,269,233,250,253,256,270,276,296,300,309,303,323,300,358,303,387,308,413,310,464,310,499,306,537,303,589,303,626,291,667,281,715,273,796,271,830,250,884,242,933,252,954,256,1006,281,1037,337,1047,339,1064,301,1078,237,1076,200,1078,206,1105,228,1130,235,1149,222,1161,189,1171,161,1166,142,1152,120,1127,128,1091,123,1057,100,1020,96,955,106,827,110,691,100,598,108,533,71,518,55,501,54,420,66,355,79,306,135,282,161,272,178,255,191,241,186,228,169,219", shape="poly")
+					
+				 
+
+			.hero__main
+				.container
+					h1.hero__title.title Тикток дом 
+						span.hero__title-double house88
+							span.part.part--text-ho ho 
+							span.part.part--text-use use 
+							span.part.part--text-88 88
+					
+					.hero__text.title
+						span.title__bg Внимание <span class="hero__title-double" data-before="30">30</span> миллионнов
+						span.title__bg человек для вашего продукта
+						span.title__bg или услуги
 	
 	section.about 
 		.about__container.container
-			h2.about__title.title(data-before="about us") О нас
+			h2.about__title.title(data-before="about us") 
+				span.title__bg О нас
 			.about__grid 
 				.about__photo
 					img(src="images/about-photo.png", width="908", height="510", alt="Общее фото ")
@@ -56,91 +106,106 @@ block main
 
 	section.partnership 
 		.partnership__container.container 
-			h2.partnership__title.title(data-before="Brands") С нами уже сотрудничают
+			h2.partnership__title.title(data-before="Brands") 
+				span.title__bg С нами уже 
+				span.title__bg сотрудничают
 			
 			ul.partnership__list 
-				each item in partners
-					li.partnership__item 
+				each item in PARTNERS
+					li.partnership__item(class="partnership__item--" + item.n.slice(5)) 
 						img(src="images/" + item.n + ".png", width= item.w, height= item.h, alt= item.alt)
 			
 			.partnership__grid
-				- let i = 1;
-				while i < 8
-					.partnership__video 
-						img(src="images/partners-" + i + ".jpg")
-					- i++;
-	
-	section.line-section 
+				each item in PARTNERSHIP_VIDEOS
+					.partnership__video(class="partnership__video--" + item.mod)
+						video(autoplay="true", muted="true", loop="true")
+							source(src="images/video/" + item.video + ".mp4", type="video/mp4")
+
+
+	section.line-section
 		.line-section__container.container 
-			h2.line-section__title.title(data-before="Contact us") Хотите посотрудничать?
+			h2.line-section__title.title(data-before="Contact us")
+				span.title__bg Хотите 
+				span.title__bg посотрудничать?
 			.line-section__main
-				form(action="", method="post")
+				form(action="#", method="post")
 					.line-section__fieldset
-						label.field
-							input(type="text", name="name")
-							span.field__hint Имя
-						label.field
-							input(type="tel", name="phone")
-							span.field__hint Телефон
-						label.field
-							input(type="email", name="email")
-							span.field__hint Почта
-						label.field
-							input(type="text", name="text")
-							span.field__hint Что надо?
-					button.line-section__button(type="submit") 
-						span Отправить
+						label.line-section__field.field(aria-label="Имя")
+							input(type="text", name="name", placeholder="Имя")
+						label.line-section__field.field(aria-label="Телефон")
+							input(type="tel", name="phone", placeholder="Телефон")
+						label.line-section__field.field(aria-label="Почта")
+							input(type="email", name="email", placeholder="Почта")
+						label.line-section__field.field(aria-label="Что надо?")
+							input(type="text", name="text", placeholder="Что надо?")
+					button.line-section__button(type="submit")
+						span.line-section__button-icon 
+							+icon('arrow-right')(width="130", height="130")
+						span.line-section__button-text Отправить
 
 	section.quality
 		.quality__container.container
-			h2.quality__title.title.title--theme-light(data-before="tiktok") Мы привносим качественный контент в ТикТок
+			h2.quality__title.title(data-before="tiktok")
+				span.title__bg Мы привносим качественный
+				| контент в ТикТок
 
-			ul.quality__list 
-				li.quality__item
-					.quality__item-video 
-						img(src="images/quality-1.jpg", alt="")
-					.quality__item-info 
-						h3.quality__item-title Браслеты / 1 серия
-						.quality__item-text Тикток Сериал
-				li.quality__item
-					.quality__item-video 
-						img(src="images/quality-2.jpg", alt="")
-					.quality__item-info 
-						h3.quality__item-title Человек-паук / 1 серия
-						.quality__item-text Тикток Сериал
-				li.quality__item
-					.quality__item-video 
-						img(src="images/quality-3.jpg", alt="")
-					.quality__item-info 
-						h3.quality__item-title Краш с района / 1 серия
-						.quality__item-text Тикток Сериал
+			ul.quality__list
+				each item in SERIALS
+					li.quality__item
+						.quality__item-video 
+							video(autoplay="true", muted="true", loop="true")
+								source(src="images/video/" + item.video + ".mp4", type="video/mp4")
+							button.quality__item-toggle.sound-toggle(type="button")
+								span.sound-toggle__icon.sound-toggle__icon--off 
+									+icon('sound-off')(width="25", height="25")
+								span.sound-toggle__icon.sound-toggle__icon--on
+									+icon('sound-on')(width="25", height="25")
+						.quality__item-info 
+							h3.quality__item-title!= item.name
+							.quality__item-text Тикток Сериал
+
 
 	section.what-doing
 		.what-doing__container.container 
-			.what-doing__section
+			.what-doing__section.what-doing__section--trends
 				.what-doing__section-media
 					.what-doing__section-video
-						img(src="images/global-trends-image.png", alt="")
+						video(autoplay="true", muted="true", loop="true")
+							source(src="images/video/global-trends.mp4", type="video/mp4")
+						button.what-doing__section-media-toggle.sound-toggle(type="button")
+							span.sound-toggle__icon.sound-toggle__icon--off 
+								+icon('sound-off')(width="25", height="25")
+							span.sound-toggle__icon.sound-toggle__icon--on
+								+icon('sound-on')(width="25", height="25")
+		
 				.what-doing__section-main
-					.what-doing__section-title.title.title--theme-light Делаем мировые тренды
+					.what-doing__section-title.title.title Делаем мировые 
+						span.title__bg тренды
 
 					.what-doing__section-sound
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ad sequi obcaecati commodi, accusamus molestias iure! Quod maxime, nesciunt repellendus possimus, sint molestias porro autem tenetur deserunt odit perferendis tempore!
+						img(src="images/original-sound.jpg", width="551", height="173", alt="")
 			
-			.what-doing__section
+			.what-doing__section.what-doing__section--formats
 				.what-doing__section-media 
 					img(src="images/new-formats-image.jpg", alt="")
 				.what-doing__section-main 
-					.what-doing__section-title.title.title--theme-light Создаём новые форматы продвижения треков через 
-						span(data-before="tik tok") тикток
+					.what-doing__section-title.title 
+						| Создаём новые форматы 
+						| <span class="title__bg">продвижения</span> 
+						| треков через 
+						span.what-doing__section-title-double(data-before="tik tok") тикток
 
-			.what-doing__section
+			.what-doing__section.what-doing__section--learning
 				.what-doing__section-main 
-					.what-doing__section-title.title.title--theme-light(data-before="Скоро") Создаём образовательный контент
+					.what-doing__section-title.title(data-after="Скоро")
+						span.title__bg Создаём
+						span.title__bg образовательный
+						span.title__bg контент
 
 	section.booking
 		.booking__container.container 
-			h2.booking__title.title(data-before="booking") Букинг блогеров
+			h2.booking__title.title(data-before="booking")
+				span.title__bg Букинг блогеров
 			
 			.booking__filters 
 				h3.booking__filters-title Виды интеграций:
@@ -165,13 +230,16 @@ block main
 								.booking__card-social 
 									.booking__card-social-title= social.name
 									.booking__card-social-count= social.count
-									a.booking__card-social-link(href= social.link)
+									a.booking__card-social-link(href= social.link, target="_blank")
+										span.visually-hidden Перейти в ${social.name}
+										+icon('chain')(width="17", height="17")
 							
 							button.booking__card-button(type="button", data-member="#") Оставить заявку
 
 	section.store
 		.store__container.container
 			h2.store__title.title(data-before="Store", data-after="Скоро открытие")
+				span.title__bg Мерч шоп
 
 			ul.store__list 
 				each item in STORE_CARDS
@@ -181,18 +249,27 @@ block main
 						h3.store__card-title= item.name 
 						a.store__card-link(href= item.link, target="_blank") Подробнее в директ
 
-	section.line-section
+	section.line-section.line-section--digital
 		.line-section__container.container
-			h2.line-section__title.title Кстати, мы ещё и диджитал студия
+			h2.line-section__title.title
+				span.title__bg Кстати, мы ещё и 
+				span.title__bg диджитал студия
 			.line-section__main
 				.line-section__list 
 					h3 Мы делаем:
 					ul
-						li Бриф с вашим маркетинговым отделом 
-						li Рекламные концепции
-						li Съёмки под ключ: от идеи до финального видео 
-						li Анализируем трафик из ТикТок
-						li Развиваем коммерческие профили в ТикТок
-						
-				a.line-section__button(href="#") 
-					span Отправить
+						li 
+							span Бриф с вашим маркетинговым отделом 
+						li 
+							span Рекламные концепции
+						li 
+							span Съёмки под ключ: от идеи до финального видео 
+						li 
+							span Анализируем трафик из ТикТок
+						li 
+							span Развиваем коммерческие профили в ТикТок
+
+				a.line-section__button(href="#", target="_blank") 
+					span.line-section__button-icon 
+						+icon('arrow-right')(width="130", height="130")
+					span.line-section__button-text На сайт

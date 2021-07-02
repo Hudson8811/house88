@@ -1,23 +1,36 @@
 html {
-	font-size: $fs-main;
+  font-size: vw(21); //$fs-main;
 }
 body {
-	font-family: $mainFont;
-	color: $textMainColor;
+  font-family: $mainFont;
+  font-weight: 400;
+  color: $textMainColor;
+  background-color: #000;
 }
 
-a{
-	color: $selectColor1;
-	text-decoration: underline;
-	&:hover{
-		color: $selectColor2;
-		text-decoration: none;
-	}
+a {
+  color: $selectColor1;
+  text-decoration: underline;
+  &:hover {
+    color: $selectColor2;
+    text-decoration: none;
+  }
 }
 
-.container{
-	width: 1330px;
-	padding: 0 15px;
-	margin: 0 auto;
-	max-width: 100%;
+.container {
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }

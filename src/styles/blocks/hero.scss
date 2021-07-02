@@ -1,0 +1,140 @@
+.hero {
+  overflow: hidden;
+
+  &__photo {
+    position: relative;
+    height: vw(1500);
+    background-color: #4c5769;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__member {
+    $member: &;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--hover {
+      #{$member}-image {
+        opacity: 1;
+      }
+
+      #{$member}-text {
+        display: none;
+      }
+    }
+
+    &--seneamin {
+      top: 0;
+      left: 0;
+    }
+    &--oreo {
+      top: 0;
+      left: 0;
+    }
+    &--haribo {
+      top: 0;
+      left: 0;
+    }
+    &--zavaly {
+      top: 0;
+      left: 0;
+    }
+    &--smmagnat {
+      top: 0;
+      left: 0;
+    }
+    &--daniil {
+      top: 0;
+      left: 0;
+    }
+    &--alexkady {
+      top: 0;
+      left: 0;
+    }
+    &--prokop {
+      top: 0;
+      left: 0;
+    }
+
+    &-image {
+      opacity: 0;
+
+      img {
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    padding-top: vw(35);
+    padding-bottom: vw(200);
+  }
+
+  &__title {
+    margin-bottom: vw(65);
+    color: #ffffff;
+
+    &-double {
+      position: relative;
+      color: #000000;
+
+      .part {
+        position: absolute;
+        top: 0;
+        transform: translateY(-1%);
+        z-index: 1;
+        font-family: $thirdFont;
+        color: $purpleColor;
+        font-size: vw(82);
+
+        &--text {
+          &-ho {
+            left: vw(16);
+            letter-spacing: vw(5);
+            transform: translateY(-6%);
+          }
+
+          &-use {
+            left: vw(111);
+          }
+
+          &-88 {
+            left: vw(260);
+            font-size: vw(100);
+            letter-spacing: vw(10);
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    .title__bg {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+}

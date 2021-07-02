@@ -1,12 +1,14 @@
 footer.footer
-  .footer__container.container 
-    .footer__row
-      address.footer__address Москва, Россия
-      a.footer__email(href="mailto:reklama@house88.ru") reklama@house88.ru
-    .footer__row
-      .footer__links 
-        a(href="#") Политика обработки персональных данных
+  .footer__container.container
+    .footer__flex
+      .footer__left
+        .footer__title Москва, Россия
+        .footer__row
+          a.footer__link(href="#") Политика обработки персональных данных
+      .footer__right
+        a.footer__title.footer__title--link(href="mailto:reklama@house88.ru") reklama@house88.ru
+        .footer__row
+          a.footer__link(href="#") TikTok
+          a.footer__link(href="#") Instagram
 
-      .footer__links 
-        a(href="#") TikTok
-        a(href="#") Instagram
+include _brief

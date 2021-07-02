@@ -1,19 +1,22 @@
 /* media */
 $media-list: (
-				'xxs': 375,
-				'xs': 560,
-				'sm': 767,
-				'md': 1079,
-				'lg': 1279,
-				'xl': 1599,
-				'xxl': 1900
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
 );
 
-
 /* шрифты */
-$mainFont: 'Roboto', sans-serif;
+$mainFont: "ALS Hauss", "Arial", sans-serif;
+$mainFont--book: "ALS Hauss Book", "Arial", sans-serif;
+$headingFont: "Druk Text Wide", "Arial", sans-serif;
+$secondFont: "Denistina", "Arial", sans-serif;
+$thirdFont: "Levi Brush", "Arial", sans-serif;
 
-$fs-main: 15px;
+$fs-main: vw(21);
 $fs-h1: 39px;
 $fs-h2: 31px;
 $fs-h3: 25px;
@@ -21,20 +24,21 @@ $fs-h4: 24px;
 $fs-h5: 19px;
 $fs-h6: 16px;
 
-
 /* цвета */
-$textMainColor: #52525A;
-$textTitleColor: #262C36;
+$textMainColor: #52525a;
+$textTitleColor: #262c36;
 $disableColor: #6b7285;
-$bgDisableColor: #E5E7E6;
-$bgGrayColor: #F4F4F4;
+$bgDisableColor: #e5e7e6;
+$bgGrayColor: #f4f4f4;
 
-$breadCrumbsColor: #BEBFCF;
-$breadCrumbsColorHover: #3E5DC8;
-$breadCrumbsColorLast: #262C36;
+$purpleColor: #6d16e8;
+
+$breadCrumbsColor: #bebfcf;
+$breadCrumbsColorHover: #3e5dc8;
+$breadCrumbsColorLast: #262c36;
 
 $selectColor1: #426cff;
-$selectColor2: #3E5DC8;
+$selectColor2: #3e5dc8;
 
 $linkMainColor: $selectColor1;
 $linkHoverColor: $selectColor2;

@@ -1,0 +1,70 @@
+.header {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: vw(36);
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: vw(1770);
+    margin: 0 auto;
+    padding: 0 vw(15);
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contact {
+    text-align: center;
+
+    &-email {
+      display: inline-block;
+      vertical-align: top;
+      font-family: $mainFont--book;
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: vw(-0.43);
+      text-decoration: none;
+
+      @include hover {
+        color: $purpleColor;
+      }
+    }
+
+    &-text {
+      margin-top: vw(-5);
+      font-size: vw(16);
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: vw(-0.32);
+      font-weight: 300;
+    }
+  }
+
+  &__button {
+    margin-left: vw(83);
+    //width: vw(240);
+    padding: vw(20) vw(35);
+    font-size: 21px;
+    line-height: 1;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include hover {
+      border-color: $purpleColor;
+      background-color: $purpleColor;
+    }
+  }
+}

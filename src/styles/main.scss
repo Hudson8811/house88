@@ -14,6 +14,9 @@
 @import "partials/main";
 
 /* components */
+@import "partials/title";
+@import "partials/field";
+@import "partials/sound-toggle";
 @import "partials/scroll";
 @import "partials/table";
 @import "partials/text-style";
@@ -28,10 +31,15 @@
 @import "partials/zoom";
 @import "partials/accordion";
 
-
 /*blocks*/
 @import "blocks/sections";
 @import "blocks/grid";
 
-
-
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/partnership";
+@import "blocks/line-section";
+@import "blocks/quality";
+@import "blocks/what-doing";
+@import "blocks/booking";
+@import "blocks/store";

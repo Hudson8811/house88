@@ -1,0 +1,31 @@
+.field {
+  display: block;
+
+  input {
+    display: block;
+    width: 100%;
+    height: vw(32);
+    min-height: 0;
+    margin: 0;
+    //padding: vw(7) 0;
+    color: #fff;
+    //font-size: vw(16);
+    line-height: (16 / 21);
+    border: none;
+    border-bottom: solid vw(2) rgba(#fff, 0.2);
+    border-radius: 0;
+    background-color: transparent;
+    appearance: none;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      color: rgba(#fff, 0.2);
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-bottom-color: #fff;
+    }
+  }
+}

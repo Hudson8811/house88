@@ -1,0 +1,108 @@
+.partnership {
+  padding: vw(120) 0 0m;
+
+  &__container {
+  }
+
+  &__title {
+    max-width: vw(630);
+    margin: 0 auto vw(170);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: vw(-83);
+  }
+
+  &__item {
+    margin-top: vw(83);
+    padding-left: vw(50);
+    padding-right: vw(50);
+
+    &--street-beat {
+      margin-left: vw(10);
+    }
+
+    &--formula-cinema {
+      margin-left: vw(10);
+    }
+
+    &--sportmaster {
+      margin-left: vw(45);
+    }
+
+    &--metro {
+      margin-left: vw(100);
+    }
+
+    &--tele2 {
+      margin-left: vw(106);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    width: vw(1188);
+    margin: vw(224) auto 0;
+    grid-template-columns: vw(252) vw(252) vw(252) vw(252);
+    grid-template-rows: vw(146) vw(82) vw(221) vw(55) vw(91) vw(55) vw(25) vw(
+        55
+      ) vw(223);
+    grid-gap: 0 vw(60);
+    grid-auto-flow: row;
+    overflow: hidden;
+  }
+  &__video {
+    //position: absolute;
+    /*top: 0;
+    left: 0;*/
+    width: vw(252);
+    min-height: vw(450);
+    background-color: rgba(#fff, 0.1);
+
+    &--one {
+      grid-row: 3 / span 3;
+    }
+
+    &--two {
+      grid-row: 1 / span 3;
+      grid-column-start: 2;
+    }
+
+    &--three {
+      grid-row: 2 / span 4;
+      grid-column-start: 3;
+    }
+
+    &--four {
+      grid-column-start: 4;
+      grid-row: 3 / span 3;
+    }
+
+    &--five {
+      grid-row-start: 9;
+    }
+
+    &--six {
+      grid-row: 5 / span 4;
+    }
+
+    &--seven {
+      grid-column-start: 3;
+      grid-row: 7 / span 3;
+    }
+
+    &--eight {
+      grid-column-start: 4;
+      grid-row-start: 9;
+    }
+
+    video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

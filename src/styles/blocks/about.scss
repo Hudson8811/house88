@@ -1,0 +1,52 @@
+.about {
+  padding: vw(120) 0 vw(180);
+
+  &__container {
+    max-width: vw(1620);
+  }
+
+  &__title {
+    margin-bottom: vw(160);
+  }
+
+  &__grid {
+    display: flex;
+  }
+
+  &__photo {
+    margin-right: vw(130);
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__main {
+    &-title {
+      margin-bottom: vw(46);
+      font-family: $headingFont;
+      font-size: vw(43);
+      color: #ffffff;
+      font-weight: 700;
+      line-height: (45.5 / 43);
+      letter-spacing: vw(-0.85);
+    }
+  }
+
+  &__item {
+    font-family: $mainFont--book;
+    color: #ffffff;
+    letter-spacing: vw(-0.43);
+
+    & + & {
+      margin-top: vw(17);
+    }
+
+    span {
+      background-color: $purpleColor;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+- const RADIO_BUTTONS = [{text: 'Челленджи и скетчи', id: 'ChallengesAndSketches'}, {text: 'Рубрики', id: 'Categories'}, {text: 'Имиджевые', id: 'ImageBased'}, {text: 'Вирусные', id: 'Viral'}, {text: 'Пранки', id: 'Pranks'}, {text: 'Помочь с выбором', id: 'HelpChoice'}];
+
+- const MEMBER_CHECKBOXES = [{text: 'Oreo', id: 'Oreo', img: 'oreo'}, {text: 'Daniilzhishko', id: 'Daniil', img: 'daniil'}, {text: 'Alex Kady', id: 'Alexkady', img: 'alexkady'}, {text: 'Seneamin', id: 'Seneamin', img: 'seneamin'}, {text: 'Zava_ly', id: 'Zava_ly', img: 'zavaly'}, {text: 'Prokop', id: 'Prokop', img: 'prokop'}, {text: 'Haribo', id: 'Haribo', img: 'haribo'}]
+
+.brief
+  .brief__title HOUSE 88
+  .brief__short Оставьте заявку на интересующую вас услугу или блогера и мы свяжемся с вами в ближайшее время чтобы обсудить детали.
+
+  form(action="#", method="post")
+    fieldset 
+      legend Тип интеграции
+      each item, index in RADIO_BUTTONS
+        .choice-button
+          if index === 1
+            input.visually-hidden(id="radio" + item.id, type="radio", name="type-integration", value= item.text, checked)
+          else
+            input.visually-hidden(id="radio" + item.id, type="radio", name="type-integration", value= item.text)
+          label(for="radio" + item.id)= item.text
+    
+    fieldset 
+      legend Выберите блогера (ов)
+
+      .choice-button 
+        input(id="checkboxHelpChoice", type="checkbox", name="help-choice", value="Помочь с выбором")
+
+      .brief__member-grid
+        each item in MEMBER_CHECKBOXES
+          .choice-button 
+            input.visually-hidden(id="checkbox" + item.id, type="checkbox", name= item.text, value= item.text)
+            label(for="checkbox" + item.id)
+              span 
+                img(src="images/brief/" + item.img + ".jpg", width="53", height="53", alt= item.text)
+              | #{item.text}
+    
+    fieldset 
+      label.field(aria-label="Как вас зовут?")
+        input(type="text", placeholder="Как вас зовут?")
+      label.field(aria-label="Название компании")
+        input(type="text", placeholder="Название компании")
+
+      .brief__fields-grid 
+        .brief__fields-column
+          label.field(aria-label="Ссылка на соцсети")
+            input(type="url", placeholder="Ссылка на соцсети")
+          label.field(aria-label="Доп. ссылка на соцсети")
+            input(type="url", placeholder="Доп. ссылка")
+
+        .brief__fields-column
+          label.field(aria-label="Ссылка на сайт")
+            input(type="url", placeholder="Ссылка на сайт")
+          label.field(aria-label="Доп. ссылка на сайт")
+            input(type="url", placeholder="Доп. ссылка")
+        
+      label(aria-label="Опишите вашу задачу")
+        input(type="text", placeholder="Опишите вашу задачу")
+
+      label(aria-label="Почта / Ник в Telegram")
+        input(type="text", placeholder="Почта / Ник в Telegram")
+  
+
+    .brief__form-bottom
+      .custom-button
+        input.visually-hidden(type="file", id="customFileBrief")
+        label(for="customFileBrief")
+          span.custom-button__icon
+            +icon('attach')(width="27", height="27")
+          | Прикрепить файлы
+      button.brief__form-send(type="submit") Отправить
+      .brief__form-consent Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a>

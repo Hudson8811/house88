@@ -1,0 +1,176 @@
+.line-section {
+  $self: &;
+  overflow: hidden;
+  padding: vw(115) 0 vw(92);
+
+  &--digital {
+    #{$self}__title {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        transform: translateX(0) translateY(0) rotate(-23deg);
+        width: vw(94);
+        height: vw(94);
+        background-image: url("../images/te-logo.svg");
+      }
+
+      &::before {
+        left: vw(128);
+        top: vw(-62);
+      }
+
+      &::after {
+        bottom: vw(-46);
+        right: vw(112);
+      }
+    }
+  }
+
+  &__container {
+    max-width: vw(1726);
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: vw(800);
+    margin-right: vw(126);
+    text-align: left;
+
+    &::before {
+      left: 0;
+      transform: translateX(0) translateY(-68%) rotate(-6deg);
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+
+    form {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: vw(437);
+    margin-right: vw(66);
+  }
+
+  &__field {
+    max-width: calc(50% - (2.70833vw / 2));
+    margin-top: vw(22);
+  }
+
+  &__list {
+    width: vw(472);
+
+    & + #{$self}__button {
+      left: vw(16);
+      margin-left: vw(-46);
+    }
+
+    h3 {
+      margin-bottom: vw(3);
+      display: inline-block;
+      vertical-align: top;
+      padding: vw(2) vw(6);
+      font-family: $mainFont;
+      font-size: vw(21);
+      line-height: (24.6 / 21);
+      font-weight: 400;
+      letter-spacing: vw(-0.43);
+      color: #ffffff;
+      background-color: $purpleColor;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: vw(3);
+    }
+
+    li {
+      display: block;
+      line-height: 1;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        padding: vw(0) vw(6);
+        font-family: $mainFont;
+        font-size: vw(21);
+        line-height: (24.6 / 21);
+        letter-spacing: vw(-0.43);
+        font-weight: 400;
+        color: #000000;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &__button {
+    $btn: &;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: vw(98) vw(81) vw(101) vw(117);
+    transform: translateX(5.75vw);
+    border: none;
+    background-color: $purpleColor;
+    cursor: pointer;
+    appearance: none;
+    transition: background-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      background-color: lighten($purpleColor, 10%);
+      #{$btn}-icon {
+        transform: translateX(1vw);
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: vw(174);
+      right: vw(46);
+      display: inline-block;
+      padding: vw(6) vw(7) vw(4) vw(11);
+      font-family: $headingFont;
+      font-size: vw(16);
+      letter-spacing: vw(-0.32);
+      font-weight: 700;
+      line-height: 1;
+      color: #ffffff;
+      text-transform: uppercase;
+      background-color: #000000;
+    }
+
+    &-icon {
+      width: vw(130);
+      height: vw(130);
+      transition: transform 0.3s ease;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        fill: #ffffff;
+      }
+    }
+  }
+}

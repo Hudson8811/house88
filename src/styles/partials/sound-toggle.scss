@@ -1,0 +1,42 @@
+.sound-toggle {
+  $self: &;
+  display: block;
+  width: vw(25);
+  height: vw(25);
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  &--no-muted {
+    #{$self}__icon {
+      &--off {
+        display: none;
+      }
+
+      &--on {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    svg {
+      display: block;
+      fill: #ffffff;
+    }
+
+    &--on {
+      display: none;
+    }
+  }
+}
