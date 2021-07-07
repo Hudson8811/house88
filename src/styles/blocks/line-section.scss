@@ -1,7 +1,7 @@
 .line-section {
   $self: &;
   overflow: hidden;
-  padding: vw(115) 0 vw(92);
+  //padding: vw(115) 0 vw(92);
 
   &--digital {
     #{$self}__title {
@@ -29,15 +29,25 @@
   }
 
   &__container {
-    max-width: vw(1726);
+    max-width: vw(1756);
     display: flex;
     align-items: center;
+
+    @include media(1200) {
+      max-width: none;
+    }
   }
 
   &__title {
     max-width: vw(800);
     margin-right: vw(126);
     text-align: left;
+
+    @include media(1200) {
+      margin-right: vw(80, 1200);
+
+      //font-size: vw(32, 1200);
+    }
 
     &::before {
       left: 0;
@@ -49,9 +59,14 @@
     display: flex;
     align-items: center;
 
+    @include media(1200) {
+      flex-grow: 1;
+    }
+
     form {
       display: flex;
       align-items: center;
+      width: 100%;
     }
   }
 
@@ -61,6 +76,13 @@
     justify-content: space-between;
     max-width: vw(437);
     margin-right: vw(66);
+
+    @include media(1200) {
+      max-width: none;
+
+      margin-right: vw(40, 1200);
+      flex-grow: 1;
+    }
   }
 
   &__field {
@@ -69,11 +91,16 @@
   }
 
   &__list {
-    width: vw(472);
+    max-width: vw(472);
+    flex-grow: 1;
+
+    @include media(1200) {
+      max-width: none;
+    }
 
     & + #{$self}__button {
-      left: vw(16);
-      margin-left: vw(-46);
+      //left: vw(16);
+      //margin-left: vw(-46);
     }
 
     h3 {
@@ -126,12 +153,17 @@
     justify-content: center;
     align-items: center;
     padding: vw(98) vw(81) vw(101) vw(117);
-    transform: translateX(5.75vw);
+    transform: translateX(5.05208vw);
     border: none;
     background-color: $purpleColor;
     cursor: pointer;
     appearance: none;
     transition: background-color 0.3s ease;
+
+    @include media(1200) {
+      margin-right: vw(-15, 1200);
+      transform: translateX(0);
+    }
 
     &:focus {
       outline: none;

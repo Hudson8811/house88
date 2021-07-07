@@ -3,10 +3,19 @@
   background-color: #ffffff;
 
   &__container {
+    @include media(1200) {
+      max-width: none;
+    }
   }
 
   &__title {
     margin-bottom: vw(157);
+
+    @include media(1200) {
+      max-width: vw(1000, 1200);
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .title__bg {
       color: #ffffff;
@@ -20,7 +29,12 @@
   }
 
   &__item {
+    width: 33.33;
     padding: 0 vw(20);
+
+    @include media(1200) {
+      padding: 0 vw(20, 1200);
+    }
 
     &-video {
       position: relative;
@@ -29,23 +43,19 @@
       margin: 0 auto;
       border-radius: vw(16);
 
-      video {
-        display: block;
-        width: 100%;
-        height: auto;
+      @include media(1200) {
+        width: vw(339, 1200);
+        border-radius: vw(16, 1200);
       }
-    }
-
-    &-toggle {
-      position: absolute;
-      right: vw(27);
-      bottom: vw(32);
-      z-index: 1;
     }
 
     &-info {
       margin-top: vw(62);
       text-align: center;
+
+      @include media(1200) {
+        font-size: vw(18, 1200);
+      }
     }
 
     &-title {
@@ -54,8 +64,12 @@
       font-weight: 700;
       color: #000000;
       line-height: 1;
-      letter-spacing: vw(-0.43);
+      letter-spacing: -0.02047em;
       text-transform: uppercase;
+
+      @include media(1200) {
+        font-size: vw(18, 1200);
+      }
     }
     &-text {
       font-family: $headingFont;
@@ -63,8 +77,12 @@
       color: #939393;
       line-height: 1;
       font-weight: 700;
-      letter-spacing: vw(-0.32);
+      letter-spacing: -0.02em;
       text-transform: uppercase;
+
+      @include media(1200) {
+        font-size: vw(14, 1200);
+      }
     }
   }
 }

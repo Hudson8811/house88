@@ -3,11 +3,17 @@
   display: block;
   width: vw(25);
   height: vw(25);
+  padding: 0;
   border: none;
   background-color: transparent;
   appearance: none;
   cursor: pointer;
   transition: opacity 0.3s ease;
+
+  @include media(1200) {
+    width: vw(25, 1200);
+    height: vw(25, 1200);
+  }
 
   &:focus {
     outline: none;
@@ -30,8 +36,13 @@
   }
 
   &__icon {
+    display: block;
+    width: 100%;
+
     svg {
       display: block;
+      width: 100%;
+      height: auto;
       fill: #ffffff;
     }
 

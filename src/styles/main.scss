@@ -9,6 +9,7 @@
 /*libs*/
 @import "./../../node_modules/swiper/swiper";
 @import "libs/select2.min.css";
+@import "libs/jquery.fancybox.css";
 
 /* main */
 @import "partials/main";
@@ -17,6 +18,8 @@
 @import "partials/title";
 @import "partials/field";
 @import "partials/sound-toggle";
+@import "partials/choice-button";
+@import "partials/file-button";
 @import "partials/scroll";
 @import "partials/table";
 @import "partials/text-style";
@@ -37,9 +40,13 @@
 
 @import "blocks/hero";
 @import "blocks/about";
+
+@import "blocks/video-box";
 @import "blocks/partnership";
 @import "blocks/line-section";
 @import "blocks/quality";
+@import "blocks/original-sound";
 @import "blocks/what-doing";
 @import "blocks/booking";
 @import "blocks/store";
+@import "blocks/brief";

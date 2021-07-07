@@ -2,10 +2,14 @@
   $self: &;
 
   background-color: #ffffff;
-  padding: vw(115) 0;
+  padding: vw(104) 0 vw(110);
 
   &__container {
     max-width: vw(1830);
+
+    @include media(1200) {
+      max-width: none;
+    }
   }
 
   &__flex {
@@ -39,7 +43,7 @@
   }
 
   &__row {
-    margin-top: vw(60);
+    margin-top: vw(55);
     display: flex;
     flex-wrap: wrap;
   }

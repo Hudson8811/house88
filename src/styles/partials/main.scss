@@ -1,5 +1,9 @@
 html {
   font-size: vw(21); //$fs-main;
+
+  @include media(1200) {
+    font-size: vw(18, 1200); //$fs-main;
+  }
 }
 body {
   font-family: $mainFont;
@@ -19,9 +23,13 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1330px;
-  padding: 0 15px;
+  max-width: vw(1330);
+  padding: 0 vw(15);
   margin: 0 auto;
+
+  @include media(1200) {
+    padding: 0 vw(15, 1200);
+  }
 }
 
 .visually-hidden {

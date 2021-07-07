@@ -15,7 +15,7 @@
         <div class="header__contact"><a class="header__contact-email" href="mailto:info@house88.ru">info@house88.ru</a>
           <div class="header__contact-text">По всем вопросам</div>
         </div>
-        <button class="header__button" type="button">Выбрать блогера</button>
+        <button class="header__button __js_open-brief" type="button">Выбрать блогера</button>
       </div>
     </header>
     <main class="main">
@@ -273,112 +273,113 @@
         </div>
       </div>
     </footer>
-    <div class="brief">
+    <div class="brief" id="brief" style="display: none;">
       <div class="brief__title">HOUSE 88</div>
-      <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и мы свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
-      <form action="#" method="post">
-        <fieldset> 
+      <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
+      <form class="brief__form" action="#" method="post" enctype="multipart/form-data">
+        <fieldset class="brief__form-fieldset">
           <legend>Тип интеграции</legend>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioChallengesAndSketches" type="radio" name="type-integration" value="Челленджи и скетчи">
             <label for="radioChallengesAndSketches">Челленджи и скетчи</label>
           </div>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioCategories" type="radio" name="type-integration" value="Рубрики" checked>
             <label for="radioCategories">Рубрики</label>
           </div>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioImageBased" type="radio" name="type-integration" value="Имиджевые">
             <label for="radioImageBased">Имиджевые</label>
           </div>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioViral" type="radio" name="type-integration" value="Вирусные">
             <label for="radioViral">Вирусные</label>
           </div>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioPranks" type="radio" name="type-integration" value="Пранки">
             <label for="radioPranks">Пранки</label>
           </div>
-          <div class="choice-button">
+          <div class="brief__radio choice-button">
             <input class="visually-hidden" id="radioHelpChoice" type="radio" name="type-integration" value="Помочь с выбором">
             <label for="radioHelpChoice">Помочь с выбором</label>
           </div>
         </fieldset>
-        <fieldset> 
+        <fieldset class="brief__form-fieldset">
           <legend>Выберите блогера (ов)</legend>
-          <div class="choice-button"> 
-            <input id="checkboxHelpChoice" type="checkbox" name="help-choice" value="Помочь с выбором">
+          <div class="brief__checkbox choice-button"> 
+            <input class="visually-hidden" id="checkboxHelpChoice" type="checkbox" name="help-choice" value="Помочь с выбором">
+            <label for="checkboxHelpChoice">Помочь с выбором</label>
           </div>
           <div class="brief__member-grid">
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxOreo" type="checkbox" name="Oreo" value="Oreo">
-              <label for="checkboxOreo"><span> <img src="images/brief/oreo.jpg" width="53" height="53" alt="Oreo"></span>Oreo</label>
+              <label for="checkboxOreo"><span class="choice-button__image"><img src="images/brief/oreo.jpg" width="53" height="53" alt="Oreo"></span>Oreo</label>
             </div>
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxDaniil" type="checkbox" name="Daniilzhishko" value="Daniilzhishko">
-              <label for="checkboxDaniil"><span> <img src="images/brief/daniil.jpg" width="53" height="53" alt="Daniilzhishko"></span>Daniilzhishko</label>
+              <label for="checkboxDaniil"><span class="choice-button__image"><img src="images/brief/daniil.jpg" width="53" height="53" alt="Daniilzhishko"></span>Daniilzhishko</label>
             </div>
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxAlexkady" type="checkbox" name="Alex Kady" value="Alex Kady">
-              <label for="checkboxAlexkady"><span> <img src="images/brief/alexkady.jpg" width="53" height="53" alt="Alex Kady"></span>Alex Kady</label>
+              <label for="checkboxAlexkady"><span class="choice-button__image"><img src="images/brief/alexkady.jpg" width="53" height="53" alt="Alex Kady"></span>Alex Kady</label>
             </div>
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxSeneamin" type="checkbox" name="Seneamin" value="Seneamin">
-              <label for="checkboxSeneamin"><span> <img src="images/brief/seneamin.jpg" width="53" height="53" alt="Seneamin"></span>Seneamin</label>
+              <label for="checkboxSeneamin"><span class="choice-button__image"><img src="images/brief/seneamin.jpg" width="53" height="53" alt="Seneamin"></span>Seneamin</label>
             </div>
-            <div class="choice-button"> 
-              <input class="visually-hidden" id="checkboxZava_ly" type="checkbox" name="Zava_ly" value="Zava_ly">
-              <label for="checkboxZava_ly"><span> <img src="images/brief/zavaly.jpg" width="53" height="53" alt="Zava_ly"></span>Zava_ly</label>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxZavaly" type="checkbox" name="Zava_ly" value="Zava_ly">
+              <label for="checkboxZavaly"><span class="choice-button__image"><img src="images/brief/zavaly.jpg" width="53" height="53" alt="Zava_ly"></span>Zava_ly</label>
             </div>
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxProkop" type="checkbox" name="Prokop" value="Prokop">
-              <label for="checkboxProkop"><span> <img src="images/brief/prokop.jpg" width="53" height="53" alt="Prokop"></span>Prokop</label>
+              <label for="checkboxProkop"><span class="choice-button__image"><img src="images/brief/prokop.jpg" width="53" height="53" alt="Prokop"></span>Prokop</label>
             </div>
-            <div class="choice-button"> 
+            <div class="brief__checkbox choice-button choice-button--image">
               <input class="visually-hidden" id="checkboxHaribo" type="checkbox" name="Haribo" value="Haribo">
-              <label for="checkboxHaribo"><span> <img src="images/brief/haribo.jpg" width="53" height="53" alt="Haribo"></span>Haribo</label>
+              <label for="checkboxHaribo"><span class="choice-button__image"><img src="images/brief/haribo.jpg" width="53" height="53" alt="Haribo"></span>Haribo</label>
             </div>
           </div>
         </fieldset>
-        <fieldset> 
-          <label class="field" aria-label="Как вас зовут?">
+        <fieldset class="brief__form-fieldset">
+          <label class="brief__field field" aria-label="Как вас зовут?">
             <input type="text" placeholder="Как вас зовут?">
           </label>
-          <label class="field" aria-label="Название компании">
+          <label class="brief__field field" aria-label="Название компании">
             <input type="text" placeholder="Название компании">
           </label>
           <div class="brief__fields-grid"> 
             <div class="brief__fields-column">
-              <label class="field" aria-label="Ссылка на соцсети">
+              <label class="brief__field field" aria-label="Ссылка на соцсети">
                 <input type="url" placeholder="Ссылка на соцсети">
               </label>
-              <label class="field" aria-label="Доп. ссылка на соцсети">
+              <label class="brief__field field" aria-label="Доп. ссылка на соцсети">
                 <input type="url" placeholder="Доп. ссылка">
               </label>
             </div>
             <div class="brief__fields-column">
-              <label class="field" aria-label="Ссылка на сайт">
+              <label class="brief__field field" aria-label="Ссылка на сайт">
                 <input type="url" placeholder="Ссылка на сайт">
               </label>
-              <label class="field" aria-label="Доп. ссылка на сайт">
+              <label class="brief__field field" aria-label="Доп. ссылка на сайт">
                 <input type="url" placeholder="Доп. ссылка">
               </label>
             </div>
           </div>
-          <label aria-label="Опишите вашу задачу">
+          <label class="brief__field field" aria-label="Опишите вашу задачу">
             <input type="text" placeholder="Опишите вашу задачу">
           </label>
-          <label aria-label="Почта / Ник в Telegram">
+          <label class="brief__field field" aria-label="Почта / Ник в Telegram">
             <input type="text" placeholder="Почта / Ник в Telegram">
           </label>
         </fieldset>
         <div class="brief__form-bottom">
-          <div class="custom-button">
+          <div class="brief__form-file file-button">
             <input class="visually-hidden" type="file" id="customFileBrief">
-            <label for="customFileBrief"><span class="custom-button__icon">
+            <label for="customFileBrief"><span class="file-button__icon">
                 <svg width="27" height="27">
                   <use xlink:href="images/sprite.svg#attach"></use>
-                </svg></span>Прикрепить файлы</label>
+                </svg></span><span class="file-button__text">Прикрепить файлы</span></label>
           </div>
           <button class="brief__form-send" type="submit">Отправить</button>
           <div class="brief__form-consent">Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a></div>

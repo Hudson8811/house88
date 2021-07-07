@@ -15,6 +15,7 @@
   }
 
   &__logo {
+    width: vw(210);
     margin-right: auto;
 
     img {
@@ -53,14 +54,15 @@
 
   &__button {
     margin-left: vw(83);
-    //width: vw(240);
     padding: vw(20) vw(35);
-    font-size: 21px;
+    font-size: vw(21);
     line-height: 1;
     color: #ffffff;
     border: 1px solid #ffffff;
     background-color: transparent;
     cursor: pointer;
+
+    transition: all 0.3s ease;
 
     @include hover {
       border-color: $purpleColor;

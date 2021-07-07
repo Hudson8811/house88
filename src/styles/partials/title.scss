@@ -8,7 +8,11 @@
   line-height: 1.0457;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: vw(-1.01);
+  letter-spacing: -0.0198em;
+
+  @include media(1200) {
+    font-size: vw(32, 1200);
+  }
 
   &::before {
     content: attr(data-before);

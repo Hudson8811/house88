@@ -1,0 +1,123 @@
+.brief {
+  background-color: transparent;
+  max-width: vw(915);
+  padding: vw(170) vw(79);
+
+  &__title {
+    margin-bottom: vw(40);
+    font-family: $headingFont;
+    font-size: vw(46);
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: vw(-0.92);
+    font-weight: 700;
+  }
+
+  &__short {
+    max-width: vw(640);
+    margin-bottom: vw(90);
+    font-size: vw(21);
+    line-height: 1.09523;
+    color: #ffffff;
+    letter-spacing: vw(-0.43);
+  }
+
+  &__form {
+    &-fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      border: none;
+    }
+
+    &-fieldset + &-fieldset {
+      margin-top: vw(90);
+    }
+
+    legend {
+      font-size: vw(21);
+      line-height: 1.09523;
+      color: #ffffff;
+      letter-spacing: vw(-0.43);
+      font-weight: 400;
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      margin-top: vw(90);
+    }
+
+    &-file {
+      margin-right: vw(24);
+      flex-shrink: 0;
+    }
+
+    &-send {
+      min-width: vw(186);
+      margin-right: vw(24);
+      flex-shrink: 0;
+      padding: vw(13) vw(25);
+      font-family: $mainFont--book;
+      font-size: vw(21);
+      color: #ffffff;
+      line-height: 1;
+      text-align: center;
+      appearance: none;
+      cursor: pointer;
+
+      border: solid vw(1) $purpleColor;
+      border-radius: vw(25);
+      background-color: $purpleColor;
+      transition: background-color 0.3s ease;
+
+      @include hover {
+        background-color: lighten($purpleColor, 10%);
+      }
+    }
+
+    &-consent {
+      max-width: vw(250);
+      font-size: vw(14);
+      line-height: 1;
+      color: #ffffff;
+      letter-spacing: vw(-0.29);
+
+      a {
+        color: $purpleColor;
+
+        @include hover {
+          color: $purpleColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__radio {
+    margin-top: vw(16);
+    margin-right: vw(16);
+  }
+
+  &__checkbox {
+    min-width: vw(230);
+    margin-top: vw(22);
+    margin-right: vw(110);
+  }
+
+  &__fields-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__fields-column {
+    width: calc(50% - 1.04166vw); //40
+  }
+
+  &__field {
+    width: 100%;
+    margin-top: vw(52);
+  }
+}

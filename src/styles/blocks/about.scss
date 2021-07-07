@@ -1,8 +1,12 @@
 .about {
-  padding: vw(120) 0 vw(180);
+  padding: vw(172) 0 vw(188);
 
   &__container {
-    max-width: vw(1620);
+    max-width: vw(1650);
+
+    @include media(1200) {
+      max-width: none;
+    }
   }
 
   &__title {
@@ -15,7 +19,10 @@
 
   &__photo {
     margin-right: vw(130);
-    flex-shrink: 0;
+
+    @include media(1200) {
+      margin-right: vw(50, 1200);
+    }
 
     img {
       display: block;
@@ -25,27 +32,49 @@
   }
 
   &__main {
+    max-width: vw(510);
+
+    @include media(1200) {
+      max-width: vw(420, 1200);
+    }
+
     &-title {
-      margin-bottom: vw(46);
+      margin-bottom: vw(40);
       font-family: $headingFont;
       font-size: vw(43);
+
       color: #ffffff;
       font-weight: 700;
-      line-height: (45.5 / 43);
-      letter-spacing: vw(-0.85);
+      line-height: 1.1;
+      letter-spacing: -0.01976em;
+
+      @include media(1200) {
+        margin-bottom: vw(32, 1200);
+        font-family: $headingFont;
+        font-size: vw(32, 1200);
+      }
     }
   }
 
   &__item {
     font-family: $mainFont--book;
     color: #ffffff;
-    letter-spacing: vw(-0.43);
+    line-height: 1.25;
+    letter-spacing: -0.02047em;
+
+    @include media(1200) {
+    }
 
     & + & {
-      margin-top: vw(17);
+      margin-top: vw(25);
+
+      @include media(1200) {
+        margin-top: vw(16, 1200);
+      }
     }
 
     span {
+      white-space: nowrap;
       background-color: $purpleColor;
     }
   }

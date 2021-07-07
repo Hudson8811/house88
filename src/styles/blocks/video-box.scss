@@ -1,0 +1,48 @@
+.video-box {
+  $self: &;
+  position: relative;
+  overflow: hidden;
+
+  &--play {
+    #{$self}__poster {
+      img {
+        opacity: 0;
+      }
+    }
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__poster {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    z-index: 1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: vw(30);
+    bottom: vw(24);
+    z-index: 1;
+
+    @include media(1200) {
+      right: vw(30, 1200);
+      bottom: vw(24, 1200);
+    }
+  }
+}

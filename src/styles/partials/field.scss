@@ -4,12 +4,10 @@
   input {
     display: block;
     width: 100%;
-    height: vw(32);
     min-height: 0;
     margin: 0;
-    //padding: vw(7) 0;
+    padding: vw(7) 0;
     color: #fff;
-    //font-size: vw(16);
     line-height: (16 / 21);
     border: none;
     border-bottom: solid vw(2) rgba(#fff, 0.2);
@@ -17,6 +15,11 @@
     background-color: transparent;
     appearance: none;
     transition: border-color 0.3s ease;
+
+    @include media(1200) {
+      padding: vw(7, 1200) 0;
+      border-bottom-width: vw(2, 1200);
+    }
 
     &::placeholder {
       color: rgba(#fff, 0.2);

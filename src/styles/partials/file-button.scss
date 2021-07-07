@@ -1,0 +1,48 @@
+.file-button {
+  $self: &;
+  display: inline-block;
+  vertical-align: top;
+
+  &__icon {
+    margin-right: vw(12);
+
+    svg {
+      display: block;
+      width: vw(27);
+      height: vw(27);
+      fill: rgba(#fff, 0.21);
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &__text {
+    font-family: $mainFont--book;
+    font-size: vw(19);
+    color: rgba(#fff, 0.21);
+    line-height: 1;
+    transition: all 0.3s ease;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: vw(10) vw(25);
+    border: vw(1) solid rgba(#fff, 0.21);
+    border-radius: vw(25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include hover {
+      border-color: $purpleColor;
+
+      #{$self}__text {
+        color: #ffffff;
+      }
+
+      #{$self}__icon svg {
+        fill: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.choice-button {
+  $self: &;
+  display: inline-block;
+  vertical-align: top;
+
+  &--image {
+    label {
+      text-align: left;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: vw(-69);
+        z-index: 1;
+        transform: translateY(-50%) translateX(-50%);
+        width: vw(21);
+        height: vw(21);
+        border-radius: 50%;
+        background-color: $purpleColor;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: vw(-16);
+    transform: translateY(-50%) translateX(-100%);
+    width: vw(53);
+    height: vw(53);
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include media(1200) {
+      left: vw(-16, 1200);
+      width: vw(53, 1200);
+      height: vw(53, 1200);
+    }
+  }
+
+  label {
+    position: relative;
+    display: block;
+    padding: vw(10) vw(25);
+    font-family: $mainFont--book;
+    font-size: vw(19);
+    color: rgba(#fff, 0.21);
+    line-height: 1;
+    border: 1px solid rgba(#fff, 0.21);
+    border-radius: vw(21);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include media(1200) {
+      padding: vw(10, 1200) vw(25, 1200);
+      font-size: vw(19, 1200);
+      border-radius: vw(21, 1200);
+    }
+
+    @include hover {
+      border-color: $purpleColor;
+      color: #fff;
+    }
+  }
+
+  input:checked ~ label {
+    background-color: $purpleColor;
+    border-color: $purpleColor;
+    color: #fff;
+    cursor: default;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

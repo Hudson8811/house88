@@ -3,13 +3,14 @@
 
   &__photo {
     position: relative;
-    height: vw(1500);
+    height: vw(1272);
     background-color: #4c5769;
 
-    img {
+    > img {
       display: block;
       width: 100%;
       height: auto;
+      //filter: invert(1);
     }
   }
 
@@ -20,6 +21,8 @@
     top: 0;
     bottom: 0;
     z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
   }
 
   &__member {
@@ -28,6 +31,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    // opacity: 0.6;
 
     &--hover {
       #{$member}-image {
@@ -40,42 +44,102 @@
     }
 
     &--seneamin {
-      top: 0;
-      left: 0;
+      width: vw(571);
+      top: vw(66);
+      left: vw(-77);
+
+      #{$member}-text {
+        top: 44.95%;
+        left: 33%;
+      }
     }
+
     &--oreo {
-      top: 0;
-      left: 0;
+      width: vw(569);
+      top: vw(-8);
+      left: vw(171);
+
+      #{$member}-text {
+        top: 41.25%;
+        left: 26%;
+      }
     }
+
     &--haribo {
-      top: 0;
-      left: 0;
+      width: vw(570);
+      top: vw(-19);
+      left: vw(396);
+
+      #{$member}-text {
+        top: 48.55%;
+        left: 37.5%;
+      }
     }
+
     &--zavaly {
-      top: 0;
-      left: 0;
+      width: vw(704);
+      top: vw(-113);
+      left: vw(553);
+
+      #{$member}-text {
+        top: 41.15%;
+        left: 39%;
+      }
     }
+
     &--smmagnat {
-      top: 0;
-      left: 0;
+      width: vw(524);
+      top: vw(19);
+      left: vw(795);
+
+      #{$member}-text {
+        top: 35.85%;
+        left: 39%;
+      }
     }
+
     &--daniil {
-      top: 0;
-      left: 0;
+      width: vw(570);
+      top: vw(-8);
+      left: vw(956);
+
+      #{$member}-text {
+        top: 46.15%;
+        left: 36%;
+      }
     }
+
     &--alexkady {
-      top: 0;
-      left: 0;
+      width: vw(570);
+      top: vw(-5);
+      left: vw(1176);
+
+      #{$member}-text {
+        top: 38.55%;
+        left: 41%;
+      }
     }
+
     &--prokop {
-      top: 0;
-      left: 0;
+      width: vw(570);
+      top: vw(-12);
+      left: vw(1398);
+
+      #{$member}-text {
+        top: 49.85%;
+        left: 39%;
+      }
     }
 
     &-image {
       opacity: 0;
+      transition: opacity 0.3s ease;
 
       img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        height: auto;
       }
     }
 
@@ -83,6 +147,24 @@
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 0;
+      padding: 0 vw(15);
+      font-family: $secondFont;
+      font-size: vw(55);
+      line-height: 1;
+      color: #ffffff;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: vw(37);
+        background-color: #000000;
+      }
     }
   }
 
@@ -135,6 +217,24 @@
     .title__bg {
       background-color: #000000;
       color: #ffffff;
+    }
+
+    &-double {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 50%;
+        top: vw(2);
+        transform: translateX(-50%);
+        z-index: 1;
+        content: attr(data-before);
+        font-family: $thirdFont;
+        font-size: vw(86);
+        color: $purpleColor;
+        font-weight: 400;
+        letter-spacing: normal;
+      }
     }
   }
 }

@@ -16,29 +16,29 @@ block vars
 			{n: 'logo-tele2', w: '143', h: '54', alt: 'Tele2'}
 		];
 
-		const FILTERS = [{text: 'Челленджи и скетчи', target: '#'}, {text: 'Рубрики', target: '#'}, {text: 'Имиджевые', target: '#'}, {text: 'Вирусные', target: '#'}, {text: 'Пранки', target: '#'}];
+		const FILTERS = [{text: 'Челленджи и скетчи', target: 'challenges-and-sketches'}, {text: 'Рубрики', target: 'categories'}, {text: 'Имиджевые', target: 'image-based'}, {text: 'Вирусные', target: 'viral'}, {text: 'Пранки', target: 'pranks'}];
 
 		const BOOKING_CARDS = [
-			{name: 'Oreo', img: 'booking-oreo', smiles: ['1', '2'], social: [{name: 'ТикТок', link: '#', count: '780 000'}, {name: 'Инстаграм ', link: '#', count: '18 800'}]},
-			{name: 'Daniil', img: 'booking-daniil', smiles: ['3', '2'], social: [{name: 'ТикТок', link: '#', count: '705 000'}, {name: 'Инстаграм ', link: '#', count: '40 600'}]},
-			{name: 'Alexkady', img: 'booking-alexkady', smiles: ['4', '5'], social: [{name: 'ТикТок', link: '#', count: '975 000'}, {name: 'Инстаграм ', link: '#', count: '21 300'}]},
-			{name: 'Seneamin', img: 'booking-seneamin', smiles: ['6', '7'], social: [{name: 'ТикТок', link: '#', count: '1 900 000'}, {name: 'Инстаграм ', link: '#', count: '30 500'}]},
-			{name: 'Prokop', img: 'booking-prokop', smiles: ['8', '9'], social: [{name: 'ТикТок', link: '#', count: '1 000 000'}, {name: 'Инстаграм ', link: '#', count: '13 600'}]},
-			{name: 'Zavaly', img: 'booking-zavaly', smiles: ['10', '11'], social: [{name: 'ТикТок', link: '#', count: '1 900 000'}, {name: 'Инстаграм ', link: '#', count: '36 400'}]},
-			{name: 'Haribo', img: 'booking-haribo', smiles: ['6', '12'], social: [{name: 'ТикТок', link: '#', count: '720 000'}, {name: 'Инстаграм ', link: '#', count: '106 000'}]}
+			{name: 'Oreo', img: 'booking-oreo', smiles: ['1', '2'], social: [{name: 'ТикТок', link: '#', count: '780 000'}, {name: 'Инстаграм ', link: '#', count: '18 800'}], member: 'Oreo', category: 'challenges-and-sketches, categories'},
+			{name: 'Daniil', img: 'booking-daniil', smiles: ['3', '2'], social: [{name: 'ТикТок', link: '#', count: '705 000'}, {name: 'Инстаграм ', link: '#', count: '40 600'}], member: 'Daniil', category: 'viral'},
+			{name: 'Alexkady', img: 'booking-alexkady', smiles: ['4', '5'], social: [{name: 'ТикТок', link: '#', count: '975 000'}, {name: 'Инстаграм ', link: '#', count: '21 300'}], member: 'Alexkady', category: 'challenges-and-sketches'},
+			{name: 'Seneamin', img: 'booking-seneamin', smiles: ['6', '7'], social: [{name: 'ТикТок', link: '#', count: '1 900 000'}, {name: 'Инстаграм ', link: '#', count: '30 500'}], member: 'Seneamin', category: 'challenges-and-sketches, pranks'},
+			{name: 'Prokop', img: 'booking-prokop', smiles: ['8', '9'], social: [{name: 'ТикТок', link: '#', count: '1 000 000'}, {name: 'Инстаграм ', link: '#', count: '13 600'}], member: 'Prokop', category: 'viral'},
+			{name: 'Zavaly', img: 'booking-zavaly', smiles: ['10', '11'], social: [{name: 'ТикТок', link: '#', count: '1 900 000'}, {name: 'Инстаграм ', link: '#', count: '36 400'}], member: 'Zavaly', category: 'image-based, pranks'},
+			{name: 'Haribo', img: 'booking-haribo', smiles: ['6', '12'], social: [{name: 'ТикТок', link: '#', count: '720 000'}, {name: 'Инстаграм ', link: '#', count: '106 000'}], member: 'Haribo', category: 'categories'}
 		];
 
 		const STORE_CARDS = [{img: 'store-1', name: 'Наклейки House88', link: '#'}, {img: 'store-2', name: 'Картины от Zavaly', link: '#'}, {img: 'store-2', name: 'Браслеты от Seneamin', link: '#'}];
-		
+
 		const HERO_MEMBERS = [
-			{mod: 'seneamin', img: { n:'1', w: '748', h: '2681'}, text: 'seneamin'},
-			{mod: 'oreo', img: { n:'2', w: '743', h: '2525'}, text: 'oreowhiteboy'},
-			{mod: 'haribo', img: { n:'3', w: '822', h: '2591'}, text: 'haribo'},
-			{mod: 'zavaly', img: { n:'4', w: '726', h: '2542'}, text: 'zava_ly'},
-			{mod: 'smmagnat', img: { n:'', w: '', h: ''}, text: 'smmagnat'},
-			{mod: 'daniil', img: { n:'5', w: '651', h: '2280'}, text: 'danil_co'},
-			{mod: 'alexkady', img: { n:'6', w: '564', h: '2427'}, text: 'alex_kady'},
-			{mod: 'prokop', img: { n:'', w: '', h: ''}, text: 'prokop'}
+			{mod: 'seneamin', img: { n:'1n', w: '1464', h: '3145'}, text: 'seneamin'},
+			{mod: 'oreo', img: { n:'2n', w: '1464', h: '3145'}, text: 'oreowhiteboy'},
+			{mod: 'haribo', img: { n:'3n', w: '1464', h: '3145'}, text: 'haribo'},
+			{mod: 'zavaly', img: { n:'4n', w: '1464', h: '3145'}, text: 'zava_ly'},
+			{mod: 'smmagnat', img: { n:'5n', w: '1464', h: '3145'}, text: 'smmagnat'},
+			{mod: 'daniil', img: { n:'6n', w: '1464', h: '3145'}, text: 'danil_co'},
+			{mod: 'alexkady', img: { n:'7n', w: '1464', h: '3145'}, text: 'alex_kady'},
+			{mod: 'prokop', img: { n:'8n', w: '1464', h: '3145'}, text: 'prokop'}
 		];
 
 		const PARTNERSHIP_VIDEOS = [
@@ -49,7 +49,7 @@ block vars
 			{video: 'lenses', mod: 'five'},
 			{video: 'street-beat', mod: 'six'},
 			{video: 'pubg', mod: 'seven'},
-			{video: 'metro', mod: 'eight'}
+			{video: 'sportmaster', mod: 'eight'}
 		];
 
 		const SERIALS = [
@@ -65,16 +65,22 @@ block main
 				img(src="images/hero/main-photo.jpg", width="1920", height="2200", usemap="#image-map", alt="Совместное фото тиктокеров house88")
 				.hero__grid 
 					each item, index in HERO_MEMBERS
-						div(class="hero__member hero__member--" + item.mod + (index === 17 ? ' hero__member--hover' : ''))
+						div(class="hero__member hero__member--" + item.mod + (index === 44 ? ' hero__member--hover' : ''))
 							.hero__member-image
-								img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)
+								if item.img.n
+									img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)
 							.hero__member-text= item.text
 
-
 				map(name="image-map")
-						area(target="", alt="", title="", href="", coords="176,202,172,183,172,148,204,122,259,136,267,153,265,185,278,207,269,233,250,253,256,270,276,296,300,309,303,323,300,358,303,387,308,413,310,464,310,499,306,537,303,589,303,626,291,667,281,715,273,796,271,830,250,884,242,933,252,954,256,1006,281,1037,337,1047,339,1064,301,1078,237,1076,200,1078,206,1105,228,1130,235,1149,222,1161,189,1171,161,1166,142,1152,120,1127,128,1091,123,1057,100,1020,96,955,106,827,110,691,100,598,108,533,71,518,55,501,54,420,66,355,79,306,135,282,161,272,178,255,191,241,186,228,169,219", shape="poly")
-					
-				 
+					area(target="" alt="seneamin" title="" href="Seneamin" coords="64,356,79,310,157,269,184,247,164,196,174,140,206,122,245,130,267,157,273,198,276,223,250,256,262,279,281,303,310,323,291,357,310,440,306,524,306,593,291,686,269,805,249,914,249,956,257,1012,274,1032,340,1046,342,1063,300,1077,193,1078,211,1116,237,1153,215,1164,174,1164,149,1159,123,1131,128,1101,132,1065,103,1025,103,904,113,736,98,668,96,612,106,533,54,505" shape="poly")
+					area(target="" alt="oreo" title="" href="Oreo" coords="378,270,337,194,347,165,373,145,423,146,447,158,461,179,454,226,440,258,456,275,540,308,568,389,559,603,544,637,551,862,568,1011,566,1060,581,1096,561,1116,527,1116,512,1065,500,1041,486,1043,434,1079,398,1089,386,1089,391,1064,422,1021,408,935,356,753,334,643,308,604,310,431,296,356,313,322,357,305" shape="poly")
+					area(target="" alt="haribo" title="" href="Haribo" coords="566,369,578,299,615,269,617,250,561,150,588,111,624,104,652,121,669,146,680,170,664,196,671,209,705,240,758,270,797,299,815,457,797,491,773,499,778,562,781,632,754,664,764,752,775,813,778,891,771,1001,778,1054,724,1090,671,1093,703,1040,680,1032,578,1056,569,1027,613,996,595,810,574,654,559,593,569,455" shape="poly")
+					area(target="" alt="zavaly" title="" href="Zavaly" coords="812,288,841,283,861,187,880,139,917,129,941,142,958,173,975,251,975,285,1010,309,1026,421,1037,551,1046,628,1032,667,1009,668,995,648,980,721,988,863,966,855,941,963,948,1038,951,1064,905,1065,902,994,917,943,915,841,924,784,907,658,900,672,887,745,880,799,870,850,859,931,863,1025,861,1094,856,1111,824,1118,808,1113,825,1004,808,868,815,835,822,768,814,684,798,665,776,639,781,597,776,500,808,487,825,439,802,322" shape="poly")
+					area(target="" alt="smmagnat" title="" href="Smmagnat" coords="980,278,1017,254,1024,229,1005,186,1020,130,1058,108,1087,121,1097,181,1088,232,1100,255,1171,284,1180,315,1177,377,1175,530,1154,613,1151,652,1138,666,1134,839,1124,938,1121,1006,1138,1050,1114,1059,1083,1047,1068,1016,1043,1003,1020,1028,993,1043,970,1037,990,991,990,921,983,787,985,703,1009,680,1051,648,1049,611,1041,552,1032,443,1019,338,1014,306,993,294" shape="poly")
+					area(target="" alt="daniil" title="" href="Daniil" coords="1185,318,1236,301,1258,275,1239,238,1248,182,1290,165,1331,187,1327,258,1307,287,1385,328,1389,472,1382,625,1334,671,1304,973,1300,1032,1280,1044,1255,1032,1233,1018,1195,1013,1182,944,1156,816,1158,664,1158,610,1173,543,1178,433,1178,374" shape="poly")
+					area(target="" alt="alexkady" title="" href="Alexkady" coords="1390,326,1433,266,1416,217,1426,151,1475,132,1517,159,1514,198,1499,241,1585,307,1573,441,1565,662,1592,862,1582,984,1562,1061,1541,1081,1494,1078,1509,1013,1443,1013,1387,1017,1363,1005,1380,993,1443,971,1450,910,1421,772,1399,681,1367,660,1385,626" shape="poly")
+					area(target="" alt="prokop" title="" href="Prokop" coords="1579,294,1630,263,1644,241,1620,165,1638,111,1674,97,1725,117,1730,161,1722,219,1801,273,1808,372,1789,507,1771,606,1774,667,1779,759,1796,843,1795,965,1786,1059,1772,1098,1728,1098,1718,1071,1735,1020,1677,1023,1625,1013,1584,1015,1596,962,1623,922,1630,854,1611,760,1588,655,1576,576" shape="poly")
+
 
 			.hero__main
 				.container
@@ -85,7 +91,7 @@ block main
 							span.part.part--text-88 88
 					
 					.hero__text.title
-						span.title__bg Внимание <span class="hero__title-double" data-before="30">30</span> миллионнов
+						span.title__bg Внимание <span class="hero__text-double" data-before="30">30</span> миллионнов
 						span.title__bg человек для вашего продукта
 						span.title__bg или услуги
 	
@@ -150,12 +156,14 @@ block main
 				| контент в ТикТок
 
 			ul.quality__list
-				each item in SERIALS
+				each item, index in SERIALS
 					li.quality__item
-						.quality__item-video 
-							video(autoplay="true", muted="true", loop="true")
+						.quality__item-video.video-box
+							.video-box__poster 
+								img(src="images/video/quality-" + (index + 1) + ".jpg", alt="")
+							video(muted="true", loop="true")
 								source(src="images/video/" + item.video + ".mp4", type="video/mp4")
-							button.quality__item-toggle.sound-toggle(type="button")
+							button.video-box__toggle.sound-toggle(type="button")
 								span.sound-toggle__icon.sound-toggle__icon--off 
 									+icon('sound-off')(width="25", height="25")
 								span.sound-toggle__icon.sound-toggle__icon--on
@@ -169,10 +177,10 @@ block main
 		.what-doing__container.container 
 			.what-doing__section.what-doing__section--trends
 				.what-doing__section-media
-					.what-doing__section-video
+					.what-doing__section-video.video-box
 						video(autoplay="true", muted="true", loop="true")
 							source(src="images/video/global-trends.mp4", type="video/mp4")
-						button.what-doing__section-media-toggle.sound-toggle(type="button")
+						button.video-box__toggle.sound-toggle(type="button")
 							span.sound-toggle__icon.sound-toggle__icon--off 
 								+icon('sound-off')(width="25", height="25")
 							span.sound-toggle__icon.sound-toggle__icon--on
@@ -182,8 +190,23 @@ block main
 					.what-doing__section-title.title.title Делаем мировые 
 						span.title__bg тренды
 
-					.what-doing__section-sound
-						img(src="images/original-sound.jpg", width="551", height="173", alt="")
+					.what-doing__section-sound.original-sound
+
+						audio(src="images/video/Nickelback-Someday.mp3", loop="true") Your browser does not support the <code>audio</code> element.
+
+						.original-sound__image
+							img(src="images/os.jpg", width="137", height="137", alt="")
+							button.original-sound__toggle(type="button")
+								span.original-sound__toggle-icon.original-sound__toggle-icon--play
+									+icon('play')(width="32", height="32")
+								span.original-sound__toggle-icon.original-sound__toggle-icon--pause
+									+icon('pause')(width="32", height="32")
+						.original-sound__main
+							.original-sound__title оригинальный звук
+							.original-sound__name Саня Бардаш
+							.original-sound__count 65.6K клипы
+							.original-sound__minus 
+						
 			
 			.what-doing__section.what-doing__section--formats
 				.what-doing__section-media 
@@ -217,7 +240,7 @@ block main
 
 			.booking__main 
 				each item in BOOKING_CARDS
-					.booking__card
+					.booking__card(data-category= item.category)
 						.booking__card-image
 							img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
 						.booking__card-main
@@ -234,7 +257,7 @@ block main
 										span.visually-hidden Перейти в ${social.name}
 										+icon('chain')(width="17", height="17")
 							
-							button.booking__card-button(type="button", data-member="#") Оставить заявку
+							button.booking__card-button(type="button", data-member= item.member) Оставить заявку
 
 	section.store
 		.store__container.container
