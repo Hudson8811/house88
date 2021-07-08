@@ -6,12 +6,28 @@
   &__icon {
     margin-right: vw(12);
 
+    @include media(1200) {
+      margin-right: vw(12, 1200);
+    }
+    @include media(768) {
+      margin-right: vw(12, 376);
+    }
+
     svg {
       display: block;
       width: vw(27);
       height: vw(27);
       fill: rgba(#fff, 0.21);
       transition: fill 0.3s ease;
+
+      @include media(1200) {
+        width: vw(27, 1200);
+        height: vw(27, 1200);
+      }
+      @include media(768) {
+        width: vw(27, 376);
+        height: vw(27, 376);
+      }
     }
   }
 
@@ -21,6 +37,13 @@
     color: rgba(#fff, 0.21);
     line-height: 1;
     transition: all 0.3s ease;
+
+    @include media(1200) {
+      font-size: vw(19, 1200);
+    }
+    @include media(768) {
+      font-size: vw(19, 376);
+    }
   }
 
   label {
@@ -32,6 +55,18 @@
     border-radius: vw(25);
     cursor: pointer;
     transition: all 0.3s ease;
+
+    @include media(1200) {
+      padding: vw(10, 1200) vw(25, 1200);
+      border-width: vw(1, 1200);
+      border-radius: vw(25, 1200);
+    }
+
+    @include media(768) {
+      padding: vw(10, 376) vw(25, 376);
+      border-width: vw(1, 376);
+      border-radius: vw(25, 376);
+    }
 
     @include hover {
       border-color: $purpleColor;

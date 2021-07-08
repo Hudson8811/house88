@@ -8,7 +8,7 @@
   .brief__title HOUSE 88
   .brief__short Оставьте заявку на интересующую вас услугу или блогера и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время чтобы обсудить детали.
 
-  form.brief__form(action="#", method="post", enctype="multipart/form-data")
+  form.brief__form(action="https://echo.htmlacademy.ru", method="post", enctype="multipart/form-data")
     fieldset.brief__form-fieldset
       legend Тип интеграции
       each item, index in RADIO_BUTTONS
@@ -63,7 +63,7 @@
 
     .brief__form-bottom
       .brief__form-file.file-button
-        input.visually-hidden(type="file", id="customFileBrief")
+        input.visually-hidden(type="file", id="customFileBrief", name="file")
         label(for="customFileBrief")
           span.file-button__icon
             +icon('attach')(width="27", height="27")

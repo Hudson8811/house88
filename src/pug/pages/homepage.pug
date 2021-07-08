@@ -16,7 +16,7 @@ block vars
 			{n: 'logo-tele2', w: '143', h: '54', alt: 'Tele2'}
 		];
 
-		const FILTERS = [{text: 'Челленджи и скетчи', target: 'challenges-and-sketches'}, {text: 'Рубрики', target: 'categories'}, {text: 'Имиджевые', target: 'image-based'}, {text: 'Вирусные', target: 'viral'}, {text: 'Пранки', target: 'pranks'}];
+		const FILTERS = [{text: 'Все', target: 'all', mod: 'booking__filters-item--current booking__filters-item--all'}, {text: 'Челленджи и скетчи', target: 'challenges-and-sketches'}, {text: 'Рубрики', target: 'categories'}, {text: 'Имиджевые', target: 'image-based'}, {text: 'Вирусные', target: 'viral'}, {text: 'Пранки', target: 'pranks'}];
 
 		const BOOKING_CARDS = [
 			{name: 'Oreo', img: 'booking-oreo', smiles: ['1', '2'], social: [{name: 'ТикТок', link: '#', count: '780 000'}, {name: 'Инстаграм ', link: '#', count: '18 800'}], member: 'Oreo', category: 'challenges-and-sketches, categories'},
@@ -62,9 +62,14 @@ block main
 	section.hero 
 		.hero__container 
 			.hero__photo
-				picture 
-					source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
-					img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
+				//picture 
+					//source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
+				
+				img.only-mobile(src="images/hero/main-photo-mobile.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
+				
+				img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
+
+
 				.hero__grid 
 					each item, index in HERO_MEMBERS
 						div(class="hero__member hero__member--" + item.mod + (index === 44 ? ' hero__member--hover' : ''))
@@ -245,20 +250,20 @@ block main
 
 				ul.booking__filters-list
 					each item in FILTERS
-						li.booking__filters-item 
+						li.booking__filters-item(class= item.mod ? ' ' + item.mod : '')
 							button(type="button", data-target= item.target)= item.text
 
 			.booking__main.swiper-container 
 				.swiper-wrapper
 					each item in BOOKING_CARDS
-						.booking__card.swiper-slide(data-category= item.category)
+						.booking__card.swiper-slide(data-category= item.category, contenteditable="true")
 							.booking__card-image
 								img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
 							.booking__card-main
 								.booking__card-title
 									h3= item.name 
-									each smile in item.smiles
-										img(src="images/smiles/" + smile + ".png", width="32", height="32", alt="smile")
+										each smile in item.smiles
+											img(src="images/smiles/" + smile + ".png", width="32", height="32", alt="smile")
 									
 								each social in item.social
 									.booking__card-social 

@@ -73,10 +73,10 @@
     }
 
     &-item {
-      padding: vw(16);
+      padding: vw(16) vw(12);
 
       @include media(1200) {
-        padding: vw(16, 1200);
+        padding: vw(16, 1200) vw(12, 1200);
       }
 
       @include media(768) {
@@ -88,7 +88,7 @@
       button {
         display: inline-block;
         vertical-align: top;
-        min-width: vw(232);
+        min-width: vw(225);
         padding: vw(16) vw(36);
         font-size: vw(21);
         line-height: 1;
@@ -97,7 +97,7 @@
         border: none;
         appearance: none;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
 
         @include media(1200) {
           padding: vw(16, 1200) vw(36, 1200);
@@ -117,6 +117,25 @@
 
         @include hover {
           background-color: rgba(#e8e8e8, 1);
+        }
+      }
+
+      &--all {
+        button {
+          min-width: 0;
+        }
+      }
+
+      &--current {
+        button {
+          background-color: $purpleColor;
+          color: #ffffff;
+          pointer-events: none;
+
+          &:focus {
+            background-color: $purpleColor;
+            color: #ffffff;
+          }
         }
       }
     }
@@ -142,10 +161,13 @@
     .swiper-wrapper {
       display: flex;
       flex-wrap: wrap;
+      align-items: stretch;
       margin-left: -3.90625vw;
       margin-top: vw(-40);
+      width: auto;
 
       @include media(768) {
+        width: 100%;
         overflow: visible;
         flex-wrap: nowrap;
         margin-left: 0;
@@ -157,6 +179,7 @@
   &__card {
     display: flex;
     width: calc(50% - 3.90625vw);
+    height: auto;
     margin-top: vw(40);
     margin-left: 3.90625vw;
     border: solid vw(2) #000000;
@@ -176,6 +199,7 @@
 
     &-image {
       width: vw(250);
+      flex-shrink: 0;
 
       @include media(1200) {
         width: vw(210, 1200);
@@ -197,6 +221,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: flex-start;
       padding: vw(28) vw(42) vw(24) vw(42);
 
       @include media(1200) {
@@ -209,29 +234,35 @@
     }
 
     &-title {
-      display: flex;
-      align-items: center;
-      margin-bottom: vw(42);
+      margin-bottom: vw(12);
+      min-height: vw(62);
 
       @include media(1200) {
-        margin-bottom: vw(36, 1200);
+        margin-bottom: vw(10, 1200);
+        min-height: vw(52, 1200);
       }
 
       @include media(768) {
-        margin-bottom: vw(24, 376);
+        margin-bottom: vw(6, 376);
+        min-height: vw(48, 376);
       }
 
       img {
-        display: block;
+        display: inline-block;
+        vertical-align: middle;
         width: vw(32);
         height: auto;
 
+        margin-left: vw(15);
+
         @include media(1200) {
           width: vw(26, 1200);
+          margin-left: vw(15, 1200);
         }
 
         @include media(768) {
           width: vw(20, 376);
+          margin-left: vw(10, 376);
         }
       }
 
@@ -248,7 +279,6 @@
       }
 
       h3 {
-        margin-right: vw(15);
         font-family: $headingFont;
         font-size: vw(31);
         line-height: 1;
@@ -258,7 +288,6 @@
         text-transform: uppercase;
 
         @include media(1200) {
-          margin-right: vw(15, 1200);
           font-size: vw(26, 1200);
         }
 
@@ -271,20 +300,23 @@
     &-social {
       position: relative;
       width: vw(166);
+      margin-bottom: vw(12);
 
       @include media(1200) {
         width: vw(140, 1200);
+        margin-bottom: vw(10, 1200);
       }
 
       @include media(768) {
         width: vw(157, 376);
+        margin-bottom: 0;
       }
 
       & + & {
-        margin-top: vw(30);
+        margin-top: vw(18);
 
         @include media(1200) {
-          margin-top: vw(24, 1200);
+          margin-top: vw(14, 1200);
         }
 
         @include media(768) {

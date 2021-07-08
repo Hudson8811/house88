@@ -20,7 +20,7 @@ $(window).on('load', function() {
 
   function initPartnersCarousel() {
     partnersVideoCarousel = new Swiper('.partnership__grid', {
-      //loop: true,
+      loop: true,
       speed: 300,
       spaceBetween: 0,
       slidesPerView: 'auto',

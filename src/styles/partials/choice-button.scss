@@ -44,6 +44,15 @@
     border-radius: 50%;
     overflow: hidden;
 
+    img {
+      display: block;
+      max-width: none;
+      width: calc(100% + 2px);
+      height: auto;
+      margin-top: -1px;
+      margin-left: -1px;
+    }
+
     @include media(1200) {
       left: vw(-16, 1200);
       width: vw(53, 1200);
@@ -61,11 +70,12 @@
   label {
     position: relative;
     display: block;
-    padding: vw(10) vw(25);
+    padding: vw(10) vw(30);
     font-family: $mainFont--book;
     font-size: vw(19);
     color: rgba(#fff, 0.21);
     line-height: 1;
+    //letter-spacing: -0.02047em;
     border: 1px solid rgba(#fff, 0.21);
     border-radius: vw(21);
     cursor: pointer;

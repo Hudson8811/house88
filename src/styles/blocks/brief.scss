@@ -1,7 +1,9 @@
 .brief {
+  $self: &;
   background-color: transparent;
   max-width: vw(915);
   padding: vw(170) vw(79);
+  font-family: $mainFont--book;
 
   @include media(1200) {
     max-width: 70%;
@@ -17,15 +19,32 @@
 
   &__close {
     position: fixed;
-    top: 80px;
-    right: 90px;
-    width: 36px;
-    height: 36px;
+    top: vw(80);
+    right: vw(98);
+    width: vw(44);
+    height: vw(44);
+    padding: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+
+    @include media(1200) {
+      top: vw(80, 1200);
+      right: vw(98, 1200);
+      width: vw(32, 1200);
+      height: vw(32, 1200);
+    }
+
+    @include media(768) {
+      top: vw(4, 376);
+      right: vw(4, 376);
+      width: vw(16, 376);
+      height: vw(16, 376);
+
+      opacity: 1;
+    }
 
     svg {
       display: block;
@@ -41,18 +60,10 @@
     @include hover {
       opacity: 1;
     }
-
-    @include media(1200) {
-      padding: vw(4, 1200);
-    }
-
-    @include media(768) {
-      padding: vw(4, 376);
-    }
   }
 
   &__title {
-    margin-bottom: vw(40);
+    margin-bottom: vw(38);
     font-family: $headingFont;
     font-size: vw(46);
     line-height: 1;
@@ -73,7 +84,7 @@
 
   &__short {
     max-width: vw(640);
-    margin-bottom: vw(90);
+    margin-bottom: vw(83);
     //font-size: vw(21);
     line-height: 1.09523;
     color: #ffffff;
@@ -96,6 +107,10 @@
       flex-wrap: wrap;
       padding: 0;
       border: none;
+
+      & > .brief__field:first-child {
+        margin-top: 0;
+      }
     }
 
     &-fieldset + &-fieldset {
@@ -118,11 +133,29 @@
       display: flex;
       align-items: center;
       margin-top: vw(90);
+
+      @include media(1200) {
+        margin-top: vw(60, 1200);
+      }
+
+      @include media(768) {
+        display: block;
+        margin-top: vw(40, 376);
+      }
     }
 
     &-file {
       margin-right: vw(24);
       flex-shrink: 0;
+
+      @include media(1200) {
+        margin-right: vw(24, 1200);
+      }
+
+      @include media(768) {
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &-send {
@@ -143,6 +176,28 @@
       background-color: $purpleColor;
       transition: background-color 0.3s ease;
 
+      @include media(1200) {
+        min-width: vw(186, 1200);
+        margin-right: vw(24, 1200);
+        padding: vw(13, 1200) vw(25, 1200);
+        font-size: vw(21, 1200);
+
+        border-width: vw(1, 1200);
+        border-radius: vw(25, 1200);
+      }
+
+      @include media(768) {
+        width: 100%;
+        min-width: 0;
+        margin-right: 0;
+        margin-top: vw(24, 376);
+        padding: vw(13, 376) vw(25, 376);
+        font-size: vw(21, 376);
+
+        border-width: vw(1, 376);
+        border-radius: vw(25, 376);
+      }
+
       @include hover {
         background-color: lighten($purpleColor, 10%);
       }
@@ -153,7 +208,18 @@
       font-size: vw(14);
       line-height: 1;
       color: #ffffff;
-      letter-spacing: vw(-0.29);
+      letter-spacing: -0.02em;
+
+      @include media(1200) {
+        max-width: vw(250, 1200);
+        font-size: vw(14, 1200);
+      }
+
+      @include media(768) {
+        max-width: vw(250, 376);
+        margin-top: vw(24, 376);
+        font-size: vw(14, 376);
+      }
 
       a {
         color: $purpleColor;
@@ -168,7 +234,7 @@
 
   &__radio {
     margin-top: vw(16);
-    margin-right: vw(16);
+    margin-right: vw(12);
 
     @include media(1200) {
       margin-top: vw(16, 1200);
@@ -183,24 +249,33 @@
 
   &__checkbox {
     min-width: vw(230);
-    margin-top: vw(22);
-    margin-right: vw(110);
+    margin-top: vw(26);
+    margin-right: vw(102);
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
 
     @include media(1200) {
       min-width: vw(230, 1200);
       margin-top: vw(22, 1200);
-      margin-right: vw(110, 1200);
+      margin-right: vw(102, 1200);
     }
 
     @include media(768) {
       min-width: vw(300, 376);
       margin-top: vw(22, 376);
-      margin-right: vw(110, 376);
+      margin-right: 0;
     }
   }
 
+  legend + &__checkbox {
+    margin-top: vw(22);
+  }
+
   &__member-grid {
-    margin-top: vw(42);
+    margin-top: vw(22);
+    margin-bottom: vw(12);
 
     @include media(1200) {
       margin-top: vw(42, 1200);
@@ -216,6 +291,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin-top: vw(62);
+    margin-bottom: vw(39);
 
     @include media(768) {
       display: block;
@@ -228,18 +305,23 @@
     @include media(768) {
       width: 100%;
     }
+
+    #{$self}__field {
+      margin-top: vw(30);
+
+      @include media(1200) {
+        margin-top: vw(27, 1200);
+      }
+    }
   }
 
   &__field {
     width: 100%;
-    margin-top: vw(52);
+    margin-top: vw(42);
+    font-family: $mainFont--book;
 
     @include media(1200) {
       margin-top: vw(40, 1200);
     }
   }
-}
-
-.fancybox-slide {
-  width: auto;
 }

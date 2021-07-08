@@ -1,5 +1,6 @@
 $(window).on('load', function() {
   const filters = $('.booking__filters-item button');
+  const filterModClass = 'booking__filters-item--current';
   const cards = $('.booking__card');
   let bookingCarousel = null;
 
@@ -14,6 +15,9 @@ $(window).on('load', function() {
     const target = current.attr('data-target');
     const parent = current.parent();
 
+    parent.addClass(filterModClass);
+    parent.siblings().removeClass(filterModClass);
+
     cards.each(function() {
       const card = $(this);
       const isVisible = card.attr('data-category').indexOf(target) !== -1;
@@ -24,6 +28,10 @@ $(window).on('load', function() {
         card.css('display', 'none')
       }
     });
+
+    if (target === 'all') {
+      cards.removeAttr('style')
+    }
 
     
     if ($(window).width() <= 768) {

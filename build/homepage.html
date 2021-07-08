@@ -22,9 +22,10 @@
       <section class="hero"> 
         <div class="hero__container"> 
           <div class="hero__photo">
-            <picture> 
-              <source media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
-            </picture>
+            <!--picture 
+            //source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
+            
+            --><img class="only-mobile" src="images/hero/main-photo-mobile.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
             <div class="hero__grid"> 
               <div class="hero__member hero__member--seneamin">
                 <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin">
@@ -316,30 +317,34 @@
           <div class="booking__filters"> 
             <h3 class="booking__filters-title">Виды интеграций:</h3>
             <ul class="booking__filters-list">
-              <li class="booking__filters-item"> 
+              <li class="booking__filters-item  booking__filters-item--current booking__filters-item--all">
+                <button type="button" data-target="all">Все</button>
+              </li>
+              <li class="booking__filters-item">
                 <button type="button" data-target="challenges-and-sketches">Челленджи и скетчи</button>
               </li>
-              <li class="booking__filters-item"> 
+              <li class="booking__filters-item">
                 <button type="button" data-target="categories">Рубрики</button>
               </li>
-              <li class="booking__filters-item"> 
+              <li class="booking__filters-item">
                 <button type="button" data-target="image-based">Имиджевые</button>
               </li>
-              <li class="booking__filters-item"> 
+              <li class="booking__filters-item">
                 <button type="button" data-target="viral">Вирусные</button>
               </li>
-              <li class="booking__filters-item"> 
+              <li class="booking__filters-item">
                 <button type="button" data-target="pranks">Пранки</button>
               </li>
             </ul>
           </div>
           <div class="booking__main swiper-container"> 
             <div class="swiper-wrapper">
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, categories">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, categories" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Oreo</h3><img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    <h3>Oreo<img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -358,11 +363,12 @@
                   <button class="booking__card-button" type="button" data-member="Oreo">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="viral">
+              <div class="booking__card swiper-slide" data-category="viral" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Daniil</h3><img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    <h3>Daniil<img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -381,11 +387,12 @@
                   <button class="booking__card-button" type="button" data-member="Daniil">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Alexkady</h3><img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+                    <h3>Alexkady<img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -404,11 +411,12 @@
                   <button class="booking__card-button" type="button" data-member="Alexkady">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, pranks">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, pranks" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Seneamin</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+                    <h3>Seneamin<img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -427,11 +435,12 @@
                   <button class="booking__card-button" type="button" data-member="Seneamin">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="viral">
+              <div class="booking__card swiper-slide" data-category="viral" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Prokop</h3><img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+                    <h3>Prokop<img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -450,11 +459,12 @@
                   <button class="booking__card-button" type="button" data-member="Prokop">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="image-based, pranks">
+              <div class="booking__card swiper-slide" data-category="image-based, pranks" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Zavaly</h3><img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+                    <h3>Zavaly<img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -473,11 +483,12 @@
                   <button class="booking__card-button" type="button" data-member="Zavaly">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="categories">
+              <div class="booking__card swiper-slide" data-category="categories" contenteditable="true">
                 <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
-                    <h3>Haribo</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+                    <h3>Haribo<img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+                    </h3>
                   </div>
                   <div class="booking__card-social"> 
                     <div class="booking__card-social-title">ТикТок</div>
@@ -561,7 +572,7 @@
       </button>
       <div class="brief__title">HOUSE 88</div>
       <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
-      <form class="brief__form" action="#" method="post" enctype="multipart/form-data">
+      <form class="brief__form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
         <fieldset class="brief__form-fieldset">
           <legend>Тип интеграции</legend>
           <div class="brief__radio choice-button">
@@ -660,7 +671,7 @@
         </fieldset>
         <div class="brief__form-bottom">
           <div class="brief__form-file file-button">
-            <input class="visually-hidden" type="file" id="customFileBrief">
+            <input class="visually-hidden" type="file" id="customFileBrief" name="file">
             <label for="customFileBrief"><span class="file-button__icon">
                 <svg width="27" height="27">
                   <use xlink:href="images/sprite.svg#attach"></use>

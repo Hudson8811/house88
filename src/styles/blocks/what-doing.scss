@@ -152,6 +152,11 @@
 
         @include media(768) {
           width: 100%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
 
@@ -163,7 +168,7 @@
           padding: vw(40, 1200);
         }
 
-        @include media(1200) {
+        @include media(768) {
           padding: vw(48, 376) vw(32, 376) vw(32, 376);
         }
 
@@ -233,6 +238,14 @@
             letter-spacing: vw(5.13);
             white-space: nowrap;
             color: $purpleColor;
+
+            @include media(1200) {
+              font-size: vw(57, 1200);
+            }
+
+            @include media(768) {
+              font-size: vw(27, 376);
+            }
           }
         }
 
