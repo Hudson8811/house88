@@ -2,6 +2,10 @@
   padding: vw(100) 0 vw(170);
   background-color: #f4f4f4;
 
+  @include media(768) {
+    padding: vw(90, 376) 0 vw(90, 376);
+  }
+
   &__container {
     max-width: vw(1265);
 
@@ -12,6 +16,10 @@
 
   &__title {
     margin-bottom: vw(178);
+
+    @include media(768) {
+      margin-bottom: vw(67, 376);
+    }
 
     .title__bg {
       color: #ffffff;
@@ -31,6 +39,11 @@
       color: #ffffff;
       background-color: $purpleColor;
       pointer-events: none;
+
+      @include media(768) {
+        font-size: vw(11, 376);
+        letter-spacing: -0.04636em;
+      }
     }
   }
 
@@ -39,6 +52,12 @@
     flex-wrap: wrap;
     margin-left: vw(-74) !important;
     margin-top: vw(-40) !important;
+
+    @include media(768) {
+      display: block;
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+    }
   }
 
   &__card {
@@ -51,12 +70,23 @@
     margin-left: vw(74);
     margin-top: vw(40);
 
+    @include media(768) {
+      max-width: none;
+      margin-left: 0;
+      margin-top: vw(60, 376);
+    }
+
     &-image {
       width: 100%;
       height: vw(363);
 
       @include media(1200) {
         height: vw(360, 1200);
+      }
+
+      @include media(768) {
+        margin-bottom: vw(20, 376);
+        height: auto;
       }
 
       img {
@@ -87,6 +117,13 @@
         padding: vw(10, 1200) vw(16, 1200);
         font-size: vw(15, 1200);
       }
+
+      @include media(768) {
+        margin-bottom: vw(10, 376);
+        padding: vw(10, 376) vw(16, 376);
+        transform: translateY(0);
+        font-size: vw(15, 376);
+      }
     }
 
     &-link {
@@ -106,6 +143,11 @@
       @include media(1200) {
         padding: vw(7, 1200) vw(8, 1200);
         font-size: vw(12, 1200);
+      }
+
+      @include media(768) {
+        padding: vw(7, 376) vw(8, 376);
+        font-size: vw(12, 376);
       }
 
       &:focus {

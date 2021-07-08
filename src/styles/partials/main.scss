@@ -4,7 +4,12 @@ html {
   @include media(1200) {
     font-size: vw(18, 1200); //$fs-main;
   }
+
+  @include media(768) {
+    font-size: vw(21, 376);
+  }
 }
+
 body {
   font-family: $mainFont;
   font-weight: 400;
@@ -29,6 +34,10 @@ a {
 
   @include media(1200) {
     padding: 0 vw(15, 1200);
+  }
+
+  @include media(768) {
+    padding: 0 vw(20, 376);
   }
 }
 

@@ -1,6 +1,10 @@
 .about {
   padding: vw(172) 0 vw(188);
 
+  @include media(768) {
+    padding: vw(92, 376) 0 vw(40, 376);
+  }
+
   &__container {
     max-width: vw(1650);
 
@@ -11,10 +15,18 @@
 
   &__title {
     margin-bottom: vw(160);
+
+    @include media(768) {
+      margin-bottom: vw(44, 376);
+    }
   }
 
   &__grid {
     display: flex;
+
+    @include media(768) {
+      display: block;
+    }
   }
 
   &__photo {
@@ -22,6 +34,11 @@
 
     @include media(1200) {
       margin-right: vw(50, 1200);
+    }
+
+    @include media(768) {
+      margin-right: 0;
+      margin-bottom: vw(28, 376);
     }
 
     img {
@@ -36,6 +53,10 @@
 
     @include media(1200) {
       max-width: vw(420, 1200);
+    }
+
+    @include media(768) {
+      max-width: none;
     }
 
     &-title {
@@ -53,6 +74,11 @@
         font-family: $headingFont;
         font-size: vw(32, 1200);
       }
+
+      @include media(768) {
+        margin-bottom: 20px;
+        font-size: vw(20, 376);
+      }
     }
   }
 
@@ -62,7 +88,7 @@
     line-height: 1.25;
     letter-spacing: -0.02047em;
 
-    @include media(1200) {
+    @include media(768) {
     }
 
     & + & {
@@ -71,11 +97,19 @@
       @include media(1200) {
         margin-top: vw(16, 1200);
       }
+
+      @include media(768) {
+        margin-top: vw(24, 376);
+      }
     }
 
     span {
       white-space: nowrap;
       background-color: $purpleColor;
+
+      @include media(768) {
+        white-space: normal;
+      }
     }
   }
 }

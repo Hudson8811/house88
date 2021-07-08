@@ -14,6 +14,11 @@
     font-size: vw(32, 1200);
   }
 
+  @include media(768) {
+    font-size: vw(20, 376);
+    letter-spacing: vw(-0.99, 376);
+  }
+
   &::before {
     content: attr(data-before);
     position: absolute;
@@ -26,6 +31,11 @@
     line-height: 1;
     color: $purpleColor;
     font-weight: 400;
+
+    @include media(768) {
+      font-size: vw(32, 376);
+      transform: translateX(-50%) translateY(-52%) rotate(-6deg);
+    }
   }
 
   &__bg {
@@ -37,5 +47,9 @@
 
     padding: vw(3) vw(20);
     background-color: #ffffff;
+
+    @include media(768) {
+      padding: vw(5, 376);
+    }
   }
 }

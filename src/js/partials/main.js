@@ -17,10 +17,15 @@ $(window).on('load', function() {
 
 
 
+	////////////////////////////////
+	
+
 
 	// Image map resizer init
-$(window).on('load', () => {
-	 $('map').imageMapResize();
-})
+
+		$('map').imageMapResize();
+	
+
+
 	
 })

@@ -1,6 +1,10 @@
 .what-doing {
   padding: vw(64) 0 vw(147);
 
+  @include media(768) {
+    padding: vw(72, 376) 0;
+  }
+
   &__container {
     max-width: vw(1450);
 
@@ -21,6 +25,11 @@
         padding: vw(50, 1200);
       }
 
+      @include media(768) {
+        display: block;
+        padding: vw(46, 376) 0 vw(60, 376);
+      }
+
       #{$section}-media {
         position: relative;
         width: vw(515);
@@ -38,6 +47,13 @@
           width: vw(550, 1200);
           height: vw(774, 1200);
         }
+
+        @include media(768) {
+          padding-left: vw(49, 376);
+          padding-top: vw(77, 376);
+          width: 100%;
+          height: vw(475, 376);
+        }
       }
 
       #{$section}-video {
@@ -49,6 +65,18 @@
           width: vw(363, 1200);
           border-radius: vw(16, 1200);
         }
+
+        @include media(768) {
+          width: vw(222, 376);
+          border-radius: vw(16, 376);
+
+          .video-box__toggle {
+            right: vw(20, 376);
+            bottom: vw(20, 376);
+            width: vw(18, 376);
+            height: vw(18, 376);
+          }
+        }
       }
 
       #{$section}-main {
@@ -58,6 +86,10 @@
         @include media(1200) {
           padding: vw(60, 1200);
           padding-top: vw(116, 1200);
+        }
+
+        @include media(768) {
+          padding: vw(36, 376) vw(16, 376) 0 vw(20, 376);
         }
       }
 
@@ -74,6 +106,23 @@
           font-size: vw(56, 1200);
         }
 
+        @include media(768) {
+          display: none;
+        }
+
+        &--mobile {
+          display: none;
+
+          @include media(768) {
+            display: block;
+            max-width: vw(160, 376);
+            margin: 0 auto vw(24, 376);
+            font-size: vw(20, 376);
+            line-height: 1.5;
+            text-align: center;
+          }
+        }
+
         .title__bg {
           margin-top: vw(2);
           margin-left: vw(-20);
@@ -88,12 +137,21 @@
       flex-direction: row-reverse;
       margin-top: vw(52);
 
+      @include media(768) {
+        flex-direction: column-reverse;
+        margin-top: vw(40, 376);
+      }
+
       #{$section}-media {
         width: vw(490);
         flex-shrink: 0;
 
         @include media(1200) {
           width: vw(450, 1200);
+        }
+
+        @include media(768) {
+          width: 100%;
         }
       }
 
@@ -105,12 +163,20 @@
           padding: vw(40, 1200);
         }
 
+        @include media(1200) {
+          padding: vw(48, 376) vw(32, 376) vw(32, 376);
+        }
+
         &::before,
         &::after {
           content: "";
           position: absolute;
           background-repeat: no-repeat;
           background-size: 100% auto;
+
+          @include media(768) {
+            display: none;
+          }
         }
 
         &::before {
@@ -139,6 +205,15 @@
 
         @include media(1200) {
           font-size: vw(52, 1200);
+        }
+
+        @include media(768) {
+          display: block;
+          //max-width: vw(160, 376);
+          margin: 0;
+          font-size: vw(20, 376);
+          line-height: 1.5;
+          text-align: center;
         }
 
         &-double {
@@ -173,6 +248,10 @@
       margin-top: vw(175);
       background-color: transparent;
 
+      @include media(768) {
+        margin-top: vw(70, 376);
+      }
+
       #{$section}-title {
         max-width: vw(800);
         margin: 0 auto;
@@ -181,6 +260,15 @@
           max-width: none;
           font-size: vw(52, 1200);
         }
+
+        /*@include media(768) {
+          display: block;
+          //max-width: vw(160, 376);
+          margin: 0;
+          font-size: vw(20, 376);
+          line-height: 1.5;
+          text-align: center;
+        }*/
 
         &::after {
           content: attr(data-after);

@@ -4,6 +4,10 @@
   vertical-align: top;
 
   &--image {
+    @include media(768) {
+      padding-left: vw(70, 376);
+    }
+
     label {
       text-align: left;
 
@@ -20,6 +24,12 @@
         background-color: $purpleColor;
         opacity: 0;
         transition: opacity 0.3s ease;
+
+        @include media(1200) {
+          left: vw(-69, 1200);
+          width: vw(21, 1200);
+          height: vw(21, 1200);
+        }
       }
     }
   }
@@ -38,6 +48,13 @@
       left: vw(-16, 1200);
       width: vw(53, 1200);
       height: vw(53, 1200);
+    }
+
+    @include media(768) {
+      left: vw(-70, 376);
+      transform: translateY(-50%) translateX(0);
+      width: vw(53, 376);
+      height: vw(53, 376);
     }
   }
 
@@ -58,6 +75,12 @@
       padding: vw(10, 1200) vw(25, 1200);
       font-size: vw(19, 1200);
       border-radius: vw(21, 1200);
+    }
+
+    @include media(768) {
+      padding: vw(10, 376) vw(25, 376);
+      font-size: vw(19, 376);
+      border-radius: vw(21, 376);
     }
 
     @include hover {

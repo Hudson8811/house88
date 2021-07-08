@@ -44,5 +44,10 @@
       right: vw(30, 1200);
       bottom: vw(24, 1200);
     }
+
+    @include media(768) {
+      right: vw(30, 376);
+      bottom: vw(24, 376);
+    }
   }
 }

@@ -62,7 +62,9 @@ block main
 	section.hero 
 		.hero__container 
 			.hero__photo
-				img(src="images/hero/main-photo.jpg", width="1920", height="2200", usemap="#image-map", alt="Совместное фото тиктокеров house88")
+				picture 
+					source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
+					img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
 				.hero__grid 
 					each item, index in HERO_MEMBERS
 						div(class="hero__member hero__member--" + item.mod + (index === 44 ? ' hero__member--hover' : ''))
@@ -84,6 +86,7 @@ block main
 
 			.hero__main
 				.container
+					button.hero__button.__js_open-brief(type="button") Выбрать блогера
 					h1.hero__title.title Тикток дом 
 						span.hero__title-double house88
 							span.part.part--text-ho ho 
@@ -94,6 +97,12 @@ block main
 						span.title__bg Внимание <span class="hero__text-double" data-before="30">30</span> миллионнов
 						span.title__bg человек для вашего продукта
 						span.title__bg или услуги
+
+					.hero__text.hero__text--mobile.title
+						span.title__bg Внимание 
+						span.title__bg <span class="hero__text-double" data-before="30">30</span> миллионнов
+						span.title__bg человек для вашего 
+						span.title__bg продукта или услуги
 	
 	section.about 
 		.about__container.container
@@ -121,11 +130,12 @@ block main
 					li.partnership__item(class="partnership__item--" + item.n.slice(5)) 
 						img(src="images/" + item.n + ".png", width= item.w, height= item.h, alt= item.alt)
 			
-			.partnership__grid
-				each item in PARTNERSHIP_VIDEOS
-					.partnership__video(class="partnership__video--" + item.mod)
-						video(autoplay="true", muted="true", loop="true")
-							source(src="images/video/" + item.video + ".mp4", type="video/mp4")
+			.partnership__grid.swiper-container 
+				.swiper-wrapper
+					each item in PARTNERSHIP_VIDEOS
+						.partnership__video(class="partnership__video--" + item.mod + " swiper-slide")
+							video(autoplay="true", muted="true", loop="true")
+								source(src="images/video/" + item.video + ".mp4", type="video/mp4")
 
 
 	section.line-section
@@ -153,7 +163,7 @@ block main
 		.quality__container.container
 			h2.quality__title.title(data-before="tiktok")
 				span.title__bg Мы привносим качественный
-				| контент в ТикТок
+				span контент в ТикТок
 
 			ul.quality__list
 				each item, index in SERIALS
@@ -176,6 +186,8 @@ block main
 	section.what-doing
 		.what-doing__container.container 
 			.what-doing__section.what-doing__section--trends
+				.what-doing__section-title.what-doing__section-title--mobile.title Делаем мировые 
+					span.title__bg тренды
 				.what-doing__section-media
 					.what-doing__section-video.video-box
 						video(autoplay="true", muted="true", loop="true")
@@ -191,7 +203,6 @@ block main
 						span.title__bg тренды
 
 					.what-doing__section-sound.original-sound
-
 						audio(src="images/video/Nickelback-Someday.mp3", loop="true") Your browser does not support the <code>audio</code> element.
 
 						.original-sound__image
@@ -207,7 +218,6 @@ block main
 							.original-sound__count 65.6K клипы
 							.original-sound__minus 
 						
-			
 			.what-doing__section.what-doing__section--formats
 				.what-doing__section-media 
 					img(src="images/new-formats-image.jpg", alt="")
@@ -238,26 +248,27 @@ block main
 						li.booking__filters-item 
 							button(type="button", data-target= item.target)= item.text
 
-			.booking__main 
-				each item in BOOKING_CARDS
-					.booking__card(data-category= item.category)
-						.booking__card-image
-							img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
-						.booking__card-main
-							.booking__card-title
-								h3= item.name 
-								each smile in item.smiles
-									img(src="images/smiles/" + smile + ".png", width="32", height="32", alt="smile")
+			.booking__main.swiper-container 
+				.swiper-wrapper
+					each item in BOOKING_CARDS
+						.booking__card.swiper-slide(data-category= item.category)
+							.booking__card-image
+								img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
+							.booking__card-main
+								.booking__card-title
+									h3= item.name 
+									each smile in item.smiles
+										img(src="images/smiles/" + smile + ".png", width="32", height="32", alt="smile")
+									
+								each social in item.social
+									.booking__card-social 
+										.booking__card-social-title= social.name
+										.booking__card-social-count= social.count
+										a.booking__card-social-link(href= social.link, target="_blank")
+											span.visually-hidden Перейти в ${social.name}
+											+icon('chain')(width="17", height="17")
 								
-							each social in item.social
-								.booking__card-social 
-									.booking__card-social-title= social.name
-									.booking__card-social-count= social.count
-									a.booking__card-social-link(href= social.link, target="_blank")
-										span.visually-hidden Перейти в ${social.name}
-										+icon('chain')(width="17", height="17")
-							
-							button.booking__card-button(type="button", data-member= item.member) Оставить заявку
+								button.booking__card-button(type="button", data-member= item.member) Оставить заявку
 
 	section.store
 		.store__container.container

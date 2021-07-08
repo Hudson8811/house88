@@ -8,6 +8,12 @@
     height: vw(136);
     margin-right: vw(24);
 
+    @include media(768) {
+      width: vw(80, 376);
+      height: vw(80, 376);
+      margin-right: vw(14, 376);
+    }
+
     img {
       display: block;
       width: 100%;
@@ -31,6 +37,11 @@
     background-color: transparent;
     cursor: pointer;
     appearance: none;
+
+    @include media(768) {
+      width: vw(20, 376);
+      height: vw(20, 376);
+    }
 
     &--play {
       #{$tg}-icon {
@@ -79,17 +90,31 @@
     color: #000;
     line-height: 1;
     font-weight: 700;
+
+    @include media(768) {
+      margin-bottom: vw(4, 376);
+      font-size: vw(21, 376);
+    }
   }
 
   &__name {
     margin-bottom: vw(8);
     color: #000;
     font-weight: 700;
+
+    @include media(768) {
+      margin-bottom: vw(4, 376);
+      font-size: vw(14, 376);
+    }
   }
 
   &__count {
     font-size: vw(18);
     line-height: 1.3;
+
+    @include media(768) {
+      font-size: vw(10, 376);
+    }
   }
 
   &__minus {

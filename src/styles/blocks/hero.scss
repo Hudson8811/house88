@@ -6,6 +6,10 @@
     height: vw(1272);
     background-color: #4c5769;
 
+    @include media(768) {
+      height: vw(274, 376);
+    }
+
     > img {
       display: block;
       width: 100%;
@@ -23,6 +27,10 @@
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
+
+    @include media(768) {
+      display: none;
+    }
   }
 
   &__member {
@@ -173,11 +181,43 @@
     z-index: 1;
     padding-top: vw(35);
     padding-bottom: vw(200);
+
+    @include media(768) {
+      padding-bottom: vw(46, 376);
+    }
+
+    .container {
+      @include media(768) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include media(768) {
+      display: block;
+      width: 100%;
+      max-width: vw(174, 376);
+      margin: 0 auto vw(35, 376);
+      padding: vw(15, 376) vw(12, 376);
+      font-size: vw(16, 376);
+      line-height: 1;
+      color: #ffffff;
+      border: vw(1, 376) solid #ffffff;
+      background-color: transparent;
+      letter-spacing: -0.0325em;
+    }
   }
 
   &__title {
     margin-bottom: vw(65);
     color: #ffffff;
+
+    @include media(768) {
+      margin-bottom: vw(20, 376);
+    }
 
     &-double {
       position: relative;
@@ -197,16 +237,31 @@
             left: vw(16);
             letter-spacing: vw(5);
             transform: translateY(-6%);
+
+            @include media(768) {
+              left: vw(7, 376);
+              font-size: vw(33, 376);
+            }
           }
 
           &-use {
             left: vw(111);
+
+            @include media(768) {
+              left: vw(46, 376);
+              font-size: vw(33, 376);
+            }
           }
 
           &-88 {
             left: vw(260);
             font-size: vw(100);
             letter-spacing: vw(10);
+
+            @include media(768) {
+              left: vw(104, 376);
+              font-size: vw(48, 376);
+            }
           }
         }
       }
@@ -214,9 +269,31 @@
   }
 
   &__text {
+    @include media(768) {
+      display: none;
+    }
+
     .title__bg {
       background-color: #000000;
       color: #ffffff;
+
+      @include media(768) {
+        padding: 0 vw(2, 376);
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media(768) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title__bg + .title__bg {
+          margin-top: vw(4, 376);
+        }
+      }
     }
 
     &-double {
@@ -234,6 +311,10 @@
         color: $purpleColor;
         font-weight: 400;
         letter-spacing: normal;
+
+        @include media(768) {
+          font-size: vw(32, 376);
+        }
       }
     }
   }

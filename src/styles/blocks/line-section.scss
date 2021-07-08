@@ -3,8 +3,19 @@
   overflow: hidden;
   //padding: vw(115) 0 vw(92);
 
+  @include media(768) {
+    padding: vw(120, 376) 0 0;
+  }
+
   &--digital {
+    @include media(768) {
+      padding-top: vw(80, 376);
+    }
+
     #{$self}__title {
+      @include media(768) {
+        margin-bottom: vw(74, 376);
+      }
       &::before,
       &::after {
         content: "";
@@ -14,16 +25,33 @@
         width: vw(94);
         height: vw(94);
         background-image: url("../images/te-logo.svg");
+
+        @include media(768) {
+          width: vw(60, 376);
+          height: vw(60, 376);
+        }
       }
 
       &::before {
         left: vw(128);
         top: vw(-62);
+
+        @include media(768) {
+          left: vw(40, 376);
+          top: 0;
+          transform: translateX(0) translateY(-50%) rotate(-23deg);
+        }
       }
 
       &::after {
         bottom: vw(-46);
         right: vw(112);
+
+        @include media(768) {
+          right: vw(40, 376);
+          bottom: 0;
+          transform: translateX(0) translateY(50%) rotate(-23deg);
+        }
       }
     }
   }
@@ -36,6 +64,10 @@
     @include media(1200) {
       max-width: none;
     }
+
+    @include media(768) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -45,13 +77,24 @@
 
     @include media(1200) {
       margin-right: vw(80, 1200);
+    }
 
-      //font-size: vw(32, 1200);
+    @include media(768) {
+      max-width: none;
+      margin-bottom: vw(40, 376);
+      margin-right: 0;
+      text-align: center;
     }
 
     &::before {
       left: 0;
       transform: translateX(0) translateY(-68%) rotate(-6deg);
+
+      @include media(768) {
+        left: 50%;
+        transform: translateX(-50%) translateY(-68%) rotate(-6deg);
+        white-space: nowrap;
+      }
     }
   }
 
@@ -63,10 +106,19 @@
       flex-grow: 1;
     }
 
+    @include media(768) {
+      width: 100%;
+      flex-direction: column;
+    }
+
     form {
       display: flex;
       align-items: center;
       width: 100%;
+
+      @include media(768) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -83,11 +135,27 @@
       margin-right: vw(40, 1200);
       flex-grow: 1;
     }
+
+    @include media(768) {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: vw(60, 376);
+    }
   }
 
   &__field {
     max-width: calc(50% - (2.70833vw / 2));
     margin-top: vw(22);
+
+    @include media(768) {
+      max-width: none;
+      margin-top: vw(24, 376);
+
+      &:first-child {
+        margin-top: vw(36, 376);
+      }
+    }
   }
 
   &__list {
@@ -96,6 +164,11 @@
 
     @include media(1200) {
       max-width: none;
+    }
+
+    @include media(768) {
+      width: 100%;
+      margin-bottom: vw(60, 376);
     }
 
     & + #{$self}__button {
@@ -112,9 +185,16 @@
       font-size: vw(21);
       line-height: (24.6 / 21);
       font-weight: 400;
-      letter-spacing: vw(-0.43);
+      letter-spacing: -0.02047em;
       color: #ffffff;
       background-color: $purpleColor;
+
+      @include media(768) {
+        margin-bottom: vw(3, 376);
+        padding: vw(2, 376) vw(6, 376);
+        font-size: vw(21, 376);
+        line-height: (24.6 / 21);
+      }
     }
 
     ul {
@@ -125,6 +205,10 @@
 
     li + li {
       margin-top: vw(3);
+
+      @include media(768) {
+        margin-top: vw(3, 376);
+      }
     }
 
     li {
@@ -138,10 +222,16 @@
         font-family: $mainFont;
         font-size: vw(21);
         line-height: (24.6 / 21);
-        letter-spacing: vw(-0.43);
+        letter-spacing: -0.02047em;
         font-weight: 400;
         color: #000000;
         background-color: #ffffff;
+
+        @include media(768) {
+          padding: 0; //vw(2, 376) vw(3, 376);
+          font-size: vw(21, 376);
+          line-height: (24.6 / 21);
+        }
       }
     }
   }
@@ -163,6 +253,13 @@
     @include media(1200) {
       margin-right: vw(-15, 1200);
       transform: translateX(0);
+    }
+
+    @include media(768) {
+      width: calc(100% + 10.6383vw);
+      margin-right: 0;
+      //margin-left: vw(-20, 376);
+      padding: vw(72, 376) 0;
     }
 
     &:focus {
@@ -190,12 +287,24 @@
       color: #ffffff;
       text-transform: uppercase;
       background-color: #000000;
+
+      @include media(768) {
+        top: vw(177, 376);
+        right: vw(90, 376);
+        padding: vw(6, 376) vw(10, 376);
+        font-size: vw(22, 376);
+      }
     }
 
     &-icon {
       width: vw(130);
       height: vw(130);
       transition: transform 0.3s ease;
+
+      @include media(768) {
+        width: vw(185, 376);
+        height: vw(185, 376);
+      }
 
       svg {
         display: block;

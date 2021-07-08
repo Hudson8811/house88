@@ -4,6 +4,8 @@ const helpChoiceChexbox = $('#checkboxHelpChoice');
 const membersCheckboxes = $('.brief__member-grid input[type="checkbox"]');
 const membersButtons = $('.booking__card-button');
 const memberModClass = 'hero__member--hover';
+const closeBriefBtn = $('.breif__close');
+
 
 areas.on('click', function (evt) {
   evt.preventDefault();
@@ -36,8 +38,15 @@ function openBrief(member) {
     src: '#brief',
     type: 'inline',
     touch: false,
+    //modal: true,
+    smallBtn: false,
+    toolbar: false,
     beforeShow: function () {
       //$("body>*:not(.fancybox-container):not(#popup-brif)").addClass("blur");
+            
+      $('.brief__close').on('click', function() {
+        $.fancybox.close();
+      })
     },
     afterClose: function () {
       //$("body>*:not(.fancybox-container):not(#popup-brif)").removeClass("blur");

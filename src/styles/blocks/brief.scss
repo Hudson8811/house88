@@ -3,23 +3,91 @@
   max-width: vw(915);
   padding: vw(170) vw(79);
 
+  @include media(1200) {
+    max-width: 70%;
+    padding: vw(170, 1200) vw(80, 1200);
+  }
+
+  @include media(768) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    padding: vw(50, 376) vw(20, 376);
+  }
+
+  &__close {
+    position: fixed;
+    top: 80px;
+    right: 90px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      fill: #fff;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      opacity: 1;
+    }
+
+    @include media(1200) {
+      padding: vw(4, 1200);
+    }
+
+    @include media(768) {
+      padding: vw(4, 376);
+    }
+  }
+
   &__title {
     margin-bottom: vw(40);
     font-family: $headingFont;
     font-size: vw(46);
     line-height: 1;
     color: #ffffff;
-    letter-spacing: vw(-0.92);
+    letter-spacing: -0.02em;
     font-weight: 700;
+
+    @include media(1200) {
+      margin-bottom: vw(30, 1200);
+      font-size: vw(36, 1200);
+    }
+
+    @include media(768) {
+      margin-bottom: vw(30, 376);
+      font-size: vw(36, 376);
+    }
   }
 
   &__short {
     max-width: vw(640);
     margin-bottom: vw(90);
-    font-size: vw(21);
+    //font-size: vw(21);
     line-height: 1.09523;
     color: #ffffff;
-    letter-spacing: vw(-0.43);
+    letter-spacing: -0.02047em;
+
+    @include media(1200) {
+      max-width: vw(580, 1200);
+      margin-bottom: vw(60, 1200);
+    }
+
+    @include media(768) {
+      max-width: none;
+      margin-bottom: vw(40, 376);
+    }
   }
 
   &__form {
@@ -32,13 +100,17 @@
 
     &-fieldset + &-fieldset {
       margin-top: vw(90);
+
+      @include media(768) {
+        margin-top: vw(60, 1200);
+      }
     }
 
     legend {
-      font-size: vw(21);
+      //font-size: vw(21);
       line-height: 1.09523;
       color: #ffffff;
-      letter-spacing: vw(-0.43);
+      letter-spacing: -0.02047em;
       font-weight: 400;
     }
 
@@ -97,12 +169,46 @@
   &__radio {
     margin-top: vw(16);
     margin-right: vw(16);
+
+    @include media(1200) {
+      margin-top: vw(16, 1200);
+      margin-right: vw(16, 1200);
+    }
+
+    @include media(768) {
+      margin-top: vw(16, 376);
+      margin-right: vw(16, 376);
+    }
   }
 
   &__checkbox {
     min-width: vw(230);
     margin-top: vw(22);
     margin-right: vw(110);
+
+    @include media(1200) {
+      min-width: vw(230, 1200);
+      margin-top: vw(22, 1200);
+      margin-right: vw(110, 1200);
+    }
+
+    @include media(768) {
+      min-width: vw(300, 376);
+      margin-top: vw(22, 376);
+      margin-right: vw(110, 376);
+    }
+  }
+
+  &__member-grid {
+    margin-top: vw(42);
+
+    @include media(1200) {
+      margin-top: vw(42, 1200);
+    }
+
+    @include media(768) {
+      margin-top: vw(20, 376);
+    }
   }
 
   &__fields-grid {
@@ -110,14 +216,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+
+    @include media(768) {
+      display: block;
+    }
   }
 
   &__fields-column {
     width: calc(50% - 1.04166vw); //40
+
+    @include media(768) {
+      width: 100%;
+    }
   }
 
   &__field {
     width: 100%;
     margin-top: vw(52);
+
+    @include media(1200) {
+      margin-top: vw(40, 1200);
+    }
   }
+}
+
+.fancybox-slide {
+  width: auto;
 }

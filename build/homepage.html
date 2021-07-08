@@ -21,7 +21,10 @@
     <main class="main">
       <section class="hero"> 
         <div class="hero__container"> 
-          <div class="hero__photo"><img src="images/hero/main-photo.jpg" width="1920" height="2200" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+          <div class="hero__photo">
+            <picture> 
+              <source media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+            </picture>
             <div class="hero__grid"> 
               <div class="hero__member hero__member--seneamin">
                 <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin">
@@ -75,8 +78,10 @@
           </div>
           <div class="hero__main">
             <div class="container">
+              <button class="hero__button __js_open-brief" type="button">Выбрать блогера</button>
               <h1 class="hero__title title">Тикток дом <span class="hero__title-double">house88<span class="part part--text-ho">ho </span><span class="part part--text-use">use </span><span class="part part--text-88">88</span></span></h1>
               <div class="hero__text title"><span class="title__bg">Внимание <span class="hero__text-double" data-before="30">30</span> миллионнов</span><span class="title__bg">человек для вашего продукта</span><span class="title__bg">или услуги</span></div>
+              <div class="hero__text hero__text--mobile title"><span class="title__bg">Внимание </span><span class="title__bg"><span class="hero__text-double" data-before="30">30</span> миллионнов</span><span class="title__bg">человек для вашего </span><span class="title__bg">продукта или услуги</span></div>
             </div>
           </div>
         </div>
@@ -111,46 +116,48 @@
             <li class="partnership__item partnership__item--metro"> <img src="images/logo-metro.png" width="165" height="30" alt="METRO"></li>
             <li class="partnership__item partnership__item--tele2"> <img src="images/logo-tele2.png" width="143" height="54" alt="Tele2"></li>
           </ul>
-          <div class="partnership__grid">
-            <div class="partnership__video partnership__video--one">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/metro.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--two">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/letual.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--three">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/street-beat.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--four">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/formula-cinema.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--five">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/lenses.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--six">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/street-beat.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--seven">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/pubg.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="partnership__video partnership__video--eight">
-              <video autoplay="true" muted="true" loop="true">
-                <source src="images/video/sportmaster.mp4" type="video/mp4">
-              </video>
+          <div class="partnership__grid swiper-container"> 
+            <div class="swiper-wrapper">
+              <div class="partnership__video partnership__video--one swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/metro.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--two swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/letual.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--three swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/street-beat.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--four swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/formula-cinema.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--five swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/lenses.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--six swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/street-beat.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--seven swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/pubg.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--eight swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/sportmaster.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +191,7 @@
       </section>
       <section class="quality">
         <div class="quality__container container">
-          <h2 class="quality__title title" data-before="tiktok"><span class="title__bg">Мы привносим качественный</span>контент в ТикТок</h2>
+          <h2 class="quality__title title" data-before="tiktok"><span class="title__bg">Мы привносим качественный</span><span>контент в ТикТок</span></h2>
           <ul class="quality__list">
             <li class="quality__item">
               <div class="quality__item-video video-box">
@@ -249,6 +256,7 @@
       <section class="what-doing">
         <div class="what-doing__container container"> 
           <div class="what-doing__section what-doing__section--trends">
+            <div class="what-doing__section-title what-doing__section-title--mobile title">Делаем мировые <span class="title__bg">тренды</span></div>
             <div class="what-doing__section-media">
               <div class="what-doing__section-video video-box">
                 <video autoplay="true" muted="true" loop="true">
@@ -325,166 +333,168 @@
               </li>
             </ul>
           </div>
-          <div class="booking__main"> 
-            <div class="booking__card" data-category="challenges-and-sketches, categories">
-              <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Oreo</h3><img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+          <div class="booking__main swiper-container"> 
+            <div class="swiper-wrapper">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, categories">
+                <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Oreo</h3><img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Oreo">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Oreo">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="viral">
-              <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Daniil</h3><img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="viral">
+                <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Daniil</h3><img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Daniil">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Daniil">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="challenges-and-sketches">
-              <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Alexkady</h3><img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches">
+                <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Alexkady</h3><img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Alexkady">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Alexkady">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="challenges-and-sketches, pranks">
-              <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Seneamin</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, pranks">
+                <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Seneamin</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Seneamin">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Seneamin">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="viral">
-              <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Prokop</h3><img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="viral">
+                <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Prokop</h3><img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Prokop">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Prokop">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="image-based, pranks">
-              <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Zavaly</h3><img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="image-based, pranks">
+                <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Zavaly</h3><img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Zavaly">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Zavaly">Оставить заявку</button>
               </div>
-            </div>
-            <div class="booking__card" data-category="categories">
-              <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
-              <div class="booking__card-main">
-                <div class="booking__card-title">
-                  <h3>Haribo</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+              <div class="booking__card swiper-slide" data-category="categories">
+                <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Haribo</h3><img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Haribo">Оставить заявку</button>
                 </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">ТикТок</div>
-                  <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <div class="booking__card-social"> 
-                  <div class="booking__card-social-title">Инстаграм </div>
-                  <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
-                    <svg width="17" height="17">
-                      <use xlink:href="images/sprite.svg#chain"></use>
-                    </svg></a>
-                </div>
-                <button class="booking__card-button" type="button" data-member="Haribo">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -544,6 +554,11 @@
       </div>
     </footer>
     <div class="brief" id="brief" style="display: none;">
+      <button class="brief__close" type="button">
+        <svg width="36" height="36">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
       <div class="brief__title">HOUSE 88</div>
       <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
       <form class="brief__form" action="#" method="post" enctype="multipart/form-data">

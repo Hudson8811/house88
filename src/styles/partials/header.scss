@@ -5,6 +5,10 @@
   top: vw(36);
   width: 100%;
 
+  @include media(768) {
+    top: vw(17, 376);
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -17,6 +21,10 @@
   &__logo {
     width: vw(210);
     margin-right: auto;
+
+    @include media(768) {
+      width: vw(66, 376);
+    }
 
     img {
       display: block;
@@ -34,8 +42,12 @@
       font-family: $mainFont--book;
       line-height: 1;
       color: #ffffff;
-      letter-spacing: vw(-0.43);
+      letter-spacing: -0.02047em;
       text-decoration: none;
+
+      @include media(768) {
+        font-size: vw(16, 376);
+      }
 
       @include hover {
         color: $purpleColor;
@@ -47,8 +59,13 @@
       font-size: vw(16);
       line-height: 1;
       color: #ffffff;
-      letter-spacing: vw(-0.32);
+      letter-spacing: -0.02em;
       font-weight: 300;
+
+      @include media(768) {
+        margin-top: vw(-5, 376);
+        font-size: vw(14, 376);
+      }
     }
   }
 
@@ -63,6 +80,10 @@
     cursor: pointer;
 
     transition: all 0.3s ease;
+
+    @include media(768) {
+      display: none;
+    }
 
     @include hover {
       border-color: $purpleColor;

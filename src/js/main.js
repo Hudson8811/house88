@@ -2,7 +2,7 @@
 //= ./../../node_modules/swiper/swiper-bundle.min.js
 //= ./libs/select2.min.js
 //= ./libs/jquery.fancybox.min.js
-//= ./libs/image-map-resizer.min.js
+//= ./libs/imageMapResizer.min.js
 
 
 //= ./partials/main.js
@@ -11,3 +11,4 @@
 //= ./partials/input-file.js
 //= ./partials/original-sound.js
 //= ./partials/booking.js
+//= ./partials/partnership-carousel.js

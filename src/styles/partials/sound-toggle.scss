@@ -15,6 +15,11 @@
     height: vw(25, 1200);
   }
 
+  @include media(768) {
+    width: vw(25, 376);
+    height: vw(25, 376);
+  }
+
   &:focus {
     outline: none;
   }
