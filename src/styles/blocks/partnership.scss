@@ -192,14 +192,14 @@
       //grid-template-rows: 12.16666vw 6.83333vw 18.41666vw 4.58333vw 7.58333vw 4.58333vw 2.08333 4.58333vw 18.58333vw;
     }
 
-    &::before {
+    /*&::before {
       content: "";
       position: relative;
       z-index: 100;
       background-color: rgba(red, 0.5);
       grid-column: 1 / -1;
       grid-row: 1 / 2;
-    }
+    }*/
   }
 
   &__video {
