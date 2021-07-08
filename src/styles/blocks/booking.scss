@@ -73,10 +73,10 @@
     }
 
     &-item {
-      padding: vw(16) vw(12);
+      padding: vw(16);
 
       @include media(1200) {
-        padding: vw(16, 1200) vw(12, 1200);
+        padding: vw(16, 1200);
       }
 
       @include media(768) {

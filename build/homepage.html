@@ -22,10 +22,9 @@
       <section class="hero"> 
         <div class="hero__container"> 
           <div class="hero__photo">
-            <!--picture 
-            //source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
-            
-            --><img class="only-mobile" src="images/hero/main-photo-mobile.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+            <picture> 
+              <source media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+            </picture>
             <div class="hero__grid"> 
               <div class="hero__member hero__member--seneamin">
                 <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin">
@@ -317,9 +316,6 @@
           <div class="booking__filters"> 
             <h3 class="booking__filters-title">Виды интеграций:</h3>
             <ul class="booking__filters-list">
-              <li class="booking__filters-item  booking__filters-item--current booking__filters-item--all">
-                <button type="button" data-target="all">Все</button>
-              </li>
               <li class="booking__filters-item">
                 <button type="button" data-target="challenges-and-sketches">Челленджи и скетчи</button>
               </li>

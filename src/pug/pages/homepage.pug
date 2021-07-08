@@ -16,7 +16,7 @@ block vars
 			{n: 'logo-tele2', w: '143', h: '54', alt: 'Tele2'}
 		];
 
-		const FILTERS = [{text: 'Все', target: 'all', mod: 'booking__filters-item--current booking__filters-item--all'}, {text: 'Челленджи и скетчи', target: 'challenges-and-sketches'}, {text: 'Рубрики', target: 'categories'}, {text: 'Имиджевые', target: 'image-based'}, {text: 'Вирусные', target: 'viral'}, {text: 'Пранки', target: 'pranks'}];
+		const FILTERS = [{text: 'Челленджи и скетчи', target: 'challenges-and-sketches'}, {text: 'Рубрики', target: 'categories'}, {text: 'Имиджевые', target: 'image-based'}, {text: 'Вирусные', target: 'viral'}, {text: 'Пранки', target: 'pranks'}];
 
 		const BOOKING_CARDS = [
 			{name: 'Oreo', img: 'booking-oreo', smiles: ['1', '2'], social: [{name: 'ТикТок', link: '#', count: '780 000'}, {name: 'Инстаграм ', link: '#', count: '18 800'}], member: 'Oreo', category: 'challenges-and-sketches, categories'},
@@ -62,12 +62,10 @@ block main
 	section.hero 
 		.hero__container 
 			.hero__photo
-				//picture 
-					//source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
-				
-				img.only-mobile(src="images/hero/main-photo-mobile.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
-				
-				img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
+				picture 
+					source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
+
+					img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
 
 
 				.hero__grid 

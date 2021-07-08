@@ -3,30 +3,16 @@
 
   &__photo {
     position: relative;
-    //height: vw(1272);
-    padding-top: 66.25%;
+    height: vw(1272);
+    //padding-top: 66.25%;
     background-color: #4c5769;
 
-    & > img {
-      position: absolute;
-      top: 0;
-      left: 0;
+    img {
       display: block;
       max-width: none !important;
       width: 100%;
       height: auto;
       //filter: invert(1);
-      @include media(768) {
-        display: none;
-      }
-    }
-
-    & > img.only-mobile {
-      display: none;
-
-      @include media(768) {
-        display: block;
-      }
     }
 
     @include media(768) {
