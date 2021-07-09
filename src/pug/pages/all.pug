@@ -1,0 +1,222 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	.container
+		.text-style
+			h1 Заголовок H1
+			h2 Заголовок H2
+			h3 Заголовок H3
+			h4 Заголовок H4
+			h5 Заголовок H5
+			h6 Заголовок H6
+			p Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании новых предложений. Значимость этих проблем
+			p Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании новых предложений. Значимость этих проблем
+			ul
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+					ul
+						li Идейные соображения высшего порядка, а также постоянный количественный рост;
+						li Идейные соображения высшего порядка, а также постоянный количественный рост;
+			ol
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+				li Идейные соображения высшего порядка, а также постоянный количественный рост;
+					ol
+						li Идейные соображения высшего порядка, а также постоянный количественный рост;
+						li Идейные соображения высшего порядка, а также постоянный количественный рост;
+						li Идейные соображения высшего порядка, а также постоянный количественный рост;
+							ol
+								li Идейные соображения высшего порядка, а также постоянный количественный рост;
+								li Идейные соображения высшего порядка, а также постоянный количественный рост;
+			a(href="#") Ссылка
+
+
+		.breadcrumbs
+			.breadcrumbs__inner
+				a.breadcrumbs__link(href="") Главная
+				.breadcrumbs__sep
+				a.breadcrumbs__link(href="") Раздел 1
+				.breadcrumbs__sep
+				.breadcrumbs__link Статья 1 Раздел 1
+
+
+		div
+			button.btn Стандартная кнопка 1
+		div
+			button.btn.btn--border Стандартная кнопка 2
+		div
+			button.btn
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					circle(cx='10' cy='10' r='9.5' stroke='currentColor')
+				span Стандартная кнопка 3
+		div
+			button.btn.btn--border
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					circle(cx='10' cy='10' r='9.5' stroke='currentColor')
+				span  Стандартная кнопка 4
+		div
+			button.btn.btn--icon
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					circle(cx='10' cy='10' r='9.5' stroke='currentColor')
+		div
+			button.btn.btn--border.btn--icon
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					circle(cx='10' cy='10' r='9.5' stroke='currentColor')
+
+		div
+			button.btn(disabled="disabled") Стандартная кнопка 1
+		div
+			button.btn.btn--border.disabled Стандартная кнопка 1
+
+
+
+		div.check-row
+			label.checkbox
+				input(type="checkbox" name="checkbox" value="")
+				span
+			span Согласен со всеми условиями
+
+		div.check-row
+			label.checkbox
+				input(type="checkbox" name="checkbox" value="" disabled="disabled")
+				span
+			span Согласен со всеми условиями
+		div.check-row
+			label.radio
+				input(type="radio" name="radio" value="")
+				span
+			span Согласен со всеми условиями
+
+		div.check-row
+			label.radio
+				input(type="radio" name="radio" value="" disabled="disabled")
+				span
+			span Согласен со всеми условиями
+
+
+
+		div
+			input.input(type="text" name="text" placeholder="Ваше имя")
+		div
+			input.input(type="text" name="text" placeholder="Ваше имя" disabled="disabled")
+
+		div
+			select.select(name="select")
+				option(value="0") Ваше имя
+				option(value="1") Не ваше имя
+				option(value="2") Не свое имя
+				option(value="3") Свое имя
+
+		div
+			select.select(name="select" disabled="disabled")
+				option(value="0") Ваше имя
+				option(value="1") Не ваше имя
+				option(value="2") Не свое имя
+				option(value="3") Свое имя
+
+
+		div
+			.tabs-switch
+				a.tabs-switch__item.active(href="javascript:;") Активное окно
+				a.tabs-switch__item(href="javascript:;") Неактивное окно
+				a.tabs-switch__item(href="javascript:;") Еще одно окно
+			.tabs-content
+				.tabs-content__item.active 1
+				.tabs-content__item 2
+				.tabs-content__item 3
+
+		div
+			table.table
+				tr
+					th Столбец 1
+					th Столбец 2
+					th Столбец 3
+				tr
+					td Надпись 1
+					td Надпись 2
+					td Надпись 3
+				tr
+					td Надпись 1
+					td Надпись 2
+					td Надпись 3
+				tr
+					td Надпись 1
+					td Надпись 2
+					td Надпись 3
+
+		div
+			.pagintaion
+				a(href="")
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M8 17L1 9L8 1' stroke='currentColor')
+				a(href="") 1
+				a(href="") 2
+				a(href="").current 3
+				a(href="") 4
+				a(href="") 5
+				span ...
+				a(href="") 10
+				a(href="")
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M1 1L8 9L1 17' stroke='currentColor')
+
+		div
+			.navigation
+				button.navigation__btn.navigation__btn--prev
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M8 17L1 9L8 1' stroke='currentColor')
+				.navigation__dots
+					button
+					button.active
+					button
+					button
+				button.navigation__btn.navigation__btn--next
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M1 1L8 9L1 17' stroke='currentColor')
+		div
+			.navigation
+				button.navigation__btn.navigation__btn--prev
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M8 17L1 9L8 1' stroke='currentColor')
+				.navigation__dots.navigation__dots--line
+					button
+					button.active
+					button
+					button
+				button.navigation__btn.navigation__btn--next
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M1 1L8 9L1 17' stroke='currentColor')
+		div
+			.navigation
+				button.navigation__btn.navigation__btn--border.navigation__btn--prev
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M8 17L1 9L8 1' stroke='currentColor')
+				.navigation__dots
+					button
+					button.active
+					button
+					button
+				button.navigation__btn.navigation__btn--border.navigation__btn--next
+					svg(width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M1 1L8 9L1 17' stroke='currentColor')
+
+
+		div(style="width: 500px;")
+			a.zoom(href="")
+				img(src="images/placeholder-image.jpg" alt="")
+
+
+		div(style="width: 500px;")
+			.accordion
+				.accordion__title
+					.accordion__title-text Текст рыба на русском языке наполнит любой макет?
+					.accordion__title-icon
+				.accordion__text.text-style
+					p При создании генератора мы использовали небезизвестныйx универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.

@@ -62,17 +62,20 @@
   
 
     .brief__form-bottom
-      //.brief__form-file.file-button
-        input.visually-hidden(type="file", id="customFileBrief", name="file")
-        label(for="customFileBrief")
-          span.file-button__icon
-            +icon('attach')(width="27", height="27")
-          span.file-button__text Прикрепить файлы
+      .brief__form-custom
+        .brief__form-file.file-button
+          input.visually-hidden.inputfile.js-new-file(type="file", id="customFileBrief", name="file")
+          label(for="customFileBrief")
+            span.file-button__icon
+              +icon('attach')(width="27", height="27")
+            span.file-button__text Прикрепить файлы
+          button.file-button__remove.js-remove-file(type="button")
+            +icon('close')(width="14", height="14")
       button.brief__form-send(type="submit") Отправить
       .brief__form-consent Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a>
 
 
-    .custom-files
+    //-.custom-files
       .custom-file
         input.inputfile.js-new-file(type="file", name="file[]", id="file1")
         label(for="file1")

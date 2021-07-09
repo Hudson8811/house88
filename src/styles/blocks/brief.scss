@@ -6,7 +6,7 @@
   font-family: $mainFont--book;
 
   @include media(1200) {
-    max-width: 70%;
+    max-width: 73%;
     padding: vw(170, 1200) vw(80, 1200);
   }
 
@@ -131,7 +131,7 @@
 
     &-bottom {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-top: vw(90);
 
       @include media(1200) {
@@ -141,6 +141,39 @@
       @include media(768) {
         display: block;
         margin-top: vw(40, 376);
+      }
+    }
+
+    &-custom {
+      counter-reset: list;
+
+      margin-right: vw(24);
+      flex-shrink: 0;
+
+      @include media(1200) {
+        margin-right: vw(24, 1200);
+      }
+
+      @include media(768) {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .file-button--selected {
+        margin-top: vw(15);
+        counter-increment: list;
+
+        @include media(1200) {
+          margin-top: vw(15, 1200);
+        }
+
+        @include media(768) {
+          margin-top: vw(15, 376);
+        }
+
+        &::before {
+          content: counter(list);
+        }
       }
     }
 
@@ -205,6 +238,7 @@
 
     &-consent {
       max-width: vw(250);
+      padding: vw(10) 0;
       font-size: vw(14);
       line-height: 1;
       color: #ffffff;
@@ -212,11 +246,13 @@
 
       @include media(1200) {
         max-width: vw(250, 1200);
+        padding: vw(10, 1200) 0;
         font-size: vw(14, 1200);
       }
 
       @include media(768) {
         max-width: vw(250, 376);
+        padding: 0;
         margin-top: vw(24, 376);
         font-size: vw(14, 376);
       }

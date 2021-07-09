@@ -1,7 +1,15 @@
 .file-button {
   $self: &;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  width: vw(260);
+
+  @include media(1200) {
+    width: vw(260, 1200);
+  }
+
+  @include media(1200) {
+    width: 100%;
+  }
 
   &__icon {
     margin-right: vw(12);
@@ -46,6 +54,31 @@
     }
   }
 
+  &__remove {
+    display: none;
+    width: vw(14);
+    height: vw(14);
+    margin-left: vw(14);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    opacity: 0.18;
+    transition: opacity 0.3s ease;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      fill: #fff;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   label {
     position: relative;
     display: flex;
@@ -54,7 +87,7 @@
     border: vw(1) solid rgba(#fff, 0.21);
     border-radius: vw(25);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
 
     @include media(1200) {
       padding: vw(10, 1200) vw(25, 1200);
@@ -78,6 +111,87 @@
       #{$self}__icon svg {
         fill: #ffffff;
       }
+    }
+  }
+
+  &--selected {
+    display: flex;
+    align-items: center;
+    padding-left: vw(35);
+
+    @include media(1200) {
+      padding-left: vw(35, 1200);
+    }
+
+    @include media(768) {
+      padding-left: vw(35, 376);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: vw(15);
+      margin-right: vw(15);
+      font-size: vw(19);
+      line-height: 1;
+      color: #fff;
+      opacity: 0.18;
+
+      @include media(1200) {
+        width: vw(15, 1200);
+        margin-right: vw(15, 1200);
+        font-size: vw(19, 1200);
+      }
+
+      @include media(768) {
+        width: vw(15, 376);
+        margin-right: vw(15, 376);
+        font-size: vw(19, 376);
+      }
+    }
+
+    @include hover {
+      #{$self}__remove {
+        opacity: 1;
+      }
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: vw(150);
+      padding: 0;
+      border: none;
+      text-align: center;
+
+      @include media(1200) {
+        max-width: vw(150, 1200);
+      }
+
+      @include media(768) {
+        max-width: vw(150, 376);
+      }
+    }
+
+    #{$self}__text {
+      color: #fff;
+    }
+
+    #{$self}__icon {
+      display: none;
+    }
+
+    #{$self}__remove {
+      display: block;
+    }
+
+    @include media(1200) {
+      padding-left: vw(35, 1200);
+    }
+
+    @include media(768) {
+      padding-left: vw(35, 376);
     }
   }
 }

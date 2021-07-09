@@ -19,246 +19,533 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <div class="text-style">
-          <h1>Заголовок H1</h1>
-          <h2>Заголовок H2</h2>
-          <h3>Заголовок H3</h3>
-          <h4>Заголовок H4</h4>
-          <h5>Заголовок H5</h5>
-          <h6>Заголовок H6</h6>
-          <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании новых предложений. Значимость этих проблем</p>
-          <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании новых предложений. Значимость этих проблем</p>
-          <ul>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;
-              <ul>
-                <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-                <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
+      <section class="hero"> 
+        <div class="hero__container"> 
+          <div class="hero__photo">
+            <picture> 
+              <source media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
+            </picture>
+            <div class="hero__grid"> 
+              <div class="hero__member hero__member--seneamin">
+                <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin">
+                </div>
+                <div class="hero__member-text">seneamin</div>
+              </div>
+              <div class="hero__member hero__member--oreo">
+                <div class="hero__member-image"><img src="images/hero/2n.png" width="1464" height="3145" alt="oreowhiteboy">
+                </div>
+                <div class="hero__member-text">oreowhiteboy</div>
+              </div>
+              <div class="hero__member hero__member--haribo">
+                <div class="hero__member-image"><img src="images/hero/3n.png" width="1464" height="3145" alt="haribo">
+                </div>
+                <div class="hero__member-text">haribo</div>
+              </div>
+              <div class="hero__member hero__member--zavaly">
+                <div class="hero__member-image"><img src="images/hero/4n.png" width="1464" height="3145" alt="zava_ly">
+                </div>
+                <div class="hero__member-text">zava_ly</div>
+              </div>
+              <div class="hero__member hero__member--smmagnat">
+                <div class="hero__member-image"><img src="images/hero/5n.png" width="1464" height="3145" alt="smmagnat">
+                </div>
+                <div class="hero__member-text">smmagnat</div>
+              </div>
+              <div class="hero__member hero__member--daniil">
+                <div class="hero__member-image"><img src="images/hero/6n.png" width="1464" height="3145" alt="danil_co">
+                </div>
+                <div class="hero__member-text">danil_co</div>
+              </div>
+              <div class="hero__member hero__member--alexkady">
+                <div class="hero__member-image"><img src="images/hero/7n.png" width="1464" height="3145" alt="alex_kady">
+                </div>
+                <div class="hero__member-text">alex_kady</div>
+              </div>
+              <div class="hero__member hero__member--prokop">
+                <div class="hero__member-image"><img src="images/hero/8n.png" width="1464" height="3145" alt="prokop">
+                </div>
+                <div class="hero__member-text">prokop</div>
+              </div>
+            </div><map name="image-map">
+              <area target="" alt="seneamin" title="" href="Seneamin" coords="64,356,79,310,157,269,184,247,164,196,174,140,206,122,245,130,267,157,273,198,276,223,250,256,262,279,281,303,310,323,291,357,310,440,306,524,306,593,291,686,269,805,249,914,249,956,257,1012,274,1032,340,1046,342,1063,300,1077,193,1078,211,1116,237,1153,215,1164,174,1164,149,1159,123,1131,128,1101,132,1065,103,1025,103,904,113,736,98,668,96,612,106,533,54,505" shape="poly">
+              <area target="" alt="oreo" title="" href="Oreo" coords="378,270,337,194,347,165,373,145,423,146,447,158,461,179,454,226,440,258,456,275,540,308,568,389,559,603,544,637,551,862,568,1011,566,1060,581,1096,561,1116,527,1116,512,1065,500,1041,486,1043,434,1079,398,1089,386,1089,391,1064,422,1021,408,935,356,753,334,643,308,604,310,431,296,356,313,322,357,305" shape="poly">
+              <area target="" alt="haribo" title="" href="Haribo" coords="566,369,578,299,615,269,617,250,561,150,588,111,624,104,652,121,669,146,680,170,664,196,671,209,705,240,758,270,797,299,815,457,797,491,773,499,778,562,781,632,754,664,764,752,775,813,778,891,771,1001,778,1054,724,1090,671,1093,703,1040,680,1032,578,1056,569,1027,613,996,595,810,574,654,559,593,569,455" shape="poly">
+              <area target="" alt="zavaly" title="" href="Zavaly" coords="812,288,841,283,861,187,880,139,917,129,941,142,958,173,975,251,975,285,1010,309,1026,421,1037,551,1046,628,1032,667,1009,668,995,648,980,721,988,863,966,855,941,963,948,1038,951,1064,905,1065,902,994,917,943,915,841,924,784,907,658,900,672,887,745,880,799,870,850,859,931,863,1025,861,1094,856,1111,824,1118,808,1113,825,1004,808,868,815,835,822,768,814,684,798,665,776,639,781,597,776,500,808,487,825,439,802,322" shape="poly">
+              <area target="" alt="smmagnat" title="" href="Smmagnat" coords="980,278,1017,254,1024,229,1005,186,1020,130,1058,108,1087,121,1097,181,1088,232,1100,255,1171,284,1180,315,1177,377,1175,530,1154,613,1151,652,1138,666,1134,839,1124,938,1121,1006,1138,1050,1114,1059,1083,1047,1068,1016,1043,1003,1020,1028,993,1043,970,1037,990,991,990,921,983,787,985,703,1009,680,1051,648,1049,611,1041,552,1032,443,1019,338,1014,306,993,294" shape="poly">
+              <area target="" alt="daniil" title="" href="Daniil" coords="1185,318,1236,301,1258,275,1239,238,1248,182,1290,165,1331,187,1327,258,1307,287,1385,328,1389,472,1382,625,1334,671,1304,973,1300,1032,1280,1044,1255,1032,1233,1018,1195,1013,1182,944,1156,816,1158,664,1158,610,1173,543,1178,433,1178,374" shape="poly">
+              <area target="" alt="alexkady" title="" href="Alexkady" coords="1390,326,1433,266,1416,217,1426,151,1475,132,1517,159,1514,198,1499,241,1585,307,1573,441,1565,662,1592,862,1582,984,1562,1061,1541,1081,1494,1078,1509,1013,1443,1013,1387,1017,1363,1005,1380,993,1443,971,1450,910,1421,772,1399,681,1367,660,1385,626" shape="poly">
+              <area target="" alt="prokop" title="" href="Prokop" coords="1579,294,1630,263,1644,241,1620,165,1638,111,1674,97,1725,117,1730,161,1722,219,1801,273,1808,372,1789,507,1771,606,1774,667,1779,759,1796,843,1795,965,1786,1059,1772,1098,1728,1098,1718,1071,1735,1020,1677,1023,1625,1013,1584,1015,1596,962,1623,922,1630,854,1611,760,1588,655,1576,576" shape="poly"></map>
+          </div>
+          <div class="hero__main">
+            <div class="container">
+              <button class="hero__button __js_open-brief" type="button">Выбрать блогера</button>
+              <h1 class="hero__title title">Тикток дом <span class="hero__title-double">house88<span class="part part--text-ho">ho </span><span class="part part--text-use">use </span><span class="part part--text-88">88</span></span></h1>
+              <div class="hero__text title"><span class="title__bg">Внимание <span class="hero__text-double" data-before="30">30</span> миллионнов</span><span class="title__bg">человек для вашего продукта</span><span class="title__bg">или услуги</span></div>
+              <div class="hero__text hero__text--mobile title"><span class="title__bg">Внимание </span><span class="title__bg"><span class="hero__text-double" data-before="30">30</span> миллионнов</span><span class="title__bg">человек для вашего </span><span class="title__bg">продукта или услуги</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about"> 
+        <div class="about__container container">
+          <h2 class="about__title title" data-before="about us"> <span class="title__bg">О нас</span></h2>
+          <div class="about__grid"> 
+            <div class="about__photo"><img src="images/about-photo.png" width="908" height="510" alt="Общее фото "></div>
+            <div class="about__main"> 
+              <div class="about__main-title">House88 это возможности:</div>
+              <ul class="about__list"> 
+                <li class="about__item">Зайти на востребованные площадки с продакшеном <span>любого уровня сложности.</span></li>
+                <li class="about__item">Получить <span>комплексный подход:</span> от анализа рынка до подробных отчётов.</li>
+                <li class="about__item">Интегрировать нас в вашу маркетинговую систему и провести <span>совместные брейнштормы</span> с отделом маркетинга.</li>
+                <li class="about__item">Получать <span>анализ процесса рекламных интеграций</span> и корректировку тактики ведения по потребности.</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partnership"> 
+        <div class="partnership__container container"> 
+          <h2 class="partnership__title title" data-before="Brands"> <span class="title__bg">С нами уже </span><span class="title__bg">сотрудничают</span></h2>
+          <ul class="partnership__list"> 
+            <li class="partnership__item partnership__item--starbucks-coffee"> <img src="images/logo-starbucks-coffee.png" width="113" height="113" alt="Starbucks Coffee"></li>
+            <li class="partnership__item partnership__item--letual"> <img src="images/logo-letual.png" width="229" height="39" alt="Л'этуаль"></li>
+            <li class="partnership__item partnership__item--street-beat"> <img src="images/logo-street-beat.png" width="226" height="87" alt="Street Beats"></li>
+            <li class="partnership__item partnership__item--formula-cinema"> <img src="images/logo-formula-cinema.png" width="310" height="33" alt="Формула кино"></li>
+            <li class="partnership__item partnership__item--pubg-mobile"> <img src="images/logo-pubg-mobile.png" width="115" height="85" alt="PUBG mobile"></li>
+            <li class="partnership__item partnership__item--sportmaster"> <img src="images/logo-sportmaster.png" width="120" height="79" alt="Спортмастер"></li>
+            <li class="partnership__item partnership__item--metro"> <img src="images/logo-metro.png" width="165" height="30" alt="METRO"></li>
+            <li class="partnership__item partnership__item--tele2"> <img src="images/logo-tele2.png" width="143" height="54" alt="Tele2"></li>
+          </ul>
+          <div class="partnership__grid swiper-container"> 
+            <div class="swiper-wrapper">
+              <div class="partnership__video partnership__video--one swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/metro.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--two swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/letual.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--three swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/street-beat.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--four swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/formula-cinema.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--five swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/lenses.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--six swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/street-beat.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--seven swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/pubg.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="partnership__video partnership__video--eight swiper-slide">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/sportmaster.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="line-section">
+        <div class="line-section__container container"> 
+          <h2 class="line-section__title title" data-before="Contact us"><span class="title__bg">Хотите </span><span class="title__bg">посотрудничать?</span></h2>
+          <div class="line-section__main">
+            <form action="#" method="post">
+              <div class="line-section__fieldset">
+                <label class="line-section__field field" aria-label="Имя">
+                  <input type="text" name="name" placeholder="Имя">
+                </label>
+                <label class="line-section__field field" aria-label="Телефон">
+                  <input type="tel" name="phone" placeholder="Телефон">
+                </label>
+                <label class="line-section__field field" aria-label="Почта">
+                  <input type="email" name="email" placeholder="Почта">
+                </label>
+                <label class="line-section__field field" aria-label="Что надо?">
+                  <input type="text" name="text" placeholder="Что надо?">
+                </label>
+              </div>
+              <button class="line-section__button" type="submit"><span class="line-section__button-icon"> 
+                  <svg width="130" height="130">
+                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  </svg></span><span class="line-section__button-text">Отправить</span></button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="quality">
+        <div class="quality__container container">
+          <h2 class="quality__title title" data-before="tiktok"><span class="title__bg">Мы привносим качественный</span><span>контент в ТикТок</span></h2>
+          <ul class="quality__list">
+            <li class="quality__item">
+              <div class="quality__item-video video-box">
+                <div class="video-box__poster"> <img src="images/video/quality-1.jpg" alt=""></div>
+                <video muted="true" loop="true">
+                  <source src="images/video/bracelets.mp4" type="video/mp4">
+                </video>
+                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Браслеты <span>/</span> 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
+            </li>
+            <li class="quality__item">
+              <div class="quality__item-video video-box">
+                <div class="video-box__poster"> <img src="images/video/quality-2.jpg" alt=""></div>
+                <video muted="true" loop="true">
+                  <source src="images/video/spiderman.mp4" type="video/mp4">
+                </video>
+                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Человек-паук <span>/</span> 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
+            </li>
+            <li class="quality__item">
+              <div class="quality__item-video video-box">
+                <div class="video-box__poster"> <img src="images/video/quality-3.jpg" alt=""></div>
+                <video muted="true" loop="true">
+                  <source src="images/video/crush.mp4" type="video/mp4">
+                </video>
+                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
+              <div class="quality__item-info"> 
+                <h3 class="quality__item-title">Краш с района <span>/</span> 1 серия</h3>
+                <div class="quality__item-text">Тикток Сериал</div>
+              </div>
             </li>
           </ul>
-          <ol>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-            <li>Идейные соображения высшего порядка, а также постоянный количественный рост;
-              <ol>
-                <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-                <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-                <li>Идейные соображения высшего порядка, а также постоянный количественный рост;
-                  <ol>
-                    <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-                    <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
-                  </ol>
-                </li>
-              </ol>
+        </div>
+      </section>
+      <section class="what-doing">
+        <div class="what-doing__container container"> 
+          <div class="what-doing__section what-doing__section--trends">
+            <div class="what-doing__section-title what-doing__section-title--mobile title">Делаем мировые <span class="title__bg">тренды</span></div>
+            <div class="what-doing__section-media">
+              <div class="what-doing__section-video video-box">
+                <video autoplay="true" muted="true" loop="true">
+                  <source src="images/video/global-trends.mp4" type="video/mp4">
+                </video>
+                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-off"></use>
+                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprite.svg#sound-on"></use>
+                    </svg></span></button>
+              </div>
+            </div>
+            <div class="what-doing__section-main">
+              <div class="what-doing__section-title title title">Делаем мировые <span class="title__bg">тренды</span></div>
+              <div class="what-doing__section-sound original-sound">
+                <audio src="images/video/Nickelback-Someday.mp3" loop="true">Your browser does not support the <code>audio</code> element.</audio>
+                <div class="original-sound__image"><img src="images/os.jpg" width="137" height="137" alt="">
+                  <button class="original-sound__toggle" type="button"><span class="original-sound__toggle-icon original-sound__toggle-icon--play">
+                      <svg width="32" height="32">
+                        <use xlink:href="images/sprite.svg#play"></use>
+                      </svg></span><span class="original-sound__toggle-icon original-sound__toggle-icon--pause">
+                      <svg width="32" height="32">
+                        <use xlink:href="images/sprite.svg#pause"></use>
+                      </svg></span></button>
+                </div>
+                <div class="original-sound__main">
+                  <div class="original-sound__title">оригинальный звук</div>
+                  <div class="original-sound__name">Саня Бардаш</div>
+                  <div class="original-sound__count">65.6K клипы</div>
+                  <div class="original-sound__minus"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="what-doing__section what-doing__section--formats">
+            <div class="what-doing__section-media"> <img src="images/new-formats-image.jpg" alt=""></div>
+            <div class="what-doing__section-main"> 
+              <div class="what-doing__section-title title">
+                 Создаём новые форматы 
+                <span class="title__bg">продвижения</span> 
+                треков через <span class="what-doing__section-title-double" data-before="tik tok">тикток</span>
+              </div>
+            </div>
+          </div>
+          <div class="what-doing__section what-doing__section--learning">
+            <div class="what-doing__section-main"> 
+              <div class="what-doing__section-title title" data-after="Скоро"><span class="title__bg">Создаём</span><span class="title__bg">образовательный</span><span class="title__bg">контент</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="booking">
+        <div class="booking__container container"> 
+          <h2 class="booking__title title" data-before="booking"><span class="title__bg">Букинг блогеров</span></h2>
+          <div class="booking__filters"> 
+            <h3 class="booking__filters-title">Виды интеграций:</h3>
+            <ul class="booking__filters-list">
+              <li class="booking__filters-item">
+                <button type="button" data-target="challenges-and-sketches">Челленджи и скетчи</button>
+              </li>
+              <li class="booking__filters-item">
+                <button type="button" data-target="categories">Рубрики</button>
+              </li>
+              <li class="booking__filters-item">
+                <button type="button" data-target="image-based">Имиджевые</button>
+              </li>
+              <li class="booking__filters-item">
+                <button type="button" data-target="viral">Вирусные</button>
+              </li>
+              <li class="booking__filters-item">
+                <button type="button" data-target="pranks">Пранки</button>
+              </li>
+            </ul>
+          </div>
+          <div class="booking__main swiper-container"> 
+            <div class="swiper-wrapper">
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, categories" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Oreo<img src="images/smiles/1.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">780 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">18 800</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Oreo">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="viral" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Daniil<img src="images/smiles/3.png" width="32" height="32" alt="smile"><img src="images/smiles/2.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">705 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">40 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Daniil">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Alexkady<img src="images/smiles/4.png" width="32" height="32" alt="smile"><img src="images/smiles/5.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">975 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">21 300</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Alexkady">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, pranks" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Seneamin<img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/7.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">30 500</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Seneamin">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="viral" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Prokop<img src="images/smiles/8.png" width="32" height="32" alt="smile"><img src="images/smiles/9.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 000 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">13 600</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Prokop">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="image-based, pranks" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Zavaly<img src="images/smiles/10.png" width="32" height="32" alt="smile"><img src="images/smiles/11.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">1 900 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">36 400</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Zavaly">Оставить заявку</button>
+                </div>
+              </div>
+              <div class="booking__card swiper-slide" data-category="categories" contenteditable="true">
+                <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
+                <div class="booking__card-main">
+                  <div class="booking__card-title">
+                    <h3>Haribo<img src="images/smiles/6.png" width="32" height="32" alt="smile"><img src="images/smiles/12.png" width="32" height="32" alt="smile">
+                    </h3>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">ТикТок</div>
+                    <div class="booking__card-social-count">720 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <div class="booking__card-social"> 
+                    <div class="booking__card-social-title">Инстаграм </div>
+                    <div class="booking__card-social-count">106 000</div><a class="booking__card-social-link" href="#" target="_blank"><span class="visually-hidden">Перейти в ${social.name}</span>
+                      <svg width="17" height="17">
+                        <use xlink:href="images/sprite.svg#chain"></use>
+                      </svg></a>
+                  </div>
+                  <button class="booking__card-button" type="button" data-member="Haribo">Оставить заявку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store">
+        <div class="store__container container">
+          <h2 class="store__title title" data-before="Store" data-after="Скоро открытие"><span class="title__bg">Мерч шоп</span></h2>
+          <ul class="store__list"> 
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-1.jpg" width="363" height="363" alt="Наклейки House88"></div>
+              <h3 class="store__card-title">Наклейки House88</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
             </li>
-          </ol><a href="#">Ссылка</a>
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Картины от Zavaly"></div>
+              <h3 class="store__card-title">Картины от Zavaly</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+            </li>
+            <li class="store__card">
+              <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Браслеты от Seneamin"></div>
+              <h3 class="store__card-title">Браслеты от Seneamin</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+            </li>
+          </ul>
         </div>
-        <div class="breadcrumbs">
-          <div class="breadcrumbs__inner"><a class="breadcrumbs__link" href="">Главная</a>
-            <div class="breadcrumbs__sep"></div><a class="breadcrumbs__link" href="">Раздел 1</a>
-            <div class="breadcrumbs__sep"></div>
-            <div class="breadcrumbs__link">Статья 1 Раздел 1</div>
+      </section>
+      <section class="line-section line-section--digital">
+        <div class="line-section__container container">
+          <h2 class="line-section__title title"><span class="title__bg">Кстати, мы ещё и </span><span class="title__bg">диджитал студия</span></h2>
+          <div class="line-section__main">
+            <div class="line-section__list"> 
+              <h3>Мы делаем:</h3>
+              <ul>
+                <li> <span>Бриф с вашим маркетинговым отделом </span></li>
+                <li> <span>Рекламные концепции</span></li>
+                <li> <span>Съёмки под ключ: от идеи до финального видео </span></li>
+                <li> <span>Анализируем трафик из ТикТок</span></li>
+                <li> <span>Развиваем коммерческие профили в ТикТок</span></li>
+              </ul>
+            </div><a class="line-section__button" href="#" target="_blank"> <span class="line-section__button-icon"> 
+                <svg width="130" height="130">
+                  <use xlink:href="images/sprite.svg#arrow-right"></use>
+                </svg></span><span class="line-section__button-text">На сайт</span></a>
           </div>
         </div>
-        <div>
-          <button class="btn">Стандартная кнопка 1</button>
-        </div>
-        <div>
-          <button class="btn btn--border">Стандартная кнопка 2</button>
-        </div>
-        <div>
-          <button class="btn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="9.5" stroke="currentColor"></circle>
-            </svg><span>Стандартная кнопка 3</span>
-          </button>
-        </div>
-        <div>
-          <button class="btn btn--border">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="9.5" stroke="currentColor"></circle>
-            </svg><span> Стандартная кнопка 4</span>
-          </button>
-        </div>
-        <div>
-          <button class="btn btn--icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="9.5" stroke="currentColor"></circle>
-            </svg>
-          </button>
-        </div>
-        <div>
-          <button class="btn btn--border btn--icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="9.5" stroke="currentColor"></circle>
-            </svg>
-          </button>
-        </div>
-        <div>
-          <button class="btn" disabled="disabled">Стандартная кнопка 1</button>
-        </div>
-        <div>
-          <button class="btn btn--border disabled">Стандартная кнопка 1</button>
-        </div>
-        <div class="check-row">
-          <label class="checkbox">
-            <input type="checkbox" name="checkbox" value=""><span></span>
-          </label><span>Согласен со всеми условиями</span>
-        </div>
-        <div class="check-row">
-          <label class="checkbox">
-            <input type="checkbox" name="checkbox" value="" disabled="disabled"><span></span>
-          </label><span>Согласен со всеми условиями</span>
-        </div>
-        <div class="check-row">
-          <label class="radio">
-            <input type="radio" name="radio" value=""><span></span>
-          </label><span>Согласен со всеми условиями</span>
-        </div>
-        <div class="check-row">
-          <label class="radio">
-            <input type="radio" name="radio" value="" disabled="disabled"><span></span>
-          </label><span>Согласен со всеми условиями</span>
-        </div>
-        <div>
-          <input class="input" type="text" name="text" placeholder="Ваше имя">
-        </div>
-        <div>
-          <input class="input" type="text" name="text" placeholder="Ваше имя" disabled="disabled">
-        </div>
-        <div>
-          <select class="select" name="select">
-            <option value="0">Ваше имя</option>
-            <option value="1">Не ваше имя</option>
-            <option value="2">Не свое имя</option>
-            <option value="3">Свое имя</option>
-          </select>
-        </div>
-        <div>
-          <select class="select" name="select" disabled="disabled">
-            <option value="0">Ваше имя</option>
-            <option value="1">Не ваше имя</option>
-            <option value="2">Не свое имя</option>
-            <option value="3">Свое имя</option>
-          </select>
-        </div>
-        <div>
-          <div class="tabs-switch"><a class="tabs-switch__item active" href="javascript:;">Активное окно</a><a class="tabs-switch__item" href="javascript:;">Неактивное окно</a><a class="tabs-switch__item" href="javascript:;">Еще одно окно</a></div>
-          <div class="tabs-content">
-            <div class="tabs-content__item active">1</div>
-            <div class="tabs-content__item">2</div>
-            <div class="tabs-content__item">3</div>
-          </div>
-        </div>
-        <div>
-          <table class="table">
-            <tr>
-              <th>Столбец 1</th>
-              <th>Столбец 2</th>
-              <th>Столбец 3</th>
-            </tr>
-            <tr>
-              <td>Надпись 1</td>
-              <td>Надпись 2</td>
-              <td>Надпись 3</td>
-            </tr>
-            <tr>
-              <td>Надпись 1</td>
-              <td>Надпись 2</td>
-              <td>Надпись 3</td>
-            </tr>
-            <tr>
-              <td>Надпись 1</td>
-              <td>Надпись 2</td>
-              <td>Надпись 3</td>
-            </tr>
-          </table>
-        </div>
-        <div>
-          <div class="pagintaion"><a href="">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 17L1 9L8 1" stroke="currentColor"></path>
-              </svg></a><a href="">1</a><a href="">2</a><a class="current" href="">3</a><a href="">4</a><a href="">5</a><span>...</span><a href="">10</a><a href="">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L8 9L1 17" stroke="currentColor"></path>
-              </svg></a></div>
-        </div>
-        <div>
-          <div class="navigation">
-            <button class="navigation__btn navigation__btn--prev">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 17L1 9L8 1" stroke="currentColor"></path>
-              </svg>
-            </button>
-            <div class="navigation__dots">
-              <button></button>
-              <button class="active"></button>
-              <button></button>
-              <button></button>
-            </div>
-            <button class="navigation__btn navigation__btn--next">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L8 9L1 17" stroke="currentColor"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="navigation">
-            <button class="navigation__btn navigation__btn--prev">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 17L1 9L8 1" stroke="currentColor"></path>
-              </svg>
-            </button>
-            <div class="navigation__dots navigation__dots--line">
-              <button></button>
-              <button class="active"></button>
-              <button></button>
-              <button></button>
-            </div>
-            <button class="navigation__btn navigation__btn--next">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L8 9L1 17" stroke="currentColor"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="navigation">
-            <button class="navigation__btn navigation__btn--border navigation__btn--prev">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 17L1 9L8 1" stroke="currentColor"></path>
-              </svg>
-            </button>
-            <div class="navigation__dots">
-              <button></button>
-              <button class="active"></button>
-              <button></button>
-              <button></button>
-            </div>
-            <button class="navigation__btn navigation__btn--border navigation__btn--next">
-              <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L8 9L1 17" stroke="currentColor"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div style="width: 500px;"><a class="zoom" href=""><img src="images/placeholder-image.jpg" alt=""></a></div>
-        <div style="width: 500px;">
-          <div class="accordion">
-            <div class="accordion__title">
-              <div class="accordion__title-text">Текст рыба на русском языке наполнит любой макет?</div>
-              <div class="accordion__title-icon"></div>
-            </div>
-            <div class="accordion__text text-style">
-              <p>При создании генератора мы использовали небезизвестныйx универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">
@@ -379,22 +666,22 @@
           </label>
         </fieldset>
         <div class="brief__form-bottom">
-          <!--.brief__form-file.file-button
-          input.visually-hidden(type="file", id="customFileBrief", name="file")
-          label(for="customFileBrief")
-            span.file-button__icon
-              +icon('attach')(width="27", height="27")
-            span.file-button__text Прикрепить файлы
-          -->
+          <div class="brief__form-custom">
+            <div class="brief__form-file file-button">
+              <input class="visually-hidden inputfile js-new-file" type="file" id="customFileBrief" name="file">
+              <label for="customFileBrief"><span class="file-button__icon">
+                  <svg width="27" height="27">
+                    <use xlink:href="images/sprite.svg#attach"></use>
+                  </svg></span><span class="file-button__text">Прикрепить файлы</span></label>
+              <button class="file-button__remove js-remove-file" type="button">
+                <svg width="14" height="14">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
           <button class="brief__form-send" type="submit">Отправить</button>
           <div class="brief__form-consent">Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a></div>
-        </div>
-        <div class="custom-files">
-          <div class="custom-file">
-            <input class="inputfile js-new-file" type="file" name="file[]" id="file1">
-            <label for="file1"><span>Прикрепить файлы</span></label>
-            <div class="js-remove-file"></div>
-          </div>
         </div>
       </form>
     </div>
