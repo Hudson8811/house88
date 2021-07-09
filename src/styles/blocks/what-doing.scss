@@ -2,7 +2,7 @@
   padding: vw(64) 0 vw(147);
 
   @include media(768) {
-    padding: vw(72, 376) 0;
+    padding: vw(72, 376) 0 vw(104, 376);
   }
 
   &__container {
@@ -27,7 +27,7 @@
 
       @include media(768) {
         display: block;
-        padding: vw(46, 376) 0 vw(60, 376);
+        padding: vw(41, 376) 0 vw(56, 376);
       }
 
       #{$section}-media {
@@ -89,7 +89,7 @@
         }
 
         @include media(768) {
-          padding: vw(36, 376) vw(16, 376) 0 vw(20, 376);
+          padding: vw(32, 376) vw(16, 376) 0 vw(20, 376);
         }
       }
 
@@ -108,6 +108,7 @@
 
         @include media(768) {
           display: none;
+          margin-bottom: vw(17, 376);
         }
 
         &--mobile {
@@ -127,7 +128,7 @@
           margin-top: vw(2);
           margin-left: vw(-20);
           color: #ffffff;
-          background-color: #000000;
+          background-color: #131313;
         }
       }
     }
@@ -169,7 +170,7 @@
         }
 
         @include media(768) {
-          padding: vw(48, 376) vw(32, 376) vw(32, 376);
+          padding: vw(39, 376) vw(32, 376) vw(24, 376);
         }
 
         &::before,
@@ -208,6 +209,10 @@
         line-height: 1.13;
         text-align: right;
 
+        br {
+          display: none;
+        }
+
         @include media(1200) {
           font-size: vw(52, 1200);
         }
@@ -219,6 +224,10 @@
           font-size: vw(20, 376);
           line-height: 1.5;
           text-align: center;
+
+          br {
+            display: block;
+          }
         }
 
         &-double {
@@ -252,7 +261,7 @@
         .title__bg {
           margin-right: vw(-20);
           color: #ffffff;
-          background-color: #000000;
+          background-color: #131313;
         }
       }
     }
@@ -274,14 +283,12 @@
           font-size: vw(52, 1200);
         }
 
-        /*@include media(768) {
-          display: block;
+        @include media(768) {
           //max-width: vw(160, 376);
           margin: 0;
           font-size: vw(20, 376);
-          line-height: 1.5;
           text-align: center;
-        }*/
+        }
 
         &::after {
           content: attr(data-after);
@@ -294,7 +301,7 @@
           z-index: 1;
           padding: vw(9) vw(50);
           font-size: vw(24);
-          letter-spacing: vw(-0.51);
+          letter-spacing: -0.02125em;
           line-height: 1;
           color: #ffffff;
           background-color: $purpleColor;
@@ -302,7 +309,12 @@
           @include media(1200) {
             padding: vw(9, 1200) vw(50, 1200);
             font-size: vw(24, 1200);
-            letter-spacing: vw(-0.51, 1200);
+          }
+
+          @include media(768) {
+            padding: vw(5, 376) vw(30, 376);
+            font-size: vw(15, 376);
+            transform: translateX(-50%) translateY(-85%) rotate(-21deg);
           }
         }
       }

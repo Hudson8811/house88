@@ -42,14 +42,14 @@ function openBrief(member) {
     smallBtn: false,
     toolbar: false,
     beforeShow: function () {
-      //$("body>*:not(.fancybox-container):not(#popup-brif)").addClass("blur");
+      $("body>*:not(.fancybox-container):not(#brief)").addClass("blur");
             
       $('.brief__close').on('click', function() {
         $.fancybox.close();
       })
     },
     afterClose: function () {
-      //$("body>*:not(.fancybox-container):not(#popup-brif)").removeClass("blur");
+      $("body>*:not(.fancybox-container):not(#brief)").removeClass("blur");
     }
   });
   clearMembers();

@@ -1,20 +1,23 @@
 .line-section {
   $self: &;
   overflow: hidden;
+  background-color: #000;
   //padding: vw(115) 0 vw(92);
 
   @include media(768) {
-    padding: vw(120, 376) 0 0;
+    padding: vw(120, 376) 0 vw(127, 376);
   }
 
   &--digital {
     @include media(768) {
       padding-top: vw(80, 376);
+      padding-bottom: 0;
     }
 
     #{$self}__title {
       @include media(768) {
-        margin-bottom: vw(74, 376);
+        max-width: vw(250, 376);
+        margin-bottom: vw(66, 376);
       }
       &::before,
       &::after {
@@ -37,7 +40,7 @@
         top: vw(-62);
 
         @include media(768) {
-          left: vw(40, 376);
+          left: vw(29, 376);
           top: 0;
           transform: translateX(0) translateY(-50%) rotate(-23deg);
         }
@@ -48,9 +51,9 @@
         right: vw(112);
 
         @include media(768) {
-          right: vw(40, 376);
+          right: vw(20, 376);
           bottom: 0;
-          transform: translateX(0) translateY(50%) rotate(-23deg);
+          transform: translateX(0) translateY(17%) rotate(-23deg);
         }
       }
     }
@@ -140,7 +143,7 @@
       display: block;
       width: 100%;
       margin-right: 0;
-      margin-bottom: vw(60, 376);
+      margin-bottom: vw(47, 376);
     }
   }
 
@@ -150,10 +153,10 @@
 
     @include media(768) {
       max-width: none;
-      margin-top: vw(24, 376);
+      margin-top: vw(29, 376);
 
       &:first-child {
-        margin-top: vw(36, 376);
+        margin-top: 0; //vw(36, 376);
       }
     }
   }
@@ -168,7 +171,7 @@
 
     @include media(768) {
       width: 100%;
-      margin-bottom: vw(60, 376);
+      margin-bottom: vw(56, 376);
     }
 
     & + #{$self}__button {
@@ -191,9 +194,9 @@
 
       @include media(768) {
         margin-bottom: vw(3, 376);
-        padding: vw(2, 376) vw(6, 376);
+        padding: vw(3, 376);
         font-size: vw(21, 376);
-        line-height: (24.6 / 21);
+        line-height: 1;
       }
     }
 
@@ -207,7 +210,7 @@
       margin-top: vw(3);
 
       @include media(768) {
-        margin-top: vw(3, 376);
+        margin-top: vw(6, 376);
       }
     }
 
@@ -228,9 +231,15 @@
         background-color: #ffffff;
 
         @include media(768) {
-          padding: 0; //vw(2, 376) vw(3, 376);
+          padding: 0 vw(3, 376); //vw(2, 376) vw(3, 376);
           font-size: vw(21, 376);
-          line-height: (24.6 / 21);
+          line-height: 1;
+        }
+      }
+
+      span + span {
+        @include media(768) {
+          margin-top: vw(3, 376);
         }
       }
     }
@@ -252,6 +261,7 @@
 
     @include media(1200) {
       margin-right: vw(-15, 1200);
+      padding: vw(98, 1200) vw(81, 1200) vw(101, 1200) vw(117, 1200);
       transform: translateX(0);
     }
 
@@ -259,7 +269,7 @@
       width: calc(100% + 10.6383vw);
       margin-right: 0;
       //margin-left: vw(-20, 376);
-      padding: vw(72, 376) 0;
+      padding: vw(64, 376) 0 vw(80, 376);
     }
 
     &:focus {
@@ -281,15 +291,22 @@
       padding: vw(6) vw(7) vw(4) vw(11);
       font-family: $headingFont;
       font-size: vw(16);
-      letter-spacing: vw(-0.32);
+      letter-spacing: -0.02em;
       font-weight: 700;
       line-height: 1;
       color: #ffffff;
       text-transform: uppercase;
       background-color: #000000;
 
+      @include media(1200) {
+        top: vw(174, 1200);
+        right: vw(46, 1200);
+        padding: vw(6, 1200) vw(7, 1200) vw(4, 1200) vw(11, 1200);
+        font-size: vw(16, 1200);
+      }
+
       @include media(768) {
-        top: vw(177, 376);
+        top: vw(170, 376);
         right: vw(90, 376);
         padding: vw(6, 376) vw(10, 376);
         font-size: vw(22, 376);
@@ -301,6 +318,11 @@
       height: vw(130);
       transition: transform 0.3s ease;
 
+      @include media(1200) {
+        width: vw(130, 1200);
+        height: vw(130, 1200);
+      }
+
       @include media(768) {
         width: vw(185, 376);
         height: vw(185, 376);
@@ -311,6 +333,35 @@
         width: 100%;
         height: auto;
         fill: #ffffff;
+      }
+    }
+
+    &--simple {
+      @include media(768) {
+        width: 100%;
+        padding: vw(13, 376) vw(20, 376) vw(14, 376);
+        border: solid vw(1, 376) #fff;
+        background-color: transparent;
+      }
+
+      #{$btn}-icon {
+        @include media(768) {
+          display: none;
+        }
+      }
+
+      #{$btn}-text {
+        @include media(768) {
+          position: static;
+          padding: 0;
+          font-family: $mainFont--book;
+          font-size: vw(16, 376);
+          line-height: 1;
+          letter-spacing: -0.0325em;
+          background-color: transparent;
+          text-transform: capitalize;
+          font-weight: 400;
+        }
       }
     }
   }

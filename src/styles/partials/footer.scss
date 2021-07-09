@@ -5,7 +5,7 @@
   padding: vw(104) 0 vw(110);
 
   @include media(768) {
-    padding: vw(50, 376) 0;
+    padding: vw(57, 376) 0;
   }
 
   &__container {
@@ -27,7 +27,7 @@
 
   &__left {
     @include media(768) {
-      margin-bottom: vw(27, 376);
+      margin-bottom: vw(18, 376);
       padding-bottom: vw(34, 376);
       border-bottom: solid 1px rgba(#0f0f0d, 0.3);
     }
@@ -76,6 +76,10 @@
     margin-top: vw(55);
     display: flex;
     flex-wrap: wrap;
+
+    @include media(768) {
+      margin-top: vw(20, 376);
+    }
   }
 
   &__link {

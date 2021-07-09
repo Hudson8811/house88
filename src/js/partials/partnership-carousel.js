@@ -1,20 +1,33 @@
 $(window).on('load', function() {
   let windowWidth = $(window).width();
   const partnersVideos = $('.partnership__video');
+  let isInit = false;
+
+  /*
+  На мобильных устройства убрать автоплей. При инициализации слайдера только в активном запускать скриптом видео. При смене слайдов выключить в предыдущем (или пауза) и запускать в новом слайде.
+  */
 
   let partnersVideoCarousel = null;
 
   if (windowWidth <= 768) {
-    initPartnersCarousel()
+    partnersVideos.find('video').prop('autoplay', false).trigger('pause');
+    initPartnersCarousel();
+    isInit = true;
   } 
 
 	$(window).on('resize', function() {
 		windowWidth = $(window).width();
 
-    if (windowWidth <= 768) {
-      initPartnersCarousel()
-    } else {
+    if (windowWidth <= 768 && !isInit) {
+      partnersVideos.find('video').prop('autoplay', false).trigger('pause');
+      initPartnersCarousel();
+      isInit = true;
+    } else if (windowWidth > 768 && isInit) {
+      isInit = false;
+      partnersVideoCarousel.destroy();
       partnersVideoCarousel = null;
+      console.log(partnersVideoCarousel)
+      partnersVideos.find('video').prop('autoplay', true).trigger('play');
     }
 	});
 
@@ -24,8 +37,18 @@ $(window).on('load', function() {
       speed: 300,
       spaceBetween: 0,
       slidesPerView: 'auto',
-      centeredSlides: true
-      //20
+      centeredSlides: true,
+      on: {
+        afterInit: function (swiper) {
+          let v = swiper.slides[swiper.activeIndex].querySelector('video').play();
+        },
+        slideChange: function (swiper) {
+          swiper.slides.forEach(it => {
+            it.querySelector('video').pause();
+          });
+          swiper.slides[swiper.activeIndex].querySelector('video').play();
+        }
+      }
     })
   }
 })

@@ -11,3 +11,4 @@
 //= ./partials/original-sound.js
 //= ./partials/booking.js
 //= ./partials/partnership-carousel.js
+//= ./partials/create-bg.js

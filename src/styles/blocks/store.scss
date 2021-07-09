@@ -3,7 +3,7 @@
   background-color: #f4f4f4;
 
   @include media(768) {
-    padding: vw(90, 376) 0 vw(90, 376);
+    padding: vw(90, 376) 0 vw(105, 376);
   }
 
   &__container {
@@ -18,12 +18,12 @@
     margin-bottom: vw(178);
 
     @include media(768) {
-      margin-bottom: vw(67, 376);
+      margin-bottom: vw(63, 376);
     }
 
     .title__bg {
       color: #ffffff;
-      background-color: #000000;
+      background-color: #131313;
     }
 
     &::after {

@@ -3,7 +3,7 @@
   background-color: #ffffff;
 
   @include media(768) {
-    padding: vw(105, 376) 0;
+    padding: vw(105, 376) 0 vw(78, 376);
   }
 
   &__container {
@@ -23,12 +23,12 @@
 
     @include media(768) {
       max-width: vw(250, 376);
-      margin-bottom: vw(48, 376);
+      margin-bottom: vw(45, 376);
     }
 
     .title__bg {
       color: #ffffff;
-      background-color: #000000;
+      background-color: #131313;
     }
 
     span:not(.title__bg) {

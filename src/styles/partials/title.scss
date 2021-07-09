@@ -16,6 +16,8 @@
 
   @include media(768) {
     font-size: vw(20, 376);
+
+    line-height: 1.5;
     letter-spacing: vw(-0.99, 376);
   }
 
@@ -43,6 +45,9 @@
 
     & + & {
       margin-top: vw(3);
+      @include media(768) {
+        margin-top: vw(2, 376);
+      }
     }
 
     padding: vw(3) vw(20);
@@ -50,6 +55,7 @@
 
     @include media(768) {
       padding: vw(5, 376);
+      line-height: 1;
     }
   }
 }

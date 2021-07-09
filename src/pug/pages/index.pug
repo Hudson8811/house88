@@ -147,6 +147,8 @@ block main
 				span.title__bg Хотите 
 				span.title__bg посотрудничать?
 			.line-section__main
+				//-.line-section__done 
+					.line-section__done-icon
 				form(action="#", method="post")
 					.line-section__fieldset
 						label.line-section__field.field(aria-label="Имя")
@@ -157,7 +159,7 @@ block main
 							input(type="email", name="email", placeholder="Почта")
 						label.line-section__field.field(aria-label="Что надо?")
 							input(type="text", name="text", placeholder="Что надо?")
-					button.line-section__button(type="submit")
+					button.line-section__button.line-section__button--simple(type="submit")
 						span.line-section__button-icon 
 							+icon('arrow-right')(width="130", height="130")
 						span.line-section__button-text Отправить
@@ -165,8 +167,8 @@ block main
 	section.quality
 		.quality__container.container
 			h2.quality__title.title(data-before="tiktok")
-				span.title__bg Мы привносим качественный
-				span контент в ТикТок
+				span.__js_create-bg(data-wrapper-class="title__bg") Мы привносим качественный
+				| контент в&nbsp;ТикТок
 
 			ul.quality__list
 				each item, index in SERIALS
@@ -228,7 +230,7 @@ block main
 					.what-doing__section-title.title 
 						| Создаём новые форматы 
 						| <span class="title__bg">продвижения</span> 
-						| треков через 
+						| треков <br>через 
 						span.what-doing__section-title-double(data-before="tik tok") тикток
 
 			.what-doing__section.what-doing__section--learning
@@ -254,7 +256,7 @@ block main
 			.booking__main.swiper-container 
 				.swiper-wrapper
 					each item in BOOKING_CARDS
-						.booking__card.swiper-slide(data-category= item.category, contenteditable="true")
+						.booking__card.swiper-slide(data-category= item.category)
 							.booking__card-image
 								img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
 							.booking__card-main
@@ -288,23 +290,21 @@ block main
 
 	section.line-section.line-section--digital
 		.line-section__container.container
-			h2.line-section__title.title
-				span.title__bg Кстати, мы ещё и 
-				span.title__bg диджитал студия
+			h2.line-section__title.title.__js_create-bg(data-wrapper-class="title__bg") Кстати, мы ещё и&nbsp;диджитал студия
 			.line-section__main
 				.line-section__list 
 					h3 Мы делаем:
 					ul
-						li 
-							span Бриф с вашим маркетинговым отделом 
-						li 
-							span Рекламные концепции
-						li 
-							span Съёмки под ключ: от идеи до финального видео 
-						li 
-							span Анализируем трафик из ТикТок
-						li 
-							span Развиваем коммерческие профили в ТикТок
+						li.__js_create-bg
+							| Бриф с вашим маркетинговым отделом 
+						li.__js_create-bg
+							| Рекламные концепции
+						li.__js_create-bg
+							| Съёмки под ключ: от идеи до финального видео 
+						li.__js_create-bg
+							| Анализируем трафик из ТикТок
+						li.__js_create-bg
+							| Развиваем коммерческие профили в ТикТок
 
 				a.line-section__button(href="#", target="_blank") 
 					span.line-section__button-icon 

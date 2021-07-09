@@ -82,6 +82,10 @@
 
   &__main {
     margin-top: vw(-20);
+
+    @include media(768) {
+      margin-top: vw(-12, 376);
+    }
   }
 
   &__title {
@@ -92,7 +96,7 @@
     font-weight: 700;
 
     @include media(768) {
-      margin-bottom: vw(4, 376);
+      margin-bottom: 0; // vw(4, 376);
       font-size: vw(21, 376);
     }
   }
@@ -104,7 +108,7 @@
 
     @include media(768) {
       margin-bottom: vw(4, 376);
-      font-size: vw(14, 376);
+      font-size: vw(12, 376);
     }
   }
 
@@ -123,5 +127,15 @@
     background-image: url("../images/minus.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media(1200) {
+      width: vw(110, 1200);
+      height: vw(10, 1200);
+    }
+
+    @include media(376) {
+      width: vw(58, 376);
+      height: vw(6, 376);
+    }
   }
 }
