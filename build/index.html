@@ -379,15 +379,22 @@
           </label>
         </fieldset>
         <div class="brief__form-bottom">
-          <div class="brief__form-file file-button">
-            <input class="visually-hidden" type="file" id="customFileBrief" name="file">
-            <label for="customFileBrief"><span class="file-button__icon">
-                <svg width="27" height="27">
-                  <use xlink:href="images/sprite.svg#attach"></use>
-                </svg></span><span class="file-button__text">Прикрепить файлы</span></label>
-          </div>
+          <!--.brief__form-file.file-button
+          input.visually-hidden(type="file", id="customFileBrief", name="file")
+          label(for="customFileBrief")
+            span.file-button__icon
+              +icon('attach')(width="27", height="27")
+            span.file-button__text Прикрепить файлы
+          -->
           <button class="brief__form-send" type="submit">Отправить</button>
           <div class="brief__form-consent">Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a></div>
+        </div>
+        <div class="custom-files">
+          <div class="custom-file">
+            <input class="inputfile js-new-file" type="file" name="file[]" id="file1">
+            <label for="file1"><span>Прикрепить файлы</span></label>
+            <div class="js-remove-file"></div>
+          </div>
         </div>
       </form>
     </div>

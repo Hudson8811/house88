@@ -42,7 +42,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    // opacity: 0.6;
+    //opacity: 0.6;
 
     &--hover {
       #{$member}-image {
@@ -59,6 +59,10 @@
       top: vw(66);
       left: vw(-77);
 
+      //width: 29.74251182343668%; //566px;
+      //top: 5.188679245283019%; //66
+      //left: -3.993694167104572%; //-76px;
+
       #{$member}-text {
         top: 44.95%;
         left: 33%;
@@ -69,6 +73,9 @@
       width: vw(569);
       top: vw(-8);
       left: vw(171);
+      //width: 29.74251182343668%; //566px;
+      //top: -0.6289308176100629%; //-8px;
+      //left: 8.880714661061482%; //169px;
 
       #{$member}-text {
         top: 41.25%;

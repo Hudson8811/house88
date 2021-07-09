@@ -1,4 +1,33 @@
 html {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $purpleColor;
+    border-radius: none;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: #999;
+  }
+
+  ::-webkit-resizer {
+    background-color: #666;
+  }
+
   font-size: vw(21); //$fs-main;
 
   @include media(1200) {

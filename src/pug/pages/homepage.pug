@@ -70,7 +70,7 @@ block main
 
 				.hero__grid 
 					each item, index in HERO_MEMBERS
-						div(class="hero__member hero__member--" + item.mod + (index === 44 ? ' hero__member--hover' : ''))
+						div(class="hero__member hero__member--" + item.mod + (index === 10 ? ' hero__member--hover' : ''))
 							.hero__member-image
 								if item.img.n
 									img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)

@@ -1,5 +1,5 @@
 
-
+moreFiles();
 var counterFiles = 2;
 function moreFiles(){
   $('.js-new-file').off('change');
