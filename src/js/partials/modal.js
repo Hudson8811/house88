@@ -7,11 +7,11 @@ const memberModClass = 'hero__member--hover';
 const closeBriefBtn = $('.breif__close');
 
 
-areas.on('click', function (evt) {
+/*areas.on('click', function (evt) {
   evt.preventDefault();
   const member = $(this).attr('href');
   openBrief(member);
-});
+});*/
 
 areas.on('mouseover', function() {
   const member = $(this).attr('href').toLowerCase();
@@ -52,9 +52,10 @@ function openBrief(member) {
       $("body>*:not(.fancybox-container):not(#brief)").removeClass("blur");
     }
   });
+  
   clearMembers();
+
   if (member) {
-    //$('#brief').find('#checkboxHelpChoice').attr('disabled', true);
     $('#brief').find('#checkbox' + member).prop('checked', true);
   }
 }
@@ -62,12 +63,3 @@ function openBrief(member) {
 function clearMembers() {
   membersCheckboxes.prop('checked', false);
 }
-/*
-membersCheckboxes.on('change', function() {
-  
-  helpChoiceChexbox.attr({'checked': false, 'disabled': true});
-});
-
-helpChoiceChexbox.on('change', function() {
-  membersCheckboxes.attr({'checked': false, 'disabled': true});
-});*/

@@ -22,48 +22,40 @@
       <section class="hero"> 
         <div class="hero__container"> 
           <div class="hero__photo">
-            <picture> 
+            <picture>
               <source media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg"><img src="images/hero/main-photo.jpg" usemap="#image-map" alt="Совместное фото тиктокеров house88">
             </picture>
             <div class="hero__grid"> 
               <div class="hero__member hero__member--seneamin">
-                <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/1n.png" width="1464" height="3145" alt="seneamin"></div>
                 <div class="hero__member-text">seneamin</div>
               </div>
               <div class="hero__member hero__member--oreo">
-                <div class="hero__member-image"><img src="images/hero/2n.png" width="1464" height="3145" alt="oreowhiteboy">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/2n.png" width="1464" height="3145" alt="oreowhiteboy"></div>
                 <div class="hero__member-text">oreowhiteboy</div>
               </div>
               <div class="hero__member hero__member--haribo">
-                <div class="hero__member-image"><img src="images/hero/3n.png" width="1464" height="3145" alt="haribo">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/3n.png" width="1464" height="3145" alt="haribo"></div>
                 <div class="hero__member-text">haribo</div>
               </div>
               <div class="hero__member hero__member--zavaly">
-                <div class="hero__member-image"><img src="images/hero/4n.png" width="1464" height="3145" alt="zava_ly">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/4n.png" width="1464" height="3145" alt="zava_ly"></div>
                 <div class="hero__member-text">zava_ly</div>
               </div>
               <div class="hero__member hero__member--smmagnat">
-                <div class="hero__member-image"><img src="images/hero/5n.png" width="1464" height="3145" alt="smmagnat">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/5n.png" width="1464" height="3145" alt="smmagnat"></div>
                 <div class="hero__member-text">smmagnat</div>
               </div>
               <div class="hero__member hero__member--daniil">
-                <div class="hero__member-image"><img src="images/hero/6n.png" width="1464" height="3145" alt="danil_co">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/6n.png" width="1464" height="3145" alt="danil_co"></div>
                 <div class="hero__member-text">danil_co</div>
               </div>
               <div class="hero__member hero__member--alexkady">
-                <div class="hero__member-image"><img src="images/hero/7n.png" width="1464" height="3145" alt="alex_kady">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/7n.png" width="1464" height="3145" alt="alex_kady"></div>
                 <div class="hero__member-text">alex_kady</div>
               </div>
               <div class="hero__member hero__member--prokop">
-                <div class="hero__member-image"><img src="images/hero/8n.png" width="1464" height="3145" alt="prokop">
-                </div>
+                <div class="hero__member-image"><img src="images/hero/8n.png" width="1464" height="3145" alt="prokop"></div>
                 <div class="hero__member-text">prokop</div>
               </div>
             </div><map name="image-map">
@@ -89,8 +81,14 @@
       <section class="about"> 
         <div class="about__container container">
           <h2 class="about__title title" data-before="about us"> <span class="title__bg">О нас</span></h2>
-          <div class="about__grid"> 
-            <div class="about__photo"><img src="images/about-photo.png" width="908" height="510" alt="Общее фото "></div>
+          <div class="about__grid">
+            <div class="about__video __js_video">
+              <div class="about__video-poster"> <img src="images/about-photo.jpg" width="908" height="510" alt="Общее фото "></div>
+              <div class="about__video-icon"></div>
+              <video>
+                <source src="images/video/all.mp4" type="video/mp4">
+              </video>
+            </div>
             <div class="about__main"> 
               <div class="about__main-title">House88 это возможности:</div>
               <ul class="about__list"> 
@@ -162,10 +160,19 @@
           </div>
         </div>
       </section>
+      <!-- успешная отправка формы .line-section--done-->
       <section class="line-section">
         <div class="line-section__container container"> 
           <h2 class="line-section__title title" data-before="Contact us"><span class="title__bg">Хотите </span><span class="title__bg">посотрудничать?</span></h2>
           <div class="line-section__main">
+            <div class="line-section__done"> 
+              <div class="line-section__done-icon">
+                <svg width="64" height="64">
+                  <use xlink:href="images/sprite.svg#check"></use>
+                </svg>
+              </div>
+              <div class="line-section__done-text">Отправлено!</div>
+            </div>
             <form action="#" method="post">
               <div class="line-section__fieldset">
                 <label class="line-section__field field" aria-label="Имя">
@@ -196,16 +203,10 @@
             <li class="quality__item">
               <div class="quality__item-video video-box">
                 <div class="video-box__poster"> <img src="images/video/quality-1.jpg" alt=""></div>
-                <video muted="true" loop="true">
+                <div class="video-box__icon"></div>
+                <video>
                   <source src="images/video/bracelets.mp4" type="video/mp4">
                 </video>
-                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-off"></use>
-                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-on"></use>
-                    </svg></span></button>
               </div>
               <div class="quality__item-info"> 
                 <h3 class="quality__item-title">Браслеты <span>/</span> 1 серия</h3>
@@ -215,16 +216,10 @@
             <li class="quality__item">
               <div class="quality__item-video video-box">
                 <div class="video-box__poster"> <img src="images/video/quality-2.jpg" alt=""></div>
-                <video muted="true" loop="true">
+                <div class="video-box__icon"></div>
+                <video>
                   <source src="images/video/spiderman.mp4" type="video/mp4">
                 </video>
-                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-off"></use>
-                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-on"></use>
-                    </svg></span></button>
               </div>
               <div class="quality__item-info"> 
                 <h3 class="quality__item-title">Человек-паук <span>/</span> 1 серия</h3>
@@ -234,16 +229,10 @@
             <li class="quality__item">
               <div class="quality__item-video video-box">
                 <div class="video-box__poster"> <img src="images/video/quality-3.jpg" alt=""></div>
-                <video muted="true" loop="true">
+                <div class="video-box__icon"></div>
+                <video>
                   <source src="images/video/crush.mp4" type="video/mp4">
                 </video>
-                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-off"></use>
-                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-on"></use>
-                    </svg></span></button>
               </div>
               <div class="quality__item-info"> 
                 <h3 class="quality__item-title">Краш с района <span>/</span> 1 серия</h3>
@@ -259,16 +248,11 @@
             <div class="what-doing__section-title what-doing__section-title--mobile title">Делаем мировые <span class="title__bg">тренды</span></div>
             <div class="what-doing__section-media">
               <div class="what-doing__section-video video-box">
-                <video autoplay="true" muted="true" loop="true">
+                <div class="video-box__poster"> <img src="images/video/trands-poster.jpg" alt=""></div>
+                <div class="video-box__icon"></div>
+                <video>
                   <source src="images/video/global-trends.mp4" type="video/mp4">
                 </video>
-                <button class="video-box__toggle sound-toggle" type="button"><span class="sound-toggle__icon sound-toggle__icon--off"> 
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-off"></use>
-                    </svg></span><span class="sound-toggle__icon sound-toggle__icon--on">
-                    <svg width="25" height="25">
-                      <use xlink:href="images/sprite.svg#sound-on"></use>
-                    </svg></span></button>
               </div>
             </div>
             <div class="what-doing__section-main">
@@ -294,7 +278,13 @@
             </div>
           </div>
           <div class="what-doing__section what-doing__section--formats">
-            <div class="what-doing__section-media"> <img src="images/new-formats-image.jpg" alt=""></div>
+            <div class="what-doing__section-media __js_video">
+              <div class="what-doing__section-media-poster"><img src="images/new-formats-image.jpg" alt=""></div>
+              <div class="what-doing__section-media-icon"></div>
+              <video>
+                <source src="images/video/new-formats.mp4" type="video/mp4">
+              </video>
+            </div>
             <div class="what-doing__section-main"> 
               <div class="what-doing__section-title title">
                  Создаём новые форматы 
@@ -317,25 +307,25 @@
             <h3 class="booking__filters-title">Виды интеграций:</h3>
             <ul class="booking__filters-list">
               <li class="booking__filters-item">
-                <button type="button" data-target="challenges-and-sketches">Челленджи и скетчи</button>
+                <div>Челленджи и скетчи</div>
               </li>
               <li class="booking__filters-item">
-                <button type="button" data-target="categories">Рубрики</button>
+                <div>Рубрики</div>
               </li>
               <li class="booking__filters-item">
-                <button type="button" data-target="image-based">Имиджевые</button>
+                <div>Имиджевые</div>
               </li>
               <li class="booking__filters-item">
-                <button type="button" data-target="viral">Вирусные</button>
+                <div>Вирусные</div>
               </li>
               <li class="booking__filters-item">
-                <button type="button" data-target="pranks">Пранки</button>
+                <div>Пранки</div>
               </li>
             </ul>
           </div>
           <div class="booking__main swiper-container"> 
             <div class="swiper-wrapper">
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, categories">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-oreo.jpg" width="251" height="339" alt="Oreo"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -359,7 +349,7 @@
                   <button class="booking__card-button" type="button" data-member="Oreo">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="viral">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-daniil.jpg" width="251" height="339" alt="Daniil"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -383,7 +373,7 @@
                   <button class="booking__card-button" type="button" data-member="Daniil">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-alexkady.jpg" width="251" height="339" alt="Alexkady"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -407,7 +397,7 @@
                   <button class="booking__card-button" type="button" data-member="Alexkady">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="challenges-and-sketches, pranks">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-seneamin.jpg" width="251" height="339" alt="Seneamin"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -431,7 +421,7 @@
                   <button class="booking__card-button" type="button" data-member="Seneamin">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="viral">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-prokop.jpg" width="251" height="339" alt="Prokop"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -455,7 +445,7 @@
                   <button class="booking__card-button" type="button" data-member="Prokop">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="image-based, pranks">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-zavaly.jpg" width="251" height="339" alt="Zavaly"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -479,7 +469,7 @@
                   <button class="booking__card-button" type="button" data-member="Zavaly">Оставить заявку</button>
                 </div>
               </div>
-              <div class="booking__card swiper-slide" data-category="categories">
+              <div class="booking__card swiper-slide">
                 <div class="booking__card-image"><img src="images/booking-haribo.jpg" width="251" height="339" alt="Haribo"></div>
                 <div class="booking__card-main">
                   <div class="booking__card-title">
@@ -517,10 +507,10 @@
             </li>
             <li class="store__card">
               <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Картины от Zavaly"></div>
-              <h3 class="store__card-title">Картины от Zavaly</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
+              <h3 class="store__card-title">Картины от Zavaly</h3><a class="store__card-link" href="#" target="_blank">Подробнее</a>
             </li>
             <li class="store__card">
-              <div class="store__card-image">	<img src="images/store-2.jpg" width="363" height="363" alt="Браслеты от Seneamin"></div>
+              <div class="store__card-image">	<img src="images/store-3.jpg" width="363" height="363" alt="Браслеты от Seneamin"></div>
               <h3 class="store__card-title">Браслеты от Seneamin</h3><a class="store__card-link" href="#" target="_blank">Подробнее в директ</a>
             </li>
           </ul>
@@ -528,7 +518,7 @@
       </section>
       <section class="line-section line-section--digital">
         <div class="line-section__container container">
-          <h2 class="line-section__title title __js_create-bg" data-wrapper-class="title__bg">Кстати, мы ещё и&nbsp;диджитал студия</h2>
+          <h2 class="line-section__title title __js_create-bg" data-wrapper-class="title__bg">Кстати, мы ещё и диджитал студия</h2>
           <div class="line-section__main">
             <div class="line-section__list"> 
               <h3>Мы делаем:</h3>

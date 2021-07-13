@@ -28,7 +28,7 @@ block vars
 			{name: 'Haribo', img: 'booking-haribo', smiles: ['6', '12'], social: [{name: 'ТикТок', link: '#', count: '720 000'}, {name: 'Инстаграм ', link: '#', count: '106 000'}], member: 'Haribo', category: 'categories'}
 		];
 
-		const STORE_CARDS = [{img: 'store-1', name: 'Наклейки House88', link: '#'}, {img: 'store-2', name: 'Картины от Zavaly', link: '#'}, {img: 'store-2', name: 'Браслеты от Seneamin', link: '#'}];
+		const STORE_CARDS = [{img: 'store-1', name: 'Наклейки House88', link: '#'}, {img: 'store-2', name: 'Картины от Zavaly', link: '#'}, {img: 'store-3', name: 'Браслеты от Seneamin', link: '#'}];
 
 		const HERO_MEMBERS = [
 			{mod: 'seneamin', img: { n:'1n', w: '1464', h: '3145'}, text: 'seneamin'},
@@ -62,7 +62,8 @@ block main
 	section.hero 
 		.hero__container 
 			.hero__photo
-				picture 
+				picture
+
 					source(media="(max-width: 768px)" srcset="images/hero/main-photo-mobile.jpg")
 
 					img(src="images/hero/main-photo.jpg" usemap="#image-map", alt="Совместное фото тиктокеров house88")
@@ -70,10 +71,9 @@ block main
 
 				.hero__grid 
 					each item, index in HERO_MEMBERS
-						div(class="hero__member hero__member--" + item.mod + (index === 10 ? ' hero__member--hover' : ''))
+						div(class="hero__member hero__member--" + item.mod + (index === 60 ? ' hero__member--hover' : ''))
 							.hero__member-image
-								if item.img.n
-									img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)
+								img(src="images/hero/" + item.img.n + ".png", width= item.img.w, height= item.img.h, alt= item.text)
 							.hero__member-text= item.text
 
 				map(name="image-map")
@@ -111,8 +111,14 @@ block main
 		.about__container.container
 			h2.about__title.title(data-before="about us") 
 				span.title__bg О нас
-			.about__grid 
-				.about__photo
+			.about__grid
+				.about__video.__js_video
+					.about__video-poster 
+						img(src="images/about-photo.jpg", width="908", height="510", alt="Общее фото ")
+					.about__video-icon
+					video
+						source(src="images/video/all.mp4", type="video/mp4") 
+				//-.about__photo
 					img(src="images/about-photo.png", width="908", height="510", alt="Общее фото ")
 				.about__main 
 					.about__main-title House88 это возможности:
@@ -140,15 +146,17 @@ block main
 							video(autoplay="true", muted="true", loop="true")
 								source(src="images/video/" + item.video + ".mp4", type="video/mp4")
 
-
+	// успешная отправка формы .line-section--done
 	section.line-section
 		.line-section__container.container 
 			h2.line-section__title.title(data-before="Contact us")
 				span.title__bg Хотите 
 				span.title__bg посотрудничать?
 			.line-section__main
-				//-.line-section__done 
+				.line-section__done 
 					.line-section__done-icon
+						+icon('check')(width="64", height="64")
+					.line-section__done-text Отправлено!
 				form(action="#", method="post")
 					.line-section__fieldset
 						label.line-section__field.field(aria-label="Имя")
@@ -176,9 +184,10 @@ block main
 						.quality__item-video.video-box
 							.video-box__poster 
 								img(src="images/video/quality-" + (index + 1) + ".jpg", alt="")
-							video(muted="true", loop="true")
+							.video-box__icon
+							video
 								source(src="images/video/" + item.video + ".mp4", type="video/mp4")
-							button.video-box__toggle.sound-toggle(type="button")
+							//-button.video-box__toggle.sound-toggle(type="button")
 								span.sound-toggle__icon.sound-toggle__icon--off 
 									+icon('sound-off')(width="25", height="25")
 								span.sound-toggle__icon.sound-toggle__icon--on
@@ -195,9 +204,12 @@ block main
 					span.title__bg тренды
 				.what-doing__section-media
 					.what-doing__section-video.video-box
-						video(autoplay="true", muted="true", loop="true")
+						.video-box__poster 
+							img(src="images/video/trands-poster.jpg", alt="")
+						.video-box__icon
+						video
 							source(src="images/video/global-trends.mp4", type="video/mp4")
-						button.video-box__toggle.sound-toggle(type="button")
+						//-button.video-box__toggle.sound-toggle(type="button")
 							span.sound-toggle__icon.sound-toggle__icon--off 
 								+icon('sound-off')(width="25", height="25")
 							span.sound-toggle__icon.sound-toggle__icon--on
@@ -224,8 +236,12 @@ block main
 							.original-sound__minus 
 						
 			.what-doing__section.what-doing__section--formats
-				.what-doing__section-media 
-					img(src="images/new-formats-image.jpg", alt="")
+				.what-doing__section-media.__js_video
+					.what-doing__section-media-poster
+						img(src="images/new-formats-image.jpg", alt="")
+					.what-doing__section-media-icon
+					video
+						source(src="images/video/new-formats.mp4", type="video/mp4")
 				.what-doing__section-main 
 					.what-doing__section-title.title 
 						| Создаём новые форматы 
@@ -250,13 +266,13 @@ block main
 
 				ul.booking__filters-list
 					each item in FILTERS
-						li.booking__filters-item(class= item.mod ? ' ' + item.mod : '')
-							button(type="button", data-target= item.target)= item.text
+						li.booking__filters-item
+							div= item.text
 
 			.booking__main.swiper-container 
 				.swiper-wrapper
 					each item in BOOKING_CARDS
-						.booking__card.swiper-slide(data-category= item.category)
+						.booking__card.swiper-slide
 							.booking__card-image
 								img(src="images/" + item.img + ".jpg", width="251", height="339", alt= item.name)
 							.booking__card-main
@@ -281,16 +297,17 @@ block main
 				span.title__bg Мерч шоп
 
 			ul.store__list 
-				each item in STORE_CARDS
+				each item, index in STORE_CARDS
+					- let linkText = index === 1 ? 'Подробнее' : 'Подробнее в директ'
 					li.store__card
 						.store__card-image 	
 							img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
 						h3.store__card-title= item.name 
-						a.store__card-link(href= item.link, target="_blank") Подробнее в директ
+						a.store__card-link(href= item.link, target="_blank")= linkText
 
 	section.line-section.line-section--digital
 		.line-section__container.container
-			h2.line-section__title.title.__js_create-bg(data-wrapper-class="title__bg") Кстати, мы ещё и&nbsp;диджитал студия
+			h2.line-section__title.title.__js_create-bg(data-wrapper-class="title__bg") Кстати, мы ещё и диджитал студия
 			.line-section__main
 				.line-section__list 
 					h3 Мы делаем:

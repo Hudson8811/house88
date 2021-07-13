@@ -59,6 +59,34 @@
     }
   }
 
+  &--done {
+    #{$self}__title,
+    #{$self}__fieldset {
+      display: none;
+    }
+
+    #{$self}__main {
+      width: 100%;
+
+      form {
+        width: auto;
+
+        @include media(768) {
+          width: 100%;
+        }
+      }
+    }
+
+    #{$self}__done {
+      display: flex;
+      margin: 0 auto;
+
+      @include media(768) {
+        margin-bottom: vw(47, 376);
+      }
+    }
+  }
+
   &__container {
     max-width: vw(1756);
     display: flex;
@@ -125,6 +153,61 @@
     }
   }
 
+  &__done {
+    display: none;
+    margin: 0 auto;
+
+    &-icon {
+      width: vw(64);
+      height: vw(64);
+      margin-right: vw(20);
+      padding: vw(10);
+      background-color: $purpleColor;
+
+      @include media(1200) {
+        width: vw(64, 1200);
+        height: vw(64, 1200);
+        margin-right: vw(20, 1200);
+        padding: vw(10, 1200);
+      }
+
+      @include media(768) {
+        width: vw(34, 376);
+        height: vw(34, 376);
+        margin-right: vw(10, 376);
+        padding: vw(5, 376);
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        fill: #fff;
+      }
+    }
+
+    &-text {
+      padding: vw(7) vw(16);
+      font-family: $headingFont;
+      font-weight: 700;
+      font-size: vw(50);
+      line-height: 1;
+      color: #000;
+      text-transform: uppercase;
+      background-color: #fff;
+
+      @include media(1200) {
+        padding: vw(7, 1200) vw(16, 1200);
+        font-size: vw(50, 1200);
+      }
+
+      @include media(768) {
+        padding: vw(7, 376) vw(16, 376);
+        font-size: vw(20, 376);
+      }
+    }
+  }
+
   &__fieldset {
     display: flex;
     flex-wrap: wrap;
@@ -174,11 +257,6 @@
       margin-bottom: vw(56, 376);
     }
 
-    & + #{$self}__button {
-      //left: vw(16);
-      //margin-left: vw(-46);
-    }
-
     h3 {
       margin-bottom: vw(3);
       display: inline-block;
@@ -207,10 +285,10 @@
     }
 
     li + li {
-      margin-top: vw(3);
+      margin-top: vw(5);
 
       @include media(768) {
-        margin-top: vw(6, 376);
+        margin-top: vw(5, 376);
       }
     }
 
@@ -239,7 +317,7 @@
 
       span + span {
         @include media(768) {
-          margin-top: vw(3, 376);
+          margin-top: vw(5, 376);
         }
       }
     }

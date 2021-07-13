@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Текст</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container"> 
+        <div class="header__logo"><img src="images/logo.png" width="210" height="74" alt=""></div>
+        <div class="header__contact"><a class="header__contact-email" href="mailto:info@house88.ru">info@house88.ru</a>
+          <div class="header__contact-text">По всем вопросам</div>
+        </div>
+        <button class="header__button __js_open-brief" type="button">Выбрать блогера</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="fake-header"></div>
+      <div class="page-section">
+        <div class="page-section__container container">
+          <h1 class="page-section__title">Политика</h1>
+          <div class="page-section__content">
+            <p>text</p>
+            <p>text</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__flex">
+          <div class="footer__left">
+            <div class="footer__title">Москва, Россия</div>
+            <div class="footer__row"><a class="footer__link" href="#">Политика обработки персональных данных</a></div>
+          </div>
+          <div class="footer__right"><a class="footer__title footer__title--link" href="mailto:reklama@house88.ru">reklama@house88.ru</a>
+            <div class="footer__row"><a class="footer__link" href="#">TikTok</a><a class="footer__link" href="#">Instagram</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="brief" id="brief" style="display: none;">
+      <button class="brief__close" type="button">
+        <svg width="36" height="36">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="brief__title">HOUSE 88</div>
+      <div class="brief__short">Оставьте заявку на интересующую вас услугу или блогера и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время чтобы обсудить детали.</div>
+      <form class="brief__form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+        <fieldset class="brief__form-fieldset">
+          <legend>Тип интеграции</legend>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioChallengesAndSketches" type="radio" name="type-integration" value="Челленджи и скетчи">
+            <label for="radioChallengesAndSketches">Челленджи и скетчи</label>
+          </div>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioCategories" type="radio" name="type-integration" value="Рубрики" checked>
+            <label for="radioCategories">Рубрики</label>
+          </div>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioImageBased" type="radio" name="type-integration" value="Имиджевые">
+            <label for="radioImageBased">Имиджевые</label>
+          </div>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioViral" type="radio" name="type-integration" value="Вирусные">
+            <label for="radioViral">Вирусные</label>
+          </div>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioPranks" type="radio" name="type-integration" value="Пранки">
+            <label for="radioPranks">Пранки</label>
+          </div>
+          <div class="brief__radio choice-button">
+            <input class="visually-hidden" id="radioHelpChoice" type="radio" name="type-integration" value="Помочь с выбором">
+            <label for="radioHelpChoice">Помочь с выбором</label>
+          </div>
+        </fieldset>
+        <fieldset class="brief__form-fieldset">
+          <legend>Выберите блогера (ов)</legend>
+          <div class="brief__checkbox choice-button"> 
+            <input class="visually-hidden" id="checkboxHelpChoice" type="checkbox" name="help-choice" value="Помочь с выбором">
+            <label for="checkboxHelpChoice">Помочь с выбором</label>
+          </div>
+          <div class="brief__member-grid">
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxOreo" type="checkbox" name="Oreo" value="Oreo">
+              <label for="checkboxOreo"><span class="choice-button__image"><img src="images/brief/oreo.jpg" width="53" height="53" alt="Oreo"></span>Oreo</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxDaniil" type="checkbox" name="Daniilzhishko" value="Daniilzhishko">
+              <label for="checkboxDaniil"><span class="choice-button__image"><img src="images/brief/daniil.jpg" width="53" height="53" alt="Daniilzhishko"></span>Daniilzhishko</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxAlexkady" type="checkbox" name="Alex Kady" value="Alex Kady">
+              <label for="checkboxAlexkady"><span class="choice-button__image"><img src="images/brief/alexkady.jpg" width="53" height="53" alt="Alex Kady"></span>Alex Kady</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxSeneamin" type="checkbox" name="Seneamin" value="Seneamin">
+              <label for="checkboxSeneamin"><span class="choice-button__image"><img src="images/brief/seneamin.jpg" width="53" height="53" alt="Seneamin"></span>Seneamin</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxZavaly" type="checkbox" name="Zava_ly" value="Zava_ly">
+              <label for="checkboxZavaly"><span class="choice-button__image"><img src="images/brief/zavaly.jpg" width="53" height="53" alt="Zava_ly"></span>Zava_ly</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxProkop" type="checkbox" name="Prokop" value="Prokop">
+              <label for="checkboxProkop"><span class="choice-button__image"><img src="images/brief/prokop.jpg" width="53" height="53" alt="Prokop"></span>Prokop</label>
+            </div>
+            <div class="brief__checkbox choice-button choice-button--image">
+              <input class="visually-hidden" id="checkboxHaribo" type="checkbox" name="Haribo" value="Haribo">
+              <label for="checkboxHaribo"><span class="choice-button__image"><img src="images/brief/haribo.jpg" width="53" height="53" alt="Haribo"></span>Haribo</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="brief__form-fieldset">
+          <label class="brief__field field" aria-label="Как вас зовут?">
+            <input type="text" placeholder="Как вас зовут?">
+          </label>
+          <label class="brief__field field" aria-label="Название компании">
+            <input type="text" placeholder="Название компании">
+          </label>
+          <div class="brief__fields-grid"> 
+            <div class="brief__fields-column">
+              <label class="brief__field field" aria-label="Ссылка на соцсети">
+                <input type="url" placeholder="Ссылка на соцсети">
+              </label>
+              <label class="brief__field field" aria-label="Доп. ссылка на соцсети">
+                <input type="url" placeholder="Доп. ссылка">
+              </label>
+            </div>
+            <div class="brief__fields-column">
+              <label class="brief__field field" aria-label="Ссылка на сайт">
+                <input type="url" placeholder="Ссылка на сайт">
+              </label>
+              <label class="brief__field field" aria-label="Доп. ссылка на сайт">
+                <input type="url" placeholder="Доп. ссылка">
+              </label>
+            </div>
+          </div>
+          <label class="brief__field field" aria-label="Опишите вашу задачу">
+            <input type="text" placeholder="Опишите вашу задачу">
+          </label>
+          <label class="brief__field field" aria-label="Почта / Ник в Telegram">
+            <input type="text" placeholder="Почта / Ник в Telegram">
+          </label>
+        </fieldset>
+        <div class="brief__form-bottom">
+          <div class="brief__form-custom">
+            <div class="brief__form-file file-button">
+              <input class="visually-hidden inputfile js-new-file" type="file" id="customFileBrief" name="file">
+              <label for="customFileBrief"><span class="file-button__icon">
+                  <svg width="27" height="27">
+                    <use xlink:href="images/sprite.svg#attach"></use>
+                  </svg></span><span class="file-button__text">Прикрепить файлы</span></label>
+              <button class="file-button__remove js-remove-file" type="button">
+                <svg width="14" height="14">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="brief__form-send" type="submit">Отправить</button>
+          <div class="brief__form-consent">Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a></div>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -12,3 +12,4 @@
 //= ./partials/booking.js
 //= ./partials/partnership-carousel.js
 //= ./partials/create-bg.js
+//= ./partials/video2.js

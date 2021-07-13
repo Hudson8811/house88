@@ -1,44 +1,11 @@
 $(window).on('load', function() {
-  const filters = $('.booking__filters-item button');
-  const filterModClass = 'booking__filters-item--current';
   const cards = $('.booking__card');
   let bookingCarousel = null;
-
-  filters.on('click', onFilterClick);
 
   if ($(window).width() <= 768) {
     initBookingCarousel()
   }
 
-  function onFilterClick(evt) {
-    const current = $(this);
-    const target = current.attr('data-target');
-    const parent = current.parent();
-
-    parent.addClass(filterModClass);
-    parent.siblings().removeClass(filterModClass);
-
-    cards.each(function() {
-      const card = $(this);
-      const isVisible = card.attr('data-category').indexOf(target) !== -1;
-
-      if (isVisible) {
-        card.removeAttr('style')
-      } else {
-        card.css('display', 'none')
-      }
-    });
-
-    if (target === 'all') {
-      cards.removeAttr('style')
-    }
-
-    
-    if ($(window).width() <= 768) {
-      bookingCarousel.update();
-    }
-
-  }  
   $(window).on('resize', function() {
     if ($(window).width() <= 768) {
       initBookingCarousel()
@@ -46,7 +13,6 @@ $(window).on('load', function() {
       bookingCarousel = null;
     }
   });
-
 
   function initBookingCarousel() {
     bookingCarousel = new Swiper('.booking__main', {

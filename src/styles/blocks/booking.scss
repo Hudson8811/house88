@@ -85,7 +85,7 @@
         padding: vw(7, 376) 0;
       }
 
-      button {
+      div {
         display: inline-block;
         vertical-align: top;
         min-width: vw(225);
@@ -93,11 +93,8 @@
         font-size: vw(21);
         line-height: 1;
         color: #000000;
+        text-align: center;
         background-color: rgba(#e8e8e8, 0.49);
-        border: none;
-        appearance: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
 
         @include media(1200) {
           padding: vw(16, 1200) vw(36, 1200);
@@ -110,16 +107,8 @@
           padding: vw(11, 376) vw(12, 376);
           font-size: vw(16, 376);
         }
-
-        &:focus {
-          outline: none;
-        }
-
-        @include hover {
-          background-color: rgba(#e8e8e8, 1);
-        }
       }
-
+      /*
       &--all {
         button {
           min-width: 0;
@@ -137,7 +126,7 @@
             color: #ffffff;
           }
         }
-      }
+      }*/
     }
   }
 

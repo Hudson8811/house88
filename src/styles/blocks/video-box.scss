@@ -2,12 +2,52 @@
   $self: &;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+
+  @include hover {
+    #{$self}__icon {
+      opacity: 0.7;
+    }
+  }
 
   &--play {
     #{$self}__poster {
       img {
         opacity: 0;
       }
+    }
+
+    #{$self}__icon {
+      opacity: 0;
+    }
+
+    @include hover {
+      #{$self}__icon {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    width: vw(100);
+    height: vw(100);
+    background-image: url("../images/play-icon.png");
+    background-size: cover;
+    transition: opacity 0.3s ease;
+
+    @include media(1200) {
+      width: vw(100, 1200);
+      height: vw(100, 1200);
+    }
+
+    @include media(768) {
+      width: vw(72, 376);
+      height: vw(72, 376);
     }
   }
 
