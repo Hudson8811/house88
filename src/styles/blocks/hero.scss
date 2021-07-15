@@ -248,17 +248,29 @@
   }
 
   &__title {
-    margin-bottom: vw(65);
+    margin-bottom: vw(30);
     color: #ffffff;
+    font-size: vw(80);
 
     @include media(768) {
-      margin-bottom: vw(14, 376);
+      margin-bottom: vw(10, 376);
+      font-size: vw(30, 376);
     }
 
     &-double {
       position: relative;
-      color: #000000;
-
+      color: #ffffff;
+      .parts{
+        transform: scale(1.69);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        @include media(768) {
+          transform: scale(1.56);
+        }
+      }
       .part {
         position: absolute;
         top: 0;
