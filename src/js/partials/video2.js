@@ -15,4 +15,49 @@ $(window).on('load', function() {
       });
     }
   });
+
+
+
+});
+
+
+
+$(window).on('load', function() {
+  const videoWrapper = $('.__js_video-2');
+  const videoWrapperModClass = 'playing';
+  const videoWrapperModClassStarted = 'started';
+  const video = videoWrapper.find('video');
+
+  let timeupdate = false;
+
+  $('.what-doing__section-media-poster, .what-doing__section-media-icon').on('click', function (evt) {
+    videoWrapper.addClass(videoWrapperModClass);
+    videoWrapper.addClass(videoWrapperModClassStarted);
+    video.trigger('play');
+    video.prop('controls',true);
+  });
+
+  video.on('ended', () => {
+    videoWrapper.removeClass(videoWrapperModClass);
+    videoWrapper.removeClass(videoWrapperModClassStarted);
+    video.prop('controls',false);
+  });
+
+  video.on('pause', () => {
+    setTimeout(function (){
+      if (timeupdate){
+        timeupdate = false;
+       } else {
+        videoWrapper.removeClass(videoWrapperModClass);
+        video.prop('controls',false);
+      }
+    },50)
+  });
+  video.on('seeking', () => {
+    timeupdate = true;
+  });
+  video.on('seeked', () => {
+    timeupdate = true;
+  });
+
 })

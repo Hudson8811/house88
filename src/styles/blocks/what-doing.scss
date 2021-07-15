@@ -193,14 +193,25 @@
           object-fit: cover;
         }
 
+        &.started{
+          #{$section}-media-poster {
+            img{
+              opacity: 0;
+              pointer-events: none;
+            }
+          }
+        }
+
         &.playing {
           #{$section}-media-poster {
             opacity: 0;
             pointer-events: none;
+            display: none;
           }
-
           #{$section}-media-icon {
             opacity: 0;
+            pointer-events: none;
+            display: none;
           }
 
           @include hover {
@@ -360,10 +371,10 @@
         &::after {
           content: attr(data-after);
           position: absolute;
-          top: 50%;
+          top: 105%;
           left: 50%;
 
-          transform: translateX(-50%) translateY(-50%) rotate(-21deg);
+          transform: translateX(-50%);
 
           z-index: 1;
           padding: vw(9) vw(50);
@@ -381,7 +392,6 @@
           @include media(768) {
             padding: vw(5, 376) vw(30, 376);
             font-size: vw(15, 376);
-            transform: translateX(-50%) translateY(-85%) rotate(-21deg);
           }
         }
       }
