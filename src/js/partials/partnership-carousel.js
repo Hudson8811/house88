@@ -26,7 +26,6 @@ $(window).on('load', function() {
       isInit = false;
       partnersVideoCarousel.destroy();
       partnersVideoCarousel = null;
-      console.log(partnersVideoCarousel)
       partnersVideos.find('video').prop('autoplay', true).trigger('play');
     }
 	});
@@ -40,12 +39,12 @@ $(window).on('load', function() {
       centeredSlides: true,
       on: {
         afterInit: function (swiper) {
-          let v = swiper.slides[swiper.activeIndex].querySelector('video').play();
+          swiper.slides[swiper.activeIndex].querySelector('video').play();
         },
-        slideChange: function (swiper) {
-          swiper.slides.forEach(it => {
-            it.querySelector('video').pause();
-          });
+        slideChangeTransitionStart: function (swiper) {
+          swiper.slides[swiper.previousIndex].querySelector('video').pause();
+        },
+        slideChangeTransitionEnd: function (swiper) {
           swiper.slides[swiper.activeIndex].querySelector('video').play();
         }
       }

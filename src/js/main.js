@@ -13,3 +13,4 @@
 //= ./partials/partnership-carousel.js
 //= ./partials/create-bg.js
 //= ./partials/video2.js
+//= ./partials/store-carousel.js
