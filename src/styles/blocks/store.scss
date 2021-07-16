@@ -58,7 +58,8 @@
 
     @include media(768) {
       .swiper-wrapper {
-        display: block;
+        flex-wrap: nowrap;
+        align-items: stretch;
         margin-top: 0 !important;
         margin-left: 0 !important;
       }
@@ -70,6 +71,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: auto;
     max-width: calc(33.33% - 3.85417vw);
     //width: ;
     margin-left: vw(74);
@@ -91,7 +93,7 @@
 
       @include media(768) {
         margin-bottom: vw(20, 376);
-        height: auto;
+        height: vw(360, 376);
       }
 
       img {
