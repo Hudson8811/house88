@@ -6,6 +6,7 @@
   }
 
   &__container {
+    max-width: vw(1740);
     @include media(1200) {
       max-width: none;
     }
@@ -230,6 +231,66 @@
 
       @include media(1200) {
         margin-left: 0;
+      }
+
+      img {
+        display: block;
+        width: vw(143);
+        height: auto;
+
+        @include media(1200) {
+          width: vw(143, 1200);
+        }
+
+        @include media(768) {
+          width: vw(143, 376);
+          transform: scale(0.47) translateX(-15px) translateY(-16px);
+        }
+      }
+    }
+
+
+    &--benetton {
+      @include media(1200) {
+        order: 11;
+        width: 100%;
+      }
+
+      @include media(768) {
+        order: 10;
+        width: 50%;
+      }
+
+      img {
+        display: block;
+        width: vw(310);
+        height: auto;
+
+        @include media(1200) {
+          width: vw(310, 1200);
+        }
+
+        @include media(768) {
+          width: vw(310, 376);
+          transform: scale(0.7) translateX(15px);
+        }
+      }
+    }
+
+    &--huawei {
+      margin-left: vw(188);
+
+      @media screen and (min-width:1201px){
+        margin-top: vw(50);
+      }
+
+      @include media(1200) {
+        margin-left: 0;
+        order: 10;
+      }
+
+      @include media(768) {
+        order: 11;
       }
 
       img {
