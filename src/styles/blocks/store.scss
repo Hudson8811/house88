@@ -100,7 +100,13 @@
       }
 
       .swiper-pagination {
-        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: vw(25);
+        z-index: 1;
+        display: flex;
+        justify-content: center;
 
         @include media(768) {
           position: absolute;
@@ -113,6 +119,11 @@
         }
 
         &-bullet {
+          width: vw(16);
+          height: vw(16);
+          margin-right: vw(6);
+          border: vw(3) solid $purpleColor;
+          border-radius: 50%;
           @include media(768) {
             width: vw(16, 376);
             height: vw(16, 376);
@@ -128,7 +139,7 @@
       }
 
       &-slide {
-        display: none;
+        display: block;
 
         @include media(768) {
           display: block;
