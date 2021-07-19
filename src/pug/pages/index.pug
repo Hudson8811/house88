@@ -299,11 +299,26 @@ block main
 			h2.store__title.title(data-before="Store", data-after="Скоро открытие")
 				span.title__bg Мерч шоп
 
-			.store__list.swiper-container.__js_store-carousel
-				.swiper-wrapper
-					each item, index in STORE_CARDS
-						- let linkText = index === 1 ? 'Подробнее' : 'Подробнее в директ'
-						.store__card.swiper-slide
+			.store__list
+				each item, index in STORE_CARDS
+					- let linkText = index === 1 ? 'Подробнее' : 'Подробнее в директ'
+					if index === 0
+						.store__card
+							.store__card-image.swiper-container.__js_store-carousel
+								.swiper-wrapper
+									.store__card-image-slide.store__card-image-slide--desktop-visible.swiper-slide
+										img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
+									.store__card-image-slide.swiper-slide 
+										img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
+									.store__card-image-slide.swiper-slide 
+										img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
+									.store__card-image-slide.swiper-slide 
+										img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
+								.swiper-pagination
+							h3.store__card-title= item.name 
+							a.store__card-link(href= item.link, target="_blank")= linkText
+					else
+						.store__card
 							.store__card-image 	
 								img(src="images/" + item.img + ".jpg", width="363", height="363", alt= item.name)
 							h3.store__card-title= item.name 

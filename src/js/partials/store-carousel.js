@@ -4,16 +4,18 @@ $(window).on('load', () => {
   let carousel = null;
   let isInit = false;
   
-  if (windowWidth < breakpoint) {
+  if (windowWidth <= breakpoint) {
     initCarousel();
     isInit = true;
   }
 
   $(window).on('resize', function() {
-    if (windowWidth < breakpoint && !isInit) {
+    windowWidth = $(window).width();
+    
+    if (windowWidth <= breakpoint && !isInit) {
       initCarousel();
       isInit = true;
-    } else if (windowWidth > brekpoint && isInit) {
+    } else if (windowWidth > breakpoint && isInit) {
       isInit = false;
       carousel.destroy();
       carousel = null;
@@ -26,17 +28,11 @@ $(window).on('load', () => {
       spaceBetween: 0,
       slidesPerView: 'auto',
       centeredSlides: true,
-      /*on: {
-        afterInit: function (swiper) {
-          let v = swiper.slides[swiper.activeIndex].querySelector('video').play();
-        },
-        slideChangeTransitionStart: function (swiper) {
-          swiper.slides[swiper.previousIndex].querySelector('video').pause();
-        },
-        slideChangeTransitionEnd: function (swiper) {
-          swiper.slides[swiper.activeIndex].querySelector('video').play();
-        },
-      }*/
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      
     })
   }
   
